@@ -33,12 +33,9 @@
 
             ],
             "scripts": [
-              "src/assets/vendor/jquery/jquery.min.js",
               "src/assets/vendor/bootstrap/js/bootstrap.min.js",
-              "src/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js",
               "src/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js",
               "src/assets/vendor/chartist/js/chartist.min.js",
-              "src/assets/scripts/klorofil-common.js"
             ]
           },
           "configurations": {
