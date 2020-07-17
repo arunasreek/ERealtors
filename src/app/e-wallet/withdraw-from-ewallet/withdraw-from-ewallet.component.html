@@ -1,0 +1,107 @@
+<div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <div class="col">
+    
+    <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">Payout Preference</h1>
+    </div>
+    
+    </div>
+    </div>
+    
+    
+    <div class="wrapper-md ">
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+        <div>
+            <tabset>
+              <tab heading="Payout Prefernce" id="tab1">
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl/payment-methods" method="post" id="select-payment-methods" accept-charset="UTF-8"><div class="from-panel"><table class="table sticky-enabled">
+                    <thead><tr><th>Payment Methods</th><th>Status</th><th>Configuration</th> </tr></thead>
+                    <tbody>
+                    <tr class="odd"><td>Bank Account</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-0-c2-method-bank">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" class="single-switch-checkbox form-checkbox checkbox" type="checkbox" id="edit-rows-0-c2-method-bank" name="rows[0][c2][method_bank]" value="1" /><i></i></label>
+                    </div>
+                    </td><td><span class="btn btn-disabled btn-rounded btn-sm btn-icon btn-muted"><i class="fa fa-cog"></i></span></td> </tr>
+                    <tr class="even"><td>PayPal</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-1-c2-method-paypal">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" class="single-switch-checkbox form-checkbox checkbox" type="checkbox" id="edit-rows-1-c2-method-paypal" name="rows[1][c2][method_paypal]" value="1" checked="checked" /><i></i></label>
+                    </div>
+                    </td><td><a href="/afl/payment-methods/method/method_paypal"><span class="btn btn-rounded btn-sm btn-icon btn-default"><i class="fa fa-cog"></i></span></a></td> </tr>
+                    </tbody>
+                    </table>
+                    <input type="hidden" name="method_uid" value="3" />
+                    <input type="submit" id="edit-submit" name="op" value="Save Payment methods" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-T4nPNcOblDHZpbLmzTFFq6HmiZIGR7SJmNujOTza5Lo" />
+                    <input type="hidden" name="form_token" value="wYb6jrhcaFHRNwHX0Al00onmY4-INI--GKQ0uE48dko" />
+                    <input type="hidden" name="form_id" value="select_payment_methods" />
+                    </div></form>
+                    </div> 
+                    </div>
+              </tab>
+              <tab heading="Bank">
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl/payment-methods/method/method_bank" method="post" id="payment-method-bank-conf" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-textfield form-item-account-number form-group">
+                    <label for="edit-account-number">Account Number <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-account-number" name="account_number" value="a" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-bank-name form-group">
+                    <label for="edit-bank-name">Bank Name <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-bank-name" name="bank_name" value="a" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-swift-code form-group">
+                    <label for="edit-swift-code">Swift Code <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-swift-code" name="swift_code" value="a" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-ifsc-code form-group">
+                    <label for="edit-ifsc-code">IFSC code <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-ifsc-code" name="ifsc_code" value="a" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-country form-group">
+                    <label for="edit-country">Country <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-country" name="country" value="a" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <input type="hidden" name="method_uid" value="3" />
+                    <input type="submit" id="edit-submit" name="op" value="Save Payment methods" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-EHTR3eObZefZ8Tc42YETvYprSFOJ7suv--OWb-sed-g" />
+                    <input type="hidden" name="form_token" value="otK3LGPgi7bwrJQSX67VTvaJRenb2tUFCLi97skYRzQ" />
+                    <input type="hidden" name="form_id" value="payment_method_bank_conf" />
+                    </div></form>
+                    </div> 
+                    </div>
+              </tab>
+              <tab heading="Paypal">
+             
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl/payment-methods/method/method_paypal" method="post" id="payment-method-paypal-conf" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-textfield form-item-paypal-email form-group">
+                    <label for="edit-paypal-email">PayPal Email Id <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-paypal-email" name="paypal_email" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-first-name form-group">
+                    <label for="edit-first-name">First Name <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-first-name" name="first_name" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-surname form-group">
+                    <label for="edit-surname">Surname <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-surname" name="surname" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <input type="hidden" name="method_uid" value="3" />
+                    <input type="submit" id="edit-submit" name="op" value="Save Payment methods" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-7EZqH-JzJWixFn-VTIs9wG0I8atW58jBOM_Jh8JKRM0" />
+                    <input type="hidden" name="form_token" value="hCns0Pc9Wfk7EEJS_LJ1gxyMQYhbadJEuAT5yxt8s3Q" />
+                    <input type="hidden" name="form_id" value="payment_method_paypal_conf" />
+                    </div></form>
+                    </div> 
+                    </div>
+              </tab>
+            </tabset>
+          </div> 
+    </div>
+    </div>

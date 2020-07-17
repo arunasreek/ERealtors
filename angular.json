@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ERealtors": {
+    "ELearning": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ERealtors",
+            "outputPath": "dist/ELearning",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,19 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
-              "src/assets/vendor/font-awesome/css/font-awesome.min.css",
-              "src/assets/vendor/linearicons/style.css",
-              "src/assets/vendor/chartist/css/chartist-custom.css",
-              "src/assets/css/main.css",
-              "src/assets/css/demo.css"
-
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ],
-            "scripts": [
-              "src/assets/vendor/bootstrap/js/bootstrap.min.js",
-              "src/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js",
-              "src/assets/vendor/chartist/js/chartist.min.js",
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -72,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ERealtors:build"
+            "browserTarget": "ELearning:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ERealtors:build:production"
+              "browserTarget": "ELearning:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ERealtors:build"
+            "browserTarget": "ELearning:build"
           }
         },
         "test": {
@@ -98,9 +90,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js",
+              "src/assets/js/svgxuse.min.js"
+            ]
           }
         },
         "lint": {
@@ -120,19 +115,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ERealtors:serve"
+            "devServerTarget": "ELearning:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ERealtors:serve:production"
+              "devServerTarget": "ELearning:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ERealtors",
+  "defaultProject": "ELearning",
   "cli": {
-    "analytics": false
+    "analytics": "cab7bfee-a139-4220-8769-5cd86ef8231e"
   }
 }

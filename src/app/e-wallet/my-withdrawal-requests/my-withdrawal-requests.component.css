@@ -1,0 +1,338 @@
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.hbox {
+    display: table;
+    width: 100%;                            
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;                      
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.m-n {
+    margin: 0!important;
+}
+.h3, h3 {
+    font-size: 24px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.text-muted {
+    color: #98a6ad;
+}
+small, .small {
+    font-size: 13px;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.app-content {
+    height: 100%;
+}
+.app-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1005;
+}
+
+.region.region-announcements {
+    background-color: #c8edf4;
+    color: #555;
+    margin: 10px 30px;
+    padding: 10px 30px;
+}
+.block.clearfix {
+clear: both;
+}
+.block {
+    display: block;
+}
+p {
+    margin: 0 0 10px;
+}
+
+.text-info {
+    color: #23b7e5;
+}
+a {
+    
+    text-decoration: none;
+    cursor: pointer;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+form.node-form, form .from-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+    
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #dee5e7;
+    padding: 15px;
+}
+label {
+    font-weight: 400;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+.form-control, .form-control:focus {
+    
+    box-shadow: none;
+}
+.form-control {
+    border-color: #cfdadd;
+    border-radius: 2px;
+}
+.form-control {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-inline .form-autocomplete .icon.form-control-feedback {
+    top: 0;
+}
+
+.form-autocomplete {
+    position: relative;
+}
+.form-control-feedback {
+    position: absolute;
+   
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+}
+.glyphicon {
+    
+   
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    
+}
+.form-inline .form-group {
+    
+
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right: 2px;;
+}
+.element-invisible {
+    display: none;
+}
+.m-t-22 {
+    margin-top: 22px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+#edit-select {
+    margin-bottom: 15px;
+}
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+fieldset legend {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    border-bottom: 1px solid #dee5e7;
+    padding-bottom: 12px;
+}
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    border: 0;
+}
+.form-actions .btn, form .from-panel .btn {
+    margin-right: 4px;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    
+    box-shadow: none;
+    opacity: .65;
+}
+.btn-primary {
+    color: #fff!important;
+}
+.panel-default {
+    border-color: #dee5e7;
+}
+.panel {
+    border-radius: 2px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel>.table-responsive {
+    margin-bottom: 0;
+    border: 0;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel>.table-responsive:first-child>.table:first-child, .panel>.table:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel>.panel-collapse>.table, .panel>.table, .panel>.table-responsive>.table {
+    margin-bottom: 0;
+}
+.table-responsive table {
+    border: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+}
+.table-responsive table thead {
+    background: #e5e5e5;
+}
+.table-responsive table thead th {
+    font-weight: 700;
+}
+.table>thead>tr>th {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eaeff0;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+}
+.table-responsive table th {
+   
+    text-align: center;
+    border-right: solid 1px #cecece;
+    
+    font-size: 14px;
+    color: #3f4454;
+}
+.vbo-views-form thead .form-type-checkbox {
+    margin: 0;
+}
+.i-checks {
+    padding-left: 20px;
+    cursor: pointer;
+}
+label {
+    font-weight: 400;
+}
+.i-checks input {
+    position: absolute;
+    margin-left: -20px;
+    opacity: 0;
+}
+.checkbox, .radio {
+   
+    display: block;
+    margin-top: 10px;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.table-responsive table thead {
+    background: #e5e5e5;
+}
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+}
+.form-autocomplete {
+    position: relative;
+}
+.panel-heading{
+    padding:10px;
+}

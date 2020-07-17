@@ -1,0 +1,60 @@
+<div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <div class="col">
+    
+    <!-- <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">E-Commerce</h1>
+    </div>
+    
+    </div>
+    </div> -->
+    
+    
+    <div class="wrapper-md ">
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="tab-container"><h2 class="hide">Primary tabs</h2><ul class="tabs--primary nav nav-tabs"><li><a [routerLink]="['/product-category']">List</a></li>
+    <li><a href="/admin/structure/taxonomy/product_category/edit">Edit</a></li>
+    <li><a href="/admin/structure/taxonomy/product_category/fields">Manage fields</a></li>
+    <li><a href="/admin/structure/taxonomy/product_category/display">Manage display</a></li>
+    <li><a href="/admin/structure/taxonomy/product_category/translate">Translate</a></li>
+    </ul></div> <div class="region region-content">
+    <div id="block-system-main" class="block block-system clearfix">
+    <form action="/admin/structure/taxonomy/product_category/add" method="post" id="taxonomy-form-term" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-textfield form-item-name form-group">
+    <label for="edit-name">Name <span class="form-required" title="This field is required.">*</span></label>
+    <input type="text" id="edit-name" name="name" value="" size="60" maxlength="255" class="form-text form-control input-lg-3 required" />
+    </div>
+    <div class="text-format-wrapper"><div class="form-item clearfix form-type-textarea form-item-description-value form-group">
+    <label for="edit-description-value">Description </label>
+    <div class="form-textarea-wrapper resizable"><textarea class="ckeditor-mod form-textarea form-control" id="edit-description-value" name="description[value]" cols="60" rows="5"></textarea></div>
+    </div>
+    <fieldset class="filter-wrapper form-wrapper" id="edit-description-format"><div class="fieldset-wrapper"><div class="filter-help form-wrapper" id="edit-description-format-help"><p><a href="/filter/tips" target="_blank">More information about text formats</a></p></div><div class="form-item clearfix form-type-select form-item-description-format form-group">
+    <label for="edit-description-format--2">Text format </label>
+    <select class="filter-list form-select form-control" id="edit-description-format--2" name="description[format]"><option value="html" selected="selected">HTML</option><option value="filtered_html">Filtered HTML</option><option value="plain_text">Plain text</option></select>
+    </div>
+    <div class="filter-guidelines form-wrapper" id="edit-description-format-guidelines"><div class="filter-guidelines-item filter-guidelines-html"><h3>HTML</h3><ul class="tips"><li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt; &lt;p&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;span&gt; &lt;style&gt; &lt;font&gt; &lt;strong&gt; &lt;img&gt; &lt;div&gt; &lt;table&gt; &lt;tr&gt; &lt;td&gt; &lt;thead&gt; &lt;th&gt; &lt;tbody&gt; &lt;i&gt; &lt;em&gt;</li><li>Lines and paragraphs break automatically.</li><li>Replaces [VIDEO::http://www.youtube.com/watch?v=someVideoID::aVideoStyle] tags with embedded videos.</li></ul></div><div class="filter-guidelines-item filter-guidelines-filtered_html"><h3>Filtered HTML</h3><ul class="tips"><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Lines and paragraphs break automatically.</li></ul></div><div class="filter-guidelines-item filter-guidelines-plain_text"><h3>Plain text</h3><ul class="tips"><li>No HTML tags allowed.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Lines and paragraphs break automatically.</li></ul></div></div></div></fieldset>
+    </div>
+    <input type="hidden" name="form_build_id" value="form-6q7iTkBvbj7ZdlpHI7hO4p7O8vRgjPhUfodQPfZBHto" />
+    <input type="hidden" name="form_token" value="AYpT_mgccd2gxSpqFlWQNmFLXPVWQ9A5c7JDP4XfKWY" />
+    <input type="hidden" name="form_id" value="taxonomy_form_term" />
+    <fieldset class="collapsible collapsed form-wrapper" id="edit-relations"><legend><span class="fieldset-legend">Relations</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-select form-item-parent form-group">
+    <label for="edit-parent">Parent terms </label>
+    <select multiple="multiple" name="parent[]" id="edit-parent" class="form-select form-control"><option value="0" selected="selected">&lt;root&gt;</option><option value="4">Coach</option><option value="1">Electronics</option><option value="2">Home Appliances</option><option value="3">Mobile</option></select>
+    </div>
+    <div class="form-item clearfix form-type-textfield form-item-weight form-group" data-toggle="tooltip" title="Terms are displayed in ascending order by weight.">
+    <label for="edit-weight">Weight <span class="form-required" title="This field is required.">*</span></label>
+    <input type="text" id="edit-weight" name="weight" value="0" size="6" maxlength="128" class="form-text form-control input-lg-3 required" />
+    </div>
+    </div></fieldset>
+    <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save" class="form-submit btn btn-default btn-primary" /></div></div></form>
+    </div> 
+    </div>
+    </div>
+</div>

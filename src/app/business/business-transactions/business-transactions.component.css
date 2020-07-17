@@ -1,0 +1,206 @@
+.block.clearfix {
+    clear: both;
+}
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.block {
+    display: block;
+}
+form.node-form, form .from-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+ 
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #dee5e7;
+    padding: 15px;
+}
+.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right:3px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.form-control {
+  
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+   
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+button, input, select, textarea {
+    font-family: inherit;
+   
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+
+}
+.panel-default {
+    border-color: #dee5e7;
+}
+.panel {
+    border-radius: 2px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+  
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel>.table-responsive {
+    margin-bottom: 0;
+    border: 0;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel>.table-responsive:first-child>.table:first-child, .panel>.table:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel>.panel-collapse>.table, .panel>.table, .panel>.table-responsive>.table {
+    margin-bottom: 0;
+}
+.table-responsive table {
+    border: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+   
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-responsive table thead {
+    background: #e5e5e5;
+}
+afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+.afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px 15px;
+    border-top: 1px solid #eaeff0;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table-responsive tbody th, .table-responsive tbody td {
+    padding: 15px 0;
+    text-align: center;
+    border-right: solid 1px #ccc!important;
+    font-size: 14px;
+    color: #3f4454;
+    border-bottom: solid 1px #ccc!important;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.m-t-22 {
+    margin-top: 22px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #fff!important;
+    background-color: #6254b2;
+    border-color: #5a4daa;
+}
+.btn {
+    font-weight: 500;
+    border-radius: 2px;
+    outline: 0!important;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+   
+    touch-action: manipulation;
+  
+    user-select: none;
+   
+}
+button, input, optgroup, select, textarea {
+    margin: 2px;
+    font: inherit;
+   
+}
+.table>thead>tr>th {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eaeff0;
+    border-right: solid 1px #cecece !important;
+}

@@ -1,0 +1,270 @@
+<div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <div class="col">
+    
+    <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">System Configurations</h1>
+    </div>
+    
+    </div>
+    </div>
+    
+    
+    <div class="wrapper-md ">
+    
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+        <div>
+            <tabset>
+              <tab heading="Settings" id="tab1"><div class="region region-content">
+                <div id="block-system-main" class="block block-system clearfix">
+                <form action="/afl-admin" method="post" id="afl-system-configurations-form" accept-charset="UTF-8"><div class="from-panel"><fieldset class="form-wrapper" id="edit-variable-realm-selector-language"><legend><span class="fieldset-legend">There are <em class="placeholder">multilingual</em> variables in this form</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">Check you are editing the variables for the right <em class="placeholder">Language</em> value or select the desired <em class="placeholder">Language</em>.</div><div id="edit-select-key" class="form-item clearfix form-type-item form-group">
+                <strong><a href="/afl-admin?variable_realm_key_language=en" class="active">English</a></strong> | <a href="/afl-admin?variable_realm_key_language=es" class="active">Spanish</a> | <a href="/afl-admin?variable_realm_key_language=ar" class="active">Arabic</a> | <a href="/afl-admin?variable_realm_key_language=ab" class="active">Abkhazian</a> | <a href="/afl-admin?variable_realm_key_language=bn" class="active">Bengali</a> | <a href="/afl-admin?variable_realm_key_language=zh-hans" class="active">Chinese, Simplified</a> | <a href="/afl-admin?variable_realm_key_language=zh-hant" class="active">Chinese, Traditional</a> | <a href="/afl-admin?variable_realm_key_language=fr" class="active">French</a> | <a href="/afl-admin?variable_realm_key_language=de" class="active">German</a> | <a href="/afl-admin?variable_realm_key_language=it" class="active">Italian</a> | <a href="/afl-admin?variable_realm_key_language=ms" class="active">Malay</a> | <a href="/afl-admin?variable_realm_key_language=ru" class="active">Russian</a> | <a href="/afl-admin?variable_realm_key_language=sv" class="active">Swedish</a>
+                </div>
+                </div></fieldset>
+                <div class="form-item clearfix form-type-textfield form-item-site-name form-group" data-toggle="tooltip" title="Please mention name of the website This is a multilingual variable. ">
+                <label for="edit-site-name">Website Name <span class="form-required" title="This field is required.">*</span></label>
+                <input class="i18n-variable form-text form-control input-lg-3 required" type="text" id="edit-site-name" name="site_name" value="Epixel Matrix Demo" size="60" maxlength="128" />
+                </div>
+                <input type="hidden" name="form_build_id" value="form-84EyNetraRwe2w3aZEaG6eq96aV8LW3PaW7PaZKob04" />
+                <input type="hidden" name="form_token" value="VfV_z5jr1sJNLcCpqSfYiFcFjRGlgtrQCxolB0gnnOo" />
+                <input type="hidden" name="form_id" value="afl_system_configurations_form" />
+                <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save configuration" class="form-submit btn btn-default btn-primary" /></div></div></form>
+                </div> 
+                </div>
+            </tab>
+              <tab heading="Compensations">
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl-admin/compensation-settings" method="post" id="afl-compensation-types" accept-charset="UTF-8"><div class="from-panel"><table class="table sticky-enabled">
+                    <thead><tr><th>Type of Compensations</th><th>Status</th><th>Configuration</th> </tr></thead>
+                    <tbody>
+                    <tr class="odd"><td>Level Commissions when new member(s) enrolles in downline</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-0-c2-afl-level-commissions">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-0-c2-afl-level-commissions" name="rows[0][c2][afl_level_commissions]" value="1" checked="checked" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><a href="/afl-admin/compensation-settings/level-commissions"><span class="btn btn-rounded btn-sm btn-icon btn-default"><i class="fa fa-cog"></i></span></a></td> </tr>
+                    <tr class="even"><td>E-commerce Sales Commissions</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-1-c2-afl-sales-commissions">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-1-c2-afl-sales-commissions" name="rows[1][c2][afl_sales_commissions]" value="1" checked="checked" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><a href="/afl-admin/compensation-settings/sales-commissions"><span class="btn btn-rounded btn-sm btn-icon btn-default"><i class="fa fa-cog"></i></span></a></td> </tr>
+                    <tr class="odd"><td>Referral Commissions / Sponsor Commissions</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-2-c2-afl-referral-comissions-module">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-2-c2-afl-referral-comissions-module" name="rows[2][c2][afl_referral_comissions_module]" value="1" checked="checked" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><a href="/afl-admin/compensation-settings/referral-commissions"><span class="btn btn-rounded btn-sm btn-icon btn-default"><i class="fa fa-cog"></i></span></a></td> </tr>
+                    <tr class="even"><td>Leadership Pool</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-3-c2-afl-leedership-pool-module">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-3-c2-afl-leedership-pool-module" name="rows[3][c2][afl_leedership_pool_module]" value="1" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><span class="btn btn-disabled btn-rounded btn-sm btn-icon btn-muted"><i class="fa fa-cog"></i></span></td> </tr>
+                    <tr class="odd"><td>Rank based commissions</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-4-c2-afl-rank-based-comissions">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-4-c2-afl-rank-based-comissions" name="rows[4][c2][afl_rank_based_comissions]" value="1" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><span class="btn btn-disabled btn-rounded btn-sm btn-icon btn-muted"><i class="fa fa-cog"></i></span></td> </tr>
+                    <tr class="even"><td>Extra Compensations</td><td><div class="form-item clearfix form-type-checkbox form-item-rows-5-c2-afl-extra-combensations">
+                    <label class="i-switch m-t-xs m-r"><input switch="switch" type="checkbox" id="edit-rows-5-c2-afl-extra-combensations" name="rows[5][c2][afl_extra_combensations]" value="1" class="form-checkbox checkbox" /><i></i></label>
+                    </div>
+                    </td><td><span class="btn btn-disabled btn-rounded btn-sm btn-icon btn-muted"><i class="fa fa-cog"></i></span></td> </tr>
+                    </tbody>
+                    </table>
+                    <input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-wVaaUqyMluHAPd3SYWvrbWvMvJJCouBCpZGTI8Hc5Jg" />
+                    <input type="hidden" name="form_token" value="hEgByvV8wgdjWV1u3r7hqywBcSJAAKQcpmZIEcnOcl8" />
+                    <input type="hidden" name="form_id" value="afl_compensation_types" />
+                    </div></form>
+                    </div> 
+                    </div>
+              </tab>
+              <tab heading="Fund deposit">
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config"><legend><span class="fieldset-legend">Fund deposit configuration</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                    <label for="edit-minimum-amount">Minimum deposit amount </label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-maximum-amount form-group" data-toggle="tooltip" title="Maximum deposit amount">
+                    <label for="edit-maximum-amount">Maximum deposit amount </label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-maximum-amount" name="maximum_amount" value="2000" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                    <label for="edit-deposit-fee">Deposit fee </label>
+                    <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
+                    </div>
+                    </div></fieldset>
+                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
+                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                    <input type="hidden" name="form_id" value="fund_deposit_form" />
+                    </div></form>
+                    </div> 
+                    </div>
+              </tab>
+              <tab heading="Plan Configuration"><div class="region region-content">
+                <div id="block-system-main" class="block block-system clearfix">
+                <form action="/afl-admin/genealogy-config" method="post" id="afl-genealogy-config" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-plan-with form-group">
+                <label for="edit-afl-plan-with">Width <span class="form-required" title="This field is required.">*</span></label>
+                <select id="edit-afl-plan-with" name="afl_plan_with" class="form-select form-control required"><option value="2">2</option><option value="3" selected="selected">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select>
+                </div>
+                <div class="form-item clearfix form-type-select form-item-afl-plan-height form-group">
+                <label for="edit-afl-plan-height">Height <span class="form-required" title="This field is required.">*</span></label>
+                <select id="edit-afl-plan-height" name="afl_plan_height" class="form-select form-control required"><option value="2">2</option><option value="3" selected="selected">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select>
+                </div>
+                <input type="hidden" name="form_build_id" value="form-uICS9n3GCG3eN8GuuOUjU8YR_sfd_SRbKd0_9gO7uY0" />
+                <input type="hidden" name="form_token" value="YesrkrLUA72m5DPc5iERbiMHvpkfmToYpdg53KfPFk8" />
+                <input type="hidden" name="form_id" value="afl_genealogy_config" />
+                <div class="form-actions form-wrapper" id="edit-actions"><input disabled="disabled" type="submit" id="edit-submit" name="op" value="Save configuration" class="form-submit btn btn-default btn-primary form-button-disabled" /></div></div></form>
+                </div> 
+                </div>
+                
+            </tab>
+              <tab heading="Rank">
+                <div class="region region-content">
+                    <div id="rank-settings-form"><div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl-admin/rank" method="post" id="afl-rank-settings" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-rank-expiry-criteria form-group" data-toggle="tooltip" title="Please mention the rank expiry periods">
+                    <label for="edit-afl-rank-expiry-criteria">Rank Expiry <span class="form-required" title="This field is required.">*</span></label>
+                    <select id="edit-afl-rank-expiry-criteria" name="afl_rank_expiry_criteria" class="form-select form-control required"><option value="-1">-Select-</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option><option value="yearly">Yearly</option><option value="permanent" selected="selected">Fixed - No Downgrading</option></select>
+                    </div>
+                    <div id="afl-rank-expiry-criteria-container"><div id="edit-afl-rank-expiry-criteria-container" class="form-wrapper"><div class="form-item clearfix form-type-select form-item-afl-default-rank form-group" data-toggle="tooltip" title="Please mention the default rank for expiry">
+                    <label for="edit-afl-default-rank">Default Rank <span class="form-required" title="This field is required.">*</span></label>
+                    <select id="edit-afl-default-rank" name="afl_default_rank" class="form-select form-control required"><option value="0">Active</option><option value="1" selected="selected">Consultant</option><option value="2">Executive</option><option value="3">Director</option><option value="4">Sr Director</option></select>
+                    </div>
+                    </div></div><div class="form-item clearfix form-type-select form-item-afl-rank-criteria form-group" data-toggle="tooltip" title="Please mention the rank criteria">
+                    <label for="edit-afl-rank-criteria">Rank Criteria <span class="form-required" title="This field is required.">*</span></label>
+                    <select id="edit-afl-rank-criteria" name="afl_rank_criteria" class="form-select form-control required"><option value="afl_rank_bsd_downline_cnt" selected="selected">Rank advancement based on the down-line members count</option><option value="afl_rank_bsd_package">Rank advancement based on joined package</option><option value="afl_rank_bsd_sales">Rank advancement based on personal or team sales</option><option value="afl_rank_bsd_downline_package">Rank advancement based on Downline member(s) packages</option><option value="afl_rank_bsd_sales_plus_rank">Rank advancement based on personal or team sales + Downline Rank</option><option value="afl_rank_bsd_custom_rule">Rank advancement based on Custom Rule</option></select>
+                    </div>
+                    <div id="ran-conf-sub-wrapper"><fieldset class="form-wrapper" id="edit-rank-conf"><div class="fieldset-wrapper"><div id="max-rank-count-div"><div class="form-item clearfix form-type-select form-item-afl-max-ranks form-group" data-toggle="tooltip" title="Please mention the maximum rank number">
+                    <label for="edit-afl-max-ranks">Maximum Rank <span class="form-required" title="This field is required.">*</span></label>
+                    <select id="edit-afl-max-ranks" name="afl_max_ranks" class="form-select form-control required"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4" selected="selected">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select>
+                    </div>
+                    </div><hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-rank-further-settings"><legend><span class="fieldset-legend">Rank configurations</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-afl-rank-name-1 form-group">
+                    <label for="edit-afl-rank-name-1">Rank-1 Title <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-name-1" name="afl_rank_name_1" value="Consultant" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-dir-downline-cnt-1 form-group">
+                    <label for="edit-afl-rank-dir-downline-cnt-1">Rank-1 - Required Direct Downline Member Count <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-dir-downline-cnt-1" name="afl_rank_dir_downline_cnt_1" value="3" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-team-member-cnt-1 form-group">
+                    <label for="edit-afl-rank-team-member-cnt-1">Rank-1 - Required Team Members (Excluding Direct Downline members) <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-team-member-cnt-1" name="afl_rank_team_member_cnt_1" value="0" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-color-1 form-group" data-toggle="tooltip" title="Format : &amp;lt;RBG color code&amp;gt;  Example : #ffffff">
+                    <label for="edit-afl-rank-color-1">Rank-1 color </label>
+                    <input type="text" id="edit-afl-rank-color-1" name="afl_rank_color_1" value="#595F23" size="60" maxlength="128" class="form-text form-control input-lg-3" />
+                    </div>
+                    <hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div class="form-item clearfix form-type-textfield form-item-afl-rank-name-2 form-group">
+                    <label for="edit-afl-rank-name-2">Rank-2 Title <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-name-2" name="afl_rank_name_2" value="Executive" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-dir-downline-cnt-2 form-group">
+                    <label for="edit-afl-rank-dir-downline-cnt-2">Rank-2 - Required Direct Downline Member Count <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-dir-downline-cnt-2" name="afl_rank_dir_downline_cnt_2" value="3" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-team-member-cnt-2 form-group">
+                    <label for="edit-afl-rank-team-member-cnt-2">Rank-2 - Required Team Members (Excluding Direct Downline members) <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-team-member-cnt-2" name="afl_rank_team_member_cnt_2" value="9" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-color-2 form-group" data-toggle="tooltip" title="Format : &amp;lt;RBG color code&amp;gt;  Example : #ffffff">
+                    <label for="edit-afl-rank-color-2">Rank-2 color </label>
+                    <input type="text" id="edit-afl-rank-color-2" name="afl_rank_color_2" value="#829F53" size="60" maxlength="128" class="form-text form-control input-lg-3" />
+                    </div>
+                    <hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div class="form-item clearfix form-type-textfield form-item-afl-rank-name-3 form-group">
+                    <label for="edit-afl-rank-name-3">Rank-3 Title <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-name-3" name="afl_rank_name_3" value="Director" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-dir-downline-cnt-3 form-group">
+                    <label for="edit-afl-rank-dir-downline-cnt-3">Rank-3 - Required Direct Downline Member Count <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-dir-downline-cnt-3" name="afl_rank_dir_downline_cnt_3" value="3" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-team-member-cnt-3 form-group">
+                    <label for="edit-afl-rank-team-member-cnt-3">Rank-3 - Required Team Members (Excluding Direct Downline members) <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-team-member-cnt-3" name="afl_rank_team_member_cnt_3" value="27" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-color-3 form-group" data-toggle="tooltip" title="Format : &amp;lt;RBG color code&amp;gt;  Example : #ffffff">
+                    <label for="edit-afl-rank-color-3">Rank-3 color </label>
+                    <input type="text" id="edit-afl-rank-color-3" name="afl_rank_color_3" value="#A2B964" size="60" maxlength="128" class="form-text form-control input-lg-3" />
+                    </div>
+                    <hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div class="form-item clearfix form-type-textfield form-item-afl-rank-name-4 form-group">
+                    <label for="edit-afl-rank-name-4">Rank-4 Title <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-name-4" name="afl_rank_name_4" value="Sr Director" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-dir-downline-cnt-4 form-group">
+                    <label for="edit-afl-rank-dir-downline-cnt-4">Rank-4 - Required Direct Downline Member Count <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-dir-downline-cnt-4" name="afl_rank_dir_downline_cnt_4" value="3" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-team-member-cnt-4 form-group">
+                    <label for="edit-afl-rank-team-member-cnt-4">Rank-4 - Required Team Members (Excluding Direct Downline members) <span class="form-required" title="This field is required.">*</span></label>
+                    <input type="text" id="edit-afl-rank-team-member-cnt-4" name="afl_rank_team_member_cnt_4" value="71" size="60" maxlength="128" class="form-text form-control input-lg-3 required" />
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-rank-color-4 form-group" data-toggle="tooltip" title="Format : &amp;lt;RBG color code&amp;gt;  Example : #ffffff">
+                    <label for="edit-afl-rank-color-4">Rank-4 color </label>
+                    <input type="text" id="edit-afl-rank-color-4" name="afl_rank_color_4" value="#5F1E02" size="60" maxlength="128" class="form-text form-control input-lg-3" />
+                    </div>
+                    <hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"></div></fieldset>
+                    </div></div></fieldset>
+                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-Tbv_SnOE3jGjIe4irLtSW38WDoBxwTbce4YSjNkf96E" />
+                    <input type="hidden" name="form_token" value="kJqunpzvDoyLWfevBFpkrVEGbWaXqILfOpJSi9rC2uA" />
+                    <input type="hidden" name="form_id" value="afl_rank_settings" />
+                    </div></form>
+                    </div> 
+                    </div>
+                    </div>
+              </tab>
+              <tab heading="Payout">
+                <div class="region region-content">
+                    <div id="block-system-main" class="block block-system clearfix">
+                    <form action="/afl-admin/payout-settings" method="post" id="afl-payout-settings" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-system-payout-frequency form-group" data-toggle="tooltip" title="Please mention Payment to E-wallet Frequency">
+                    <label for="edit-afl-system-payout-frequency">Payout <span class="form-required" title="This field is required.">*</span></label>
+                    <select id="edit-afl-system-payout-frequency" name="afl_system_payout_frequency" class="form-select form-control required"><option value="instant" selected="selected">Instant</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option><option value="yearly">Yearly</option></select>
+                    </div>
+                    <div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-payout-further-settings"><legend><span class="fieldset-legend">Payout Configurations</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-afl-payout-min-value form-group" data-toggle="tooltip" title="Please give only integer value">
+                    <label for="edit-afl-payout-min-value">Minimum payout amount <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-afl-payout-min-value" name="afl_payout_min_value" value="100" size="60" maxlength="128" class="form-text form-control input-lg-3 required" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-payout-charges-method-bank form-group" data-toggle="tooltip" title="Please place a (%) if it a percentage value. Example: 25%, 30.5%, 2500, etc.. Mention zero if no charges are applied">
+                    <label for="edit-afl-payout-charges-method-bank">Payout charges - Bank Account <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3 required" type="text" id="edit-afl-payout-charges-method-bank" name="afl_payout_charges_method_bank" value="10%" size="60" maxlength="128" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-afl-payout-charges-method-paypal form-group" data-toggle="tooltip" title="Please place a (%) if it a percentage value. Example: 25%, 30.5%, 2500, etc.. Mention zero if no charges are applied">
+                    <label for="edit-afl-payout-charges-method-paypal">Payout charges - PayPal <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3 required" type="text" id="edit-afl-payout-charges-method-paypal" name="afl_payout_charges_method_paypal" value="10%" size="60" maxlength="128" /></div>
+                    </div>
+                    </div></fieldset>
+                    </div><hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-withdrawal-settings"><legend><span class="fieldset-legend">Withdrawal Settings</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-withdrawal-min-value form-group" data-toggle="tooltip" title="Please give only integer value">
+                    <label for="edit-withdrawal-min-value">Minimum withdrawal amount <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-withdrawal-min-value" name="withdrawal_min_value" value="100" size="60" maxlength="128" class="form-text form-control input-lg-3 required" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-withdrawal-max-value form-group" data-toggle="tooltip" title="Please place a (%) if it a percentage value. Example: 25%, 30.5%, 2500, et.. Mention zero if no limits are applied">
+                    <label for="edit-withdrawal-max-value">Maximum withdrawal amount <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3 required" type="text" id="edit-withdrawal-max-value" name="withdrawal_max_value" value="100%" size="60" maxlength="128" /></div>
+                    </div>
+                    </div></fieldset>
+                    </div><hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-ewallet-transfer"><legend><span class="fieldset-legend">E-wallet Transfer Settings</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-etransfer-min-value form-group" data-toggle="tooltip" title="Please give only integer value">
+                    <label for="edit-etransfer-min-value">Minimum amount to initiate e-wallet transfer <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-etransfer-min-value" name="etransfer_min_value" value="100" size="60" maxlength="128" class="form-text form-control input-lg-3 required" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-etransfer-max-value form-group" data-toggle="tooltip" title="Please place a (%) if it a percentage value. Example: 25%, 30.5%, 2500, etc.. Mention zero if no limits are applied">
+                    <label for="edit-etransfer-max-value">Maximum amount can be transferred from e-wallet <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3 required" type="text" id="edit-etransfer-max-value" name="etransfer_max_value" value="50%" size="60" maxlength="128" /></div>
+                    </div>
+                    <div class="form-item clearfix form-type-textfield form-item-etransfer-charges form-group" data-toggle="tooltip" title="Please place a (%) if it a percentage value. Example: 25%, 30.5%, 2500, etc.. Mention zero if no charges are applied">
+                    <label for="edit-etransfer-charges">E-wallet Transfer charges <span class="form-required" title="This field is required.">*</span></label>
+                    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3 required" type="text" id="edit-etransfer-charges" name="etransfer_charges" value="10%" size="60" maxlength="128" /></div>
+                    </div>
+                    </div></fieldset>
+                    </div><hr style="border:2px solid #7266ba; color:#7266ba; margin:60px 0px 60px 0px"><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-PVSk4dKqghZYeVcQSiH1uIO1zf7mgM5xYlAuBY2zFhI" />
+                    <input type="hidden" name="form_token" value="S2aNSwiJh3vr5P3-SMqTC1aDAKW0cHxMe9Cm9WY9YM8" />
+                    <input type="hidden" name="form_id" value="afl_payout_settings" />
+                    </div></form>
+                    </div> 
+                    </div>
+                    
+              </tab>
+            </tabset>
+          </div> 
+    </div>
+    </div>
+    </div>

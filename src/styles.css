@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Roboto Regular;
+    font-size: 17px;
+}
+.c-sidebar-nav{
+    height: 550px;
+    background-color: cadetblue;
+}
+.label-primary {
+    background-color: darkgreen !important;
+}
+.bg-info {
+    background-color: darkgreen !important;
+}
+.bg-danger {
+    color: #ffffff;
+    background-color: #B22222 !important;
+}
+.c-main>.container-fluid, .c-main>.container-sm, .c-main>.container-md, .c-main>.container-lg, .c-main>.container-xl {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #768192;
+    background-color: white;
+    border-color: #c4c9d0 #c4c9d0 #ebedef;
+    border-bottom-color: #fff;
+}
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+.nav-tabs>li>a {
+    border-bottom-color: #dee5e7;
+    border-radius: 2px 2px 0 0;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+   
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn{
+    background-color: darkgreen;
+    color:white;
+}
+.c-sidebar .c-sidebar-brand, .c-sidebar .c-sidebar-header {
+    background-color:  cadetblue;
+}
+.c-sidebar .c-sidebar-minimizer {
+    background-color: cadetblue;
+}

@@ -1,0 +1,34 @@
+.app-content {
+    height: 100%;
+}
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}

@@ -1,0 +1,56 @@
+<div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <div class="col">
+    
+    <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">Fund Transfer</h1>
+    </div>
+    
+    </div>
+    </div>
+    
+    
+    <div class="wrapper-md ">
+    
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="region region-content">
+    <div id="block-system-main" class="block block-system clearfix">
+    <form action="/afl/initiate-ewallet-transfer" method="post" id="create-ewallet-transfer" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-textfield form-item-transfer-amount form-group">
+    <label for="edit-transfer-amount">Amount to be transferred to others e-wallet <span class="form-required" title="This field is required.">*</span></label>
+    <div class="input-group m-b"><span class="input-group-addon">$</span><input groupfields="$" type="text" id="edit-transfer-amount" name="transfer_amount" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 required" /></div>
+    </div>
+    <div class="form-item form-autocomplete clearfix form-type-entityreference form-item-transferee form-group">
+    <label for="edit-transferee">Transferee (Please provide the transferee username) <span class="form-required" title="This field is required.">*</span></label>
+    <input type="text" id="edit-transferee" name="transferee" value="" size="60" class="form-text form-control input-lg-3 required form-autocomplete" /><span class="fa fa-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-transferee-autocomplete" value="https://matrix.epixelmlmsoftware.com/entityreference_autocomplete/autocomplete/user/%2A/limit%3D50%26property_conditions%255B0%255D%255B0%255D%3Duid%26property_conditions%255B0%255D%255B1%255D%3D2%26property_conditions%255B0%255D%255B2%255D%3D%253E" disabled="disabled" class="autocomplete" />
+    </div>
+    <div class="transaction-password"><div class="form-item clearfix form-type-password form-item-password form-group">
+    <label for="edit-password">Transaction Password <span class="form-required" title="This field is required.">*</span></label>
+    <input type="password" id="edit-password" name="password" size="10" maxlength="128" class="form-text form-control required" />
+    </div>
+    </div><div class="fund-transaction-password"><a href="/afl/ewallet/transaction-authorization/password-verification/YWZsL2luaXRpYXRlLWV3YWxsZXQtdHJhbnNmZXI=/redirect" class="btn btn-primary"> Forget Password</a></div><input type="hidden" name="for_uid" value="3" />
+    <table class="table sticky-enabled">
+    <thead><tr><th>E-wallet Particulars</th><th>Amount</th> </tr></thead>
+    <tbody>
+    <tr class="odd"><td>E-wallet amount already in <br />payout process</td><td>1,470.13 USD</td> </tr>
+    <tr class="even"><td>E-Wallet Balance Available for Transfer</td><td>0.00 USD</td> </tr>
+    <tr class="odd"><td>Transfer Charges</td><td>10%</td> </tr>
+    <tr class="even"><td>Minimum Amount to Initiate Transfer</td><td>100.00 USD</td> </tr>
+    <tr class="odd"><td>Maximum Transferable Amount Percentage / Amount</td><td>50%</td> </tr>
+    <tr class="active even"><td>Maximum Transferable Amount (inc. Transfer Charges)</td><td>0.00 USD</td> </tr>
+    </tbody>
+    </table>
+    <input type="submit" id="edit-submit" name="op" value="Transfer Fund" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-2_I0YSJdpffjFVCfu1oPQMwvHBb-BQyu5sJYe2WqwYM" />
+    <input type="hidden" name="form_token" value="5n-HUGVlDfSv3Z--QwuS7qTslDFJ0kEC_Q8W2H4PGNw" />
+    <input type="hidden" name="form_id" value="create_ewallet_transfer" />
+    </div></form>
+    </div> 
+    </div>
+    </div>
+    </div>

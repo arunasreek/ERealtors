@@ -1,0 +1,1116 @@
+.block.clearfix {
+    clear: both;
+}
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.block {
+    display: block;
+}
+form.node-form, form .from-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+ 
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #dee5e7;
+    padding: 15px;
+}
+.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right:3px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.form-control {
+  
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+   
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+button, input, select, textarea {
+    font-family: inherit;
+   
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+
+}
+.panel-default {
+    border-color: #dee5e7;
+}
+.panel {
+    border-radius: 2px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+  
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel>.table-responsive {
+    margin-bottom: 0;
+    border: 0;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel>.table-responsive:first-child>.table:first-child, .panel>.table:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel>.panel-collapse>.table, .panel>.table, .panel>.table-responsive>.table {
+    margin-bottom: 0;
+}
+.table-responsive table {
+    border: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+   
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-responsive table thead {
+    background: #e5e5e5;
+}
+afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+.afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px 15px;
+    border-top: 1px solid #eaeff0;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table-responsive tbody th, .table-responsive tbody td {
+    padding: 15px 0;
+    text-align: center;
+    border-right: solid 1px #ccc!important;
+    font-size: 14px;
+    color: #3f4454;
+    border-bottom: solid 1px #ccc!important;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.m-t-22 {
+    margin-top: 22px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    color: #fff!important;
+    background-color: #6254b2;
+    border-color: #5a4daa;
+}
+.btn {
+    font-weight: 500;
+    border-radius: 2px;
+    outline: 0!important;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+   
+    touch-action: manipulation;
+  
+    user-select: none;
+   
+}
+button, input, optgroup, select, textarea {
+    margin: 2px;
+    font: inherit;
+   
+}
+.table>thead>tr>th {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eaeff0;
+    border-right: solid 1px #cecece !important;
+}
+form.node-form, form .from-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+    
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #dee5e7;
+    padding: 15px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.field-ui-overview tr.region-populated {
+    display: none;
+}
+table.field-ui-overview tr.region-message td {
+    font-style: italic;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+.i-checks input {
+    position: absolute;
+    margin-left: -20px;
+    opacity: 0;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+.checkbox, .radio {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.i-checks {
+    padding-left: 20px;
+    cursor: pointer;
+}
+.i-checks input:checked+i {
+    border-color: #23b7e5;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.table > tbody > tr > th, .table > tfoot > tr > th, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px 15px;
+    border: none;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+fieldset legend {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    border-bottom: 1px solid #dee5e7;
+    padding-bottom: 12px;
+}
+.form-radios {
+    padding: 15px 0;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 2px;
+     margin-bottom: 2px;
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+.i-checks input {
+    opacity: 0;
+}
+.i-checks input[type=radio]+i, .i-checks input[type=radio]+i:before {
+    border-radius: 50%;
+}
+.i-checks input:checked+i {
+    border-color: #23b7e5;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+.i-checks input:checked+i:before {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #23b7e5;
+}
+.i-checks>i:before {
+    position: absolute;
+    content: "";
+    transition: all .2s;
+}
+.checkbox+.checkbox, .radio+.radio {
+    margin-top: -5px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.field-ui-overview tr.region-populated {
+    display: none;
+}
+table.field-ui-overview tr.region-message td {
+    font-style: italic;
+}
+.afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+padding: 8px 15px;
+}
+table.field-ui-overview tr.add-new td {
+    vertical-align: top;
+    white-space: nowrap;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+table.field-ui-overview tr.add-new .add-new-placeholder {
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+.form-control, .form-control:focus {
+   
+    box-shadow: none;
+}
+div.vertical-tabs {
+    margin: 1em 0 1em 15em;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.vertical-tabs ul.vertical-tabs-list {
+    width: 15em;
+    list-style: none;
+    list-style-image: none;
+    border-top: 1px solid #ccc;
+    padding: 0;
+    position: relative;
+    margin: -1px 0 -1px -15em;
+    float: left;
+}
+.vertical-tabs ul.vertical-tabs-list li.selected {
+    background-color: #fff;
+    border-right-width: 0;
+}
+.vertical-tabs ul.vertical-tabs-list li {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-top: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+.vertical-tabs ul.vertical-tabs-list li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 0.6em;
+}
+.vertical-tabs ul.vertical-tabs-list .selected strong {
+    color: #000;
+}
+.vertical-tabs ul.vertical-tabs-list li a strong {
+    font-weight: 500;
+}
+.vertical-tabs ul.vertical-tabs-list .summary {
+    display: block;
+}
+.vertical-tabs fieldset.vertical-tabs-pane {
+    padding: 1em;
+}
+.vertical-tabs fieldset.vertical-tabs-pane {
+    
+    padding: 0 1em;
+    border: 0;
+}
+fieldset.vertical-tabs-pane legend {
+    display: none;
+}
+fieldset legend {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    border-bottom: 1px solid #dee5e7;
+    padding-bottom: 12px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.field-ui-overview tr.region-populated {
+    display: none;
+}
+table.field-ui-overview tr.region-message td {
+    font-style: italic;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+.i-checks input {
+    position: absolute;
+    margin-left: -20px;
+    opacity: 0;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+.checkbox, .radio {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.i-checks {
+    padding-left: 20px;
+    cursor: pointer;
+}
+.i-checks input:checked+i {
+    border-color: #23b7e5;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.m-n {
+    margin: 0!important;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+}
+.h3, h3 {
+    font-size: 24px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+}
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.app-content-body {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.app-content:after {
+    clear: both;
+}
+.app-content:before, .app-content:after {
+    display: table;
+    content: " ";
+}
+#footer {
+    position: relative;
+}
+.app-footer {
+    
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1005;
+}
+.b-t {
+    border-top: 1px solid #dee5e7;
+}
+.wrapper {
+    padding: 15px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.block.clearfix {
+    clear: both;
+}
+.block {
+    display: block;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.text-muted {
+    color: #98a6ad;
+}
+.b-t {
+    border-top: 1px solid #dee5e7;
+}
+.wrapper {
+    padding: 15px;
+}
+.bg-light {
+    color: #58666e;
+    background-color: #edf1f2;
+}
+.tab-container, .tab-container .pagination {
+    margin-bottom: 0;
+}
+.hide {
+    display: none!important;
+}
+.h2, h2 {
+    font-size: 30px;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.nav-tabs {
+    border-color: #dee5e7;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+.nav-tabs>li.active>a {
+    border-bottom-color: #fff!important;
+}
+.nav-tabs>li:hover>a, .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover {
+    border-color: #dee5e7;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.nav-tabs>li>a {
+    
+    border-radius: 2px 2px 0 0;
+}
+
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.element-invisible {
+    display: none;
+}
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+.nav-tabs>li>a {
+    border-bottom-color: #dee5e7;
+    border-radius: 2px 2px 0 0;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-tabs>li>a {
+    border-bottom-color: #dee5e7;
+    border-radius: 2px 2px 0 0;
+}
+.nav-tabs {
+    border-color: #dee5e7;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ol, ul {
+    margin-top: 0;
+    
+}
+.from-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dee5e7;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-color: #dee5e7;
+    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+element.style {
+    position: fixed;
+    top: 0px;
+    left: 266px;
+    visibility: hidden;
+    width: 1047px;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+element.style {
+    width: 430px;
+    display: table-cell;
+}
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+element.style {
+    display: table-cell;
+    width: 293px;
+}
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+element.style {
+    width: 324px;
+    display: table-cell;
+}
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+element.style {
+    position: fixed;
+    top: 0px;
+    left: 266px;
+    visibility: hidden;
+    width: 1047px;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.table>thead>tr>th {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eaeff0;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+}
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px 15px;
+    border-top: 1px solid #eaeff0;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.element-invisible {
+    display: none;
+}
+label {
+    font-weight: 400;
+}
+label {
+    
+    max-width: 100%;
+    margin-bottom: 5px;
+   
+}
+.form-control, .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-control {
+    border-color: #cfdadd;
+    border-radius: 2px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-actions.form-wrapper {
+    margin-top: 55px;
+}
+.form-actions .btn, form .from-panel .btn {
+    margin-right: 4px;
+}
+
+small, .small {
+    font-size: 13px;
+}
+fieldset legend {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    border-bottom: 1px solid #dee5e7;
+    padding-bottom: 12px;
+}
+.form-radios {
+    padding: 15px 0;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 2px;
+     margin-bottom: 2px;
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+.i-checks input {
+    opacity: 0;
+}
+.i-checks input[type=radio]+i, .i-checks input[type=radio]+i:before {
+    border-radius: 50%;
+}
+.i-checks input:checked+i {
+    border-color: #23b7e5;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+.i-checks input:checked+i:before {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #23b7e5;
+}
+.i-checks>i:before {
+    position: absolute;
+    content: "";
+    transition: all .2s;
+}
+.checkbox+.checkbox, .radio+.radio {
+    margin-top: -5px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.field-ui-overview tr.region-populated {
+    display: none;
+}
+table.field-ui-overview tr.region-message td {
+    font-style: italic;
+}
+.afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+padding: 8px 15px;
+}
+table.field-ui-overview tr.add-new td {
+    vertical-align: top;
+    white-space: nowrap;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+table.field-ui-overview tr.add-new .add-new-placeholder {
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+.form-control, .form-control:focus {
+   
+    box-shadow: none;
+}
+div.vertical-tabs {
+    margin: 1em 0 1em 15em;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.vertical-tabs ul.vertical-tabs-list {
+    width: 15em;
+    list-style: none;
+    list-style-image: none;
+    border-top: 1px solid #ccc;
+    padding: 0;
+    position: relative;
+    margin: -1px 0 -1px -15em;
+    float: left;
+}
+.vertical-tabs ul.vertical-tabs-list li.selected {
+    background-color: #fff;
+    border-right-width: 0;
+}
+.vertical-tabs ul.vertical-tabs-list li {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-top: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+.vertical-tabs ul.vertical-tabs-list li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 0.6em;
+}
+.vertical-tabs ul.vertical-tabs-list .selected strong {
+    color: #000;
+}
+.vertical-tabs ul.vertical-tabs-list li a strong {
+    font-weight: 500;
+}
+.vertical-tabs ul.vertical-tabs-list .summary {
+    display: block;
+}
+.vertical-tabs fieldset.vertical-tabs-pane {
+    padding: 1em;
+}
+.vertical-tabs fieldset.vertical-tabs-pane {
+    
+    padding: 0 1em;
+    border: 0;
+}
+fieldset.vertical-tabs-pane legend {
+    display: none;
+}
+fieldset legend {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    border-bottom: 1px solid #dee5e7;
+    padding-bottom: 12px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table.field-ui-overview tr.region-populated {
+    display: none;
+}
+table.field-ui-overview tr.region-message td {
+    font-style: italic;
+}
+a.tabledrag-handle .handle {
+    width: 23px;
+    height: 22px;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+table.field-ui-overview tr.add-new .label-input {
+    float: left;
+}
+.i-checks input {
+    position: absolute;
+    margin-left: -20px;
+    opacity: 0;
+}
+.i-checks>i {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #cfdadd;
+}
+.checkbox, .radio {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.i-checks {
+    padding-left: 20px;
+    cursor: pointer;
+}
+.i-checks input:checked+i {
+    border-color: #23b7e5;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
