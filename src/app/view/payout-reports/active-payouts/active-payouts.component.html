@@ -1,571 +1,146 @@
-<div class="app-content-body ">
-    <div class="hbox hbox-auto-xs hbox-auto-sm">
-    <div class="col">
-    
-    <div class="bg-light lter b-b wrapper-md">
-    <div class="row">
-    <div class="col-sm-12 col-xs-12">
-    <h1 class="m-n h3">Payouts - Awaiting Approval</h1>
-    <small class="text-muted"></small>
-    </div>
-    
-    </div>
-    </div>
-    
-    
-    <div class="wrapper-md ">
-    
-    
-    <div class="row">
-    <div class="region region-announcements">
-    <div id="block-block-9" class="block block-block contextual-links-region clearfix">
-    <p>This is a preset Demo. More than one users may check this demo simultaneously. &nbsp;Changing&nbsp;the configurations of this demo makes unexpected results to other users and it may confuse them. So please be careful to make changes to the configurations in this preset demo. Please <a class="text-info" href="https://www.epixelmlmsoftware.com/contact-us" target="_blank">contact us</a> for the dedicated demo tailored for your requirements. We will be resetting the demo everyday midnight which will remove all the test values.&nbsp;</p>
-    </div> 
-    </div>
-    </div>
-    
-    
-    <div class="row">
-    <div class="col-md-12">
-    <div class="region region-content-top">
-    <div id="block-afl-widgets-generate-payout-report" class="block block-afl-widgets contextual-links-region clearfix">
-    <form action="/afl-admin/payouts" method="post" id="generate-payout-report" accept-charset="UTF-8" siq_id="autopick_6305"><div class="from-panel"><p>Please select the date and click below button to generate payout reports. Generates payout report till the selected date</p><div class="container-inline form-wrapper" id="edit-container"><div class="container-inline-date"><div class="form-item clearfix form-type-date-popup form-item-afl-last-payout-date form-group">
-    <div id="edit-afl-last-payout-date" class="date-padding"><div class="form-item clearfix form-type-textfield form-item-afl-last-payout-date-date form-group" data-toggle="tooltip" title="" data-original-title=" E.g., 07/17/2020">
-    <label for="edit-afl-last-payout-date-datepicker-popup-0">Date </label>
-    <input type="text" id="edit-afl-last-payout-date-datepicker-popup-0" name="afl_last_payout_date[date]" value="07/16/2020" size="20" maxlength="30" class="form-text form-control input-lg-3">
-    </div>
-    </div>
-    </div>
-    </div><p>&nbsp;</p><input type="submit" id="edit-submit--2" name="op" value="Generate Payout Report" class="form-submit btn btn-default btn-primary"></div><input type="hidden" name="form_build_id" value="form-sw5ygZkmQaYr5t51ZULPw70s7ZBRvjFkW-i7ulNRuH0">
-    <input type="hidden" name="form_token" value="nmPMWjefJ8GW8U73F9u66-n-_D7J2-_-Xvbg7d2iw0k">
-    <input type="hidden" name="form_id" value="generate_payout_report">
-    </div></form>
-    </div> 
-    </div>
-    <!--
-        <div class="tab-container"><h2 class="hide">Primary tabs</h2><ul class="tabs--primary nav nav-tabs"><li class="active"><a href="/afl-admin/payouts" class="active">Payouts - Awaiting Approval<span class="element-invisible">(active tab)</span></a></li>
-    <li><a href="/afl-admin/payouts/ready-for-payment">Payouts - Ready For Payment</a></li>
-    <li><a href="/afl-admin/payouts/pay-later">Cancelled Payouts</a></li>
-    <li><a href="/afl-admin/payouts/completed">Payouts History</a></li>
-    </ul></div>
-    -->
-    <div>
-        <tabset>
-            <tab heading="Payouts - Awaiting Approval" >
-              <div class="view-header">
-                <div class="panel">
-                <div class="wrapper-lg">
-                <div>
-                <h3>Payout in 2 steps</h3>
-                <div class="m-b">
-                <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-1: Generate and Initiate Payment</span>
-                In this step we have to <a href="/afl-admin/payouts" class="text-success active">Generate</a> the payout report. It can be scheduled automatically. The system will generate the report for a pre-defined interval. In manual process, we have to click on the below "Generate Payout Report" Button. After generating report, we can initiate the payment. Click "Process Payment" button after selecting record(s)to initiate a payment. The payout record will be listed in <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a>.
-                </div>
-                <div class="m-b">
-                <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-2: Download the report and Mark as paid</span>
-                In <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a> page we have to <a href="/afl-admin/payouts/ready-for-payment/export" class="btn btn-primary"><span class="glyphicon glyphicon-download"></span> Download</a> the payout report and make the payment. After making payment, please change the status to <span class="text-primary">Mark as Paid</span> by clicking "Mark as Paid" button after selecting record(s). After this step, it will be considered as payment processes complete. <span class="text-danger">All the steps are Mandatory</span>
-                </div>
-                </div>
-                <div class="line line-lg b-b b-light"></div>
-                </div>
-                </div> </div>
-                <div class="view-filters">
-                  <form action="/afl-admin/payouts" method="get" id="views-exposed-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_7894"><div class="from-panel"><div class="views-exposed-form form-inline">
-                  <div class="views-exposed-widgets clearfix">
-                  <div id="edit-mail-wrapper" class="views-exposed-widget views-widget-filter-mail form-group">
-                  <label for="edit-mail">
-                  E-mail </label>
-                  <div class="views-widget">
-                  <div class="form-item clearfix form-type-textfield form-item-mail form-group">
-                  <input type="text" id="edit-mail" name="mail" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
+<div class="app-content-body">	
+  <div class="hbox hbox-auto-xs hbox-auto-sm">
+      <div class="col">
+        <div class="row">
+          <div class="col-md-12">
+          <div class="region region-content">
+          <div id="block-system-main" class="block block-system clearfix">
+          <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
+          <div class="view-filters">
+          <form action="/afl/track-epin" method="get" id="views-exposed-form-track-epin-admin-page" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
+          <div class="views-exposed-widgets clearfix">
+          <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
+          <label for="edit-pin">
+          Search by Member ID </label>
+          <div class="views-widget">
+          <div class="form-item clearfix form-type-textfield form-item-pin form-group">
+          <input type="text" id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+          </div>
+          </div>
+          </div>
+          <div class="views-exposed-widget views-submit-button form-group m-t-22">
+          <input type="submit" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" /> 
+          <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> 
+          <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+        </div>
+          </div>
+          </div>
+          </div></form> </div>
+          <div class="business">
+              <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH JUNE 2020</h2><br><br>
+              <div class="containerfluid">
+                  <div class="row">
+                  <div class="col-sm-8 ">
+                  <div class="row ">
+                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay out No :</p>
+
+                  </div>
+                  <div class="row ">
+                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</p>
+                  </div>
+                  <div class="row ">
+                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank :</p>
+                  </div>
+                  <div class="row ">
+                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id Number :</p>
+                  </div>
+                  <div class="row ">
+                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :</p>
                   </div>
                   </div>
+                  <div class="col-sm-4 white-box">
+                          <div class="div1">
+                                  <span class="border"></span>
+                          </div>
                   </div>
-                  <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
-                  <label for="edit-uid">
-                  Username </label>
-                  <div class="views-widget">
-                  <div class="form-item form-autocomplete clearfix form-type-textfield form-item-uid form-group" data-toggle="tooltip" title="" role="application" data-original-title="Enter a comma separated list of user names.">
-                  <input type="text" id="edit-uid" name="uid" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 form-autocomplete" autocomplete="OFF" aria-autocomplete="list"><span class="icon glyphicon glyphicon-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-uid-autocomplete" value="https://matrix.epixelmlmsoftware.com/admin/views/ajax/autocomplete/user" disabled="disabled" class="autocomplete autocomplete-processed">
-                  <span class="element-invisible" aria-live="assertive" id="edit-uid-autocomplete-aria-live"></span></div>
+
                   </div>
+
+              </div>
+              <div class="container ">
+                  <h3 class="text-center">BUSINESS DETAILS </h3>
+                  <br>
+              </div>
+              
+                 <div class="view-content">
+                     <div class="panel panel-default">
+                      <div class="table-responsive">
+                          <table class="views-table cols-2 table">
+                              <thead>
+                              <tr>
+                                  <th class="views-field views-field-fast-track-income">Fast Track Income </th>
+                                  <th class="views-field views-auto-pool-working-plan">AUTO POOL NON WORKING PLAN </th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class=" odd views-row-first">
+                                      <td class="views-field views-field-fast-track-income">
+                              <p style="margin-left: -23px;">Direct Collection : Rs.25,000/-@ 12.5% = 3,125/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 1st Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 2nd Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 3rd Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 4th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 5th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 6th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 7th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down Line upgrad incentive Rs. 8,000/-</p>
+                              <p style="margin-left:280px">M.F.A. Rs.10,000/-</p>
+                              <p style="margin-left:250px">Eligibility Rs.23,625/-</p>
+                                
+                                      </td>
+                                      <td class="views-field views-field-fast-auto-pool-working-plan">
+                                          <p>1st Level Rs.6,000/-</p>
+                                          <p>2nd Level Rs.6,000/-</p>
+                                          <p>3rd Level Rs.6,000/-</p>
+                                          <p>4th Level Rs.6,000/-</p>
+                                          <p>5th Level Rs.6,000/-</p>
+                                          <p>6th Level Rs.6,000/-</p>
+                                          <p>7th Level Rs.6,000/-</p>
+                                          <p>Eligibility Rs.6,000/-</p>
+                                      </td>
+                                      
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      </div>
                   </div>
-                  <div id="edit-uid-raw-wrapper" class="views-exposed-widget views-widget-filter-uid_raw form-group">
-                  <label for="edit-uid-raw">
-                  User Id </label>
-                  <div class="views-widget">
-                  <div class="form-item clearfix form-type-textfield form-item-uid-raw form-group">
-                  <input type="text" id="edit-uid-raw" name="uid_raw" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-                  </div>
-                  </div>
-                  </div>
-                  <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                  <input type="submit" id="edit-submit-active-payout" name="" value="Search" class="form-submit btn btn-default btn-primary"> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary"> </div>
-                  </div>
-                  </div>
-                  </div></form> </div>
                   <div class="view-content">
-                    <div class="vbo-views-form"><form action="/afl-admin/payouts" method="post" id="views-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_4064"><div class="from-panel"><input type="hidden" name="form_build_id" value="form-bYCfvz9iyEqesD8ZsJs5t7O7qwT4dFTDXh-D-jViIiU">
-                    <input type="hidden" name="form_token" value="V3AQowPnFbw5Wfpr7g7QPrwxigB16TTPTS6FjKfWRDw">
-                    <input type="hidden" name="form_id" value="views_form_active_payout_page">
-                    <input class="select-all-rows" type="hidden" name="select_all" value="">
-                    <fieldset class="container-inline form-wrapper" id="edit-select"><legend><span class="fieldset-legend">Operations</span></legend><div class="fieldset-wrapper"><input type="submit" id="edit-actionafl-process-the-payment" name="op" value="Process the payment" class="form-submit btn btn-default btn-primary"><input type="submit" id="edit-actionafl-revert-payment" name="op" value="Cancel Payout" class="form-submit btn btn-default btn-primary"></div></fieldset>
-                    <div class="panel panel-default">
-                    <div class="table-responsive">
-                    <table class="views-table cols-9 table">
-                    <thead>
-                    <tr>
-                    <th class="views-field views-field-views-bulk-operations">
-                    <div class="form-item clearfix form-type-checkbox">
-                    <label class="i-checks"><input class="vbo-table-select-all form-checkbox checkbox" type="checkbox" value="1"><i></i></label>
-                    </div>
-                    </th>
-                    <th class="views-field views-field-name">
-                    Name </th>
-                    <th class="views-field views-field-created">
-                    Generated Date </th>
-                    <th class="views-field views-field-payout-method">
-                    Payout Method </th>
-                    <th class="views-field views-field-php-1">
-                    Payment Details </th>
-                    <th class="views-field views-field-notes">
-                    Notes </th>
-                    <th class="views-field views-field-php">
-                    Actual Amount </th>
-                    <th class="views-field views-field-php-2">
-                    Charges </th>
-                    <th class="views-field views-field-php-3">
-                    Net Amount Payable </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="odd views-row-first">
-                    <td class="views-field views-field-views-bulk-operations">
-                    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-0">
-                    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-0" name="views_bulk_operations[0]" value=""><i></i></label>
-                    </div>
-                    </td>
-                    <td class="views-field views-field-name">
-                    Business Director <span class="label bg-info"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label label-primary"><a href="/user/3">3</a></span> </td>
-                    <td class="views-field views-field-created">
-                    01/03/2019 - 10:16 </td>
-                    <td class="views-field views-field-payout-method">
-                    Paypal </td>
-                    <td class="views-field views-field-php-1">
-                    </td>
-                    <td class="views-field views-field-notes">
-                    Payout Initiated </td>
-                    <td class="views-field views-field-php">
-                    $ 188.00 </td>
-                    <td class="views-field views-field-php-2">
-                    $ 18.80 </td>
-                    <td class="views-field views-field-php-3">
-                    $ 169.20
-                    </td>
-                    </tr>
-                    <tr class="even">
-                    <td class="views-field views-field-views-bulk-operations">
-                    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-1">
-                    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-1" name="views_bulk_operations[1]" value=""><i></i></label>
-                    </div>
-                    </td>
-                    <td class="views-field views-field-name">
-                    mlm.member mlm.member <span class="label bg-info"><a href="/user/15" title="View user profile." class="username">mlm.member</a></span> <span class="label label-primary"><a href="/user/15">15</a></span> </td>
-                    <td class="views-field views-field-created">
-                    01/03/2019 - 10:16 </td>
-                    <td class="views-field views-field-payout-method">
-                    Bank Account </td>
-                    <td class="views-field views-field-php-1">
-                    <strong>Account Number</strong> : 943878878<br><strong>Bank Name</strong> : afsaf<br><strong>Swift Code</strong> : erwewet<br><strong>IFSC code</strong> : twtetwe<br><strong>Country</strong> : ewtwetwe </td>
-                    <td class="views-field views-field-notes">
-                    Payout Initiated </td>
-                    <td class="views-field views-field-php">
-                    $ 112.00 </td>
-                    <td class="views-field views-field-php-2">
-                    $ 11.20 </td>
-                    <td class="views-field views-field-php-3">
-                    $ 100.80
-                    </td>
-                    </tr>
-                    <tr class="odd views-row-last">
-                    <td class="views-field views-field-views-bulk-operations">
-                    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-2">
-                    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-2" name="views_bulk_operations[2]" value=""><i></i></label>
-                    </div>
-                    </td>
-                    <td class="views-field views-field-name">
-                    Whoopi Bowers <span class="label bg-info"><a href="/user/49" title="View user profile." class="username">whoopi</a></span> <span class="label label-primary"><a href="/user/49">49</a></span> </td>
-                    <td class="views-field views-field-created">
-                    01/03/2019 - 10:16 </td>
-                    <td class="views-field views-field-payout-method">
-                    Bank Account </td>
-                    <td class="views-field views-field-php-1">
-                    <strong>Account Number</strong> : a<br><strong>Bank Name</strong> : a<br><strong>Swift Code</strong> : a<br><strong>IFSC code</strong> : a<br><strong>Country</strong> : a </td>
-                    <td class="views-field views-field-notes">
-                    Payout Initiated </td>
-                    <td class="views-field views-field-php">
-                    $ 1,112.00 </td>
-                    <td class="views-field views-field-php-2">
-                    $ 111.20 </td>
-                    <td class="views-field views-field-php-3">
-                    $ 1,000.80
-                    </td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    </div>
-                    </div>
-                    </div></form></div> </div>
-               </tab>
-          <tab heading="Payouts - Ready For Payment" id="tab1" >
-            <div class="view-header">
-              <div class="panel">
-              <div class="wrapper-lg">
-              <div>
-              <h3>Payout in 2 steps</h3>
-              <div class="m-b">
-              <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-1: Generate and Initiate Payment</span>
-              In this step we have to <a href="/afl-admin/payouts" class="text-success active">Generate</a> the payout report. It can be scheduled automatically. The system will generate the report for a pre-defined interval. In manual process, we have to click on the below "Generate Payout Report" Button. After generating report, we can initiate the payment. Click "Process Payment" button after selecting record(s)to initiate a payment. The payout record will be listed in <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a>.
-              </div>
-              <div class="m-b">
-              <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-2: Download the report and Mark as paid</span>
-              In <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a> page we have to <a href="/afl-admin/payouts/ready-for-payment/export" class="btn btn-primary"><span class="glyphicon glyphicon-download"></span> Download</a> the payout report and make the payment. After making payment, please change the status to <span class="text-primary">Mark as Paid</span> by clicking "Mark as Paid" button after selecting record(s). After this step, it will be considered as payment processes complete. <span class="text-danger">All the steps are Mandatory</span>
-              </div>
-              </div>
-              <div class="line line-lg b-b b-light"></div>
-              </div>
-              </div> </div>
-              <div class="view-filters">
-                <form action="/afl-admin/payouts" method="get" id="views-exposed-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_7894"><div class="from-panel"><div class="views-exposed-form form-inline">
-                <div class="views-exposed-widgets clearfix">
-                <div id="edit-mail-wrapper" class="views-exposed-widget views-widget-filter-mail form-group">
-                <label for="edit-mail">
-                E-mail </label>
-                <div class="views-widget">
-                <div class="form-item clearfix form-type-textfield form-item-mail form-group">
-                <input type="text" id="edit-mail" name="mail" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-                </div>
-                </div>
-                </div>
-                <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
-                <label for="edit-uid">
-                Username </label>
-                <div class="views-widget">
-                <div class="form-item form-autocomplete clearfix form-type-textfield form-item-uid form-group" data-toggle="tooltip" title="" role="application" data-original-title="Enter a comma separated list of user names.">
-                <input type="text" id="edit-uid" name="uid" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 form-autocomplete" autocomplete="OFF" aria-autocomplete="list"><span class="icon glyphicon glyphicon-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-uid-autocomplete" value="https://matrix.epixelmlmsoftware.com/admin/views/ajax/autocomplete/user" disabled="disabled" class="autocomplete autocomplete-processed">
-                <span class="element-invisible" aria-live="assertive" id="edit-uid-autocomplete-aria-live"></span></div>
-                </div>
-                </div>
-                <div id="edit-uid-raw-wrapper" class="views-exposed-widget views-widget-filter-uid_raw form-group">
-                <label for="edit-uid-raw">
-                User Id </label>
-                <div class="views-widget">
-                <div class="form-item clearfix form-type-textfield form-item-uid-raw form-group">
-                <input type="text" id="edit-uid-raw" name="uid_raw" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-                </div>
-                </div>
-                </div>
-                <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                <input type="submit" id="edit-submit-active-payout" name="" value="Search" class="form-submit btn btn-default btn-primary"> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary"> </div>
-                </div>
-                </div>
-                </div></form> </div>
-                <fieldset class="container-inline form-wrapper" id="edit-select"><legend><span class="fieldset-legend">Operations</span></legend><div class="fieldset-wrapper"><input type="submit" id="edit-actionafl-reject-payout" name="op" value="Pay Later" class="form-submit btn btn-default btn-primary" disabled=""><input type="submit" id="edit-actionafl-mark-as-paid" name="op" value="Marks as paid" class="form-submit btn btn-default btn-primary" disabled=""></div></fieldset>
-          </tab>
-          <tab heading="Cancelled Payouts">
-            
-    <div class="view-filters">
-    <form action="/afl-admin/payouts" method="get" id="views-exposed-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_7894"><div class="from-panel"><div class="views-exposed-form form-inline">
-    <div class="views-exposed-widgets clearfix">
-    <div id="edit-mail-wrapper" class="views-exposed-widget views-widget-filter-mail form-group">
-    <label for="edit-mail">
-    E-mail </label>
-    <div class="views-widget">
-    <div class="form-item clearfix form-type-textfield form-item-mail form-group">
-    <input type="text" id="edit-mail" name="mail" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-    </div>
-    </div>
-    </div>
-    <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
-    <label for="edit-uid">
-    Username </label>
-    <div class="views-widget">
-    <div class="form-item form-autocomplete clearfix form-type-textfield form-item-uid form-group" data-toggle="tooltip" title="" role="application" data-original-title="Enter a comma separated list of user names.">
-    <input type="text" id="edit-uid" name="uid" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 form-autocomplete" autocomplete="OFF" aria-autocomplete="list"><span class="icon glyphicon glyphicon-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-uid-autocomplete" value="https://matrix.epixelmlmsoftware.com/admin/views/ajax/autocomplete/user" disabled="disabled" class="autocomplete autocomplete-processed">
-    <span class="element-invisible" aria-live="assertive" id="edit-uid-autocomplete-aria-live"></span></div>
-    </div>
-    </div>
-    <div id="edit-uid-raw-wrapper" class="views-exposed-widget views-widget-filter-uid_raw form-group">
-    <label for="edit-uid-raw">
-    User Id </label>
-    <div class="views-widget">
-    <div class="form-item clearfix form-type-textfield form-item-uid-raw form-group">
-    <input type="text" id="edit-uid-raw" name="uid_raw" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-    </div>
-    </div>
-    </div>
-    <div class="views-exposed-widget views-submit-button form-group m-t-22">
-    <input type="submit" id="edit-submit-active-payout" name="" value="Search" class="form-submit btn btn-default btn-primary"> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary"> </div>
-    </div>
-    </div>
-    </div></form> </div>
-          </tab>
-          <tab heading="Payouts History">
-            <div class="view-filters">
-            <form action="/afl-admin/payouts" method="get" id="views-exposed-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_7894"><div class="from-panel"><div class="views-exposed-form form-inline">
-            <div class="views-exposed-widgets clearfix">
-            <div id="edit-mail-wrapper" class="views-exposed-widget views-widget-filter-mail form-group">
-            <label for="edit-mail">
-            E-mail </label>
-            <div class="views-widget">
-            <div class="form-item clearfix form-type-textfield form-item-mail form-group">
-            <input type="text" id="edit-mail" name="mail" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-            </div>
-            </div>
-            </div>
-            <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
-            <label for="edit-uid">
-            Username </label>
-            <div class="views-widget">
-            <div class="form-item form-autocomplete clearfix form-type-textfield form-item-uid form-group" data-toggle="tooltip" title="" role="application" data-original-title="Enter a comma separated list of user names.">
-            <input type="text" id="edit-uid" name="uid" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 form-autocomplete" autocomplete="OFF" aria-autocomplete="list"><span class="icon glyphicon glyphicon-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-uid-autocomplete" value="https://matrix.epixelmlmsoftware.com/admin/views/ajax/autocomplete/user" disabled="disabled" class="autocomplete autocomplete-processed">
-            <span class="element-invisible" aria-live="assertive" id="edit-uid-autocomplete-aria-live"></span></div>
-            </div>
-            </div>
-            <div id="edit-uid-raw-wrapper" class="views-exposed-widget views-widget-filter-uid_raw form-group">
-            <label for="edit-uid-raw">
-            User Id </label>
-            <div class="views-widget">
-            <div class="form-item clearfix form-type-textfield form-item-uid-raw form-group">
-            <input type="text" id="edit-uid-raw" name="uid_raw" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-            </div>
-            </div>
-            </div>
-            <div class="views-exposed-widget views-submit-button form-group m-t-22">
-            <input type="submit" id="edit-submit-active-payout" name="" value="Search" class="form-submit btn btn-default btn-primary"> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary"> </div>
-            </div>
-            </div>
-            </div></form> </div></tab>
-        </tabset>
-      </div>
-    <div class="region region-content">
-    <div id="block-system-main" class="block block-system clearfix">
-    <div class="view view-active-payout view-id-active_payout view-display-id-page view-dom-id-986dae73f5360f2569117b0e402a326d">
-    <!--<div class="view-header">
-    <div class="panel">
-    <div class="wrapper-lg">
-    <div>
-    <h3>Payout in 2 steps</h3>
-    <div class="m-b">
-    <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-1: Generate and Initiate Payment</span>
-    In this step we have to <a href="/afl-admin/payouts" class="text-success active">Generate</a> the payout report. It can be scheduled automatically. The system will generate the report for a pre-defined interval. In manual process, we have to click on the below "Generate Payout Report" Button. After generating report, we can initiate the payment. Click "Process Payment" button after selecting record(s)to initiate a payment. The payout record will be listed in <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a>.
-    </div>
-    <div class="m-b">
-    <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> Step-2: Download the report and Mark as paid</span>
-    In <a href="/afl-admin/payouts/ready-for-payment" class="text-info"> Ready For Payment</a> page we have to <a href="/afl-admin/payouts/ready-for-payment/export" class="btn btn-primary"><span class="glyphicon glyphicon-download"></span> Download</a> the payout report and make the payment. After making payment, please change the status to <span class="text-primary">Mark as Paid</span> by clicking "Mark as Paid" button after selecting record(s). After this step, it will be considered as payment processes complete. <span class="text-danger">All the steps are Mandatory</span>
-    </div>
-    </div>
-    <div class="line line-lg b-b b-light"></div>
-    </div>
-    </div> </div>-->
-
-
-
-
-    <!--<div class="view-filters">
-    <form action="/afl-admin/payouts" method="get" id="views-exposed-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_7894"><div class="from-panel"><div class="views-exposed-form form-inline">
-    <div class="views-exposed-widgets clearfix">
-    <div id="edit-mail-wrapper" class="views-exposed-widget views-widget-filter-mail form-group">
-    <label for="edit-mail">
-    E-mail </label>
-    <div class="views-widget">
-    <div class="form-item clearfix form-type-textfield form-item-mail form-group">
-    <input type="text" id="edit-mail" name="mail" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-    </div>
-    </div>
-    </div>
-    <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
-    <label for="edit-uid">
-    Username </label>
-    <div class="views-widget">
-    <div class="form-item form-autocomplete clearfix form-type-textfield form-item-uid form-group" data-toggle="tooltip" title="" role="application" data-original-title="Enter a comma separated list of user names.">
-    <input type="text" id="edit-uid" name="uid" value="" size="60" maxlength="128" class="form-text form-control input-lg-3 form-autocomplete" autocomplete="OFF" aria-autocomplete="list"><span class="icon glyphicon glyphicon-refresh form-control-feedback" aria-hidden="true"></span><input type="hidden" id="edit-uid-autocomplete" value="https://matrix.epixelmlmsoftware.com/admin/views/ajax/autocomplete/user" disabled="disabled" class="autocomplete autocomplete-processed">
-    <span class="element-invisible" aria-live="assertive" id="edit-uid-autocomplete-aria-live"></span></div>
-    </div>
-    </div>
-    <div id="edit-uid-raw-wrapper" class="views-exposed-widget views-widget-filter-uid_raw form-group">
-    <label for="edit-uid-raw">
-    User Id </label>
-    <div class="views-widget">
-    <div class="form-item clearfix form-type-textfield form-item-uid-raw form-group">
-    <input type="text" id="edit-uid-raw" name="uid_raw" value="" size="30" maxlength="128" class="form-text form-control input-lg-3">
-    </div>
-    </div>
-    </div>
-    <div class="views-exposed-widget views-submit-button form-group m-t-22">
-    <input type="submit" id="edit-submit-active-payout" name="" value="Search" class="form-submit btn btn-default btn-primary"> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary"> </div>
-    </div>
-    </div>
-    </div></form> </div>-->
-
-
-
-    <!--<div class="view-content">
-    <div class="vbo-views-form"><form action="/afl-admin/payouts" method="post" id="views-form-active-payout-page" accept-charset="UTF-8" siq_id="autopick_4064"><div class="from-panel"><input type="hidden" name="form_build_id" value="form-bYCfvz9iyEqesD8ZsJs5t7O7qwT4dFTDXh-D-jViIiU">
-    <input type="hidden" name="form_token" value="V3AQowPnFbw5Wfpr7g7QPrwxigB16TTPTS6FjKfWRDw">
-    <input type="hidden" name="form_id" value="views_form_active_payout_page">
-    <input class="select-all-rows" type="hidden" name="select_all" value="">
-    <fieldset class="container-inline form-wrapper" id="edit-select"><legend><span class="fieldset-legend">Operations</span></legend><div class="fieldset-wrapper"><input type="submit" id="edit-actionafl-process-the-payment" name="op" value="Process the payment" class="form-submit btn btn-default btn-primary"><input type="submit" id="edit-actionafl-revert-payment" name="op" value="Cancel Payout" class="form-submit btn btn-default btn-primary"></div></fieldset>
-    <div class="panel panel-default">
-    <div class="table-responsive">
-    <table class="views-table cols-9 table">
-    <thead>
-    <tr>
-    <th class="views-field views-field-views-bulk-operations">
-    <div class="form-item clearfix form-type-checkbox">
-    <label class="i-checks"><input class="vbo-table-select-all form-checkbox checkbox" type="checkbox" value="1"><i></i></label>
-    </div>
-    </th>
-    <th class="views-field views-field-name">
-    Name </th>
-    <th class="views-field views-field-created">
-    Generated Date </th>
-    <th class="views-field views-field-payout-method">
-    Payout Method </th>
-    <th class="views-field views-field-php-1">
-    Payment Details </th>
-    <th class="views-field views-field-notes">
-    Notes </th>
-    <th class="views-field views-field-php">
-    Actual Amount </th>
-    <th class="views-field views-field-php-2">
-    Charges </th>
-    <th class="views-field views-field-php-3">
-    Net Amount Payable </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd views-row-first">
-    <td class="views-field views-field-views-bulk-operations">
-    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-0">
-    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-0" name="views_bulk_operations[0]" value=""><i></i></label>
-    </div>
-    </td>
-    <td class="views-field views-field-name">
-    Business Director <span class="label bg-info"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label label-primary"><a href="/user/3">3</a></span> </td>
-    <td class="views-field views-field-created">
-    01/03/2019 - 10:16 </td>
-    <td class="views-field views-field-payout-method">
-    Paypal </td>
-    <td class="views-field views-field-php-1">
-    </td>
-    <td class="views-field views-field-notes">
-    Payout Initiated </td>
-    <td class="views-field views-field-php">
-    $ 188.00 </td>
-    <td class="views-field views-field-php-2">
-    $ 18.80 </td>
-    <td class="views-field views-field-php-3">
-    $ 169.20
-    </td>
-    </tr>
-    <tr class="even">
-    <td class="views-field views-field-views-bulk-operations">
-    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-1">
-    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-1" name="views_bulk_operations[1]" value=""><i></i></label>
-    </div>
-    </td>
-    <td class="views-field views-field-name">
-    mlm.member mlm.member <span class="label bg-info"><a href="/user/15" title="View user profile." class="username">mlm.member</a></span> <span class="label label-primary"><a href="/user/15">15</a></span> </td>
-    <td class="views-field views-field-created">
-    01/03/2019 - 10:16 </td>
-    <td class="views-field views-field-payout-method">
-    Bank Account </td>
-    <td class="views-field views-field-php-1">
-    <strong>Account Number</strong> : 943878878<br><strong>Bank Name</strong> : afsaf<br><strong>Swift Code</strong> : erwewet<br><strong>IFSC code</strong> : twtetwe<br><strong>Country</strong> : ewtwetwe </td>
-    <td class="views-field views-field-notes">
-    Payout Initiated </td>
-    <td class="views-field views-field-php">
-    $ 112.00 </td>
-    <td class="views-field views-field-php-2">
-    $ 11.20 </td>
-    <td class="views-field views-field-php-3">
-    $ 100.80
-    </td>
-    </tr>
-    <tr class="odd views-row-last">
-    <td class="views-field views-field-views-bulk-operations">
-    <div class="form-item clearfix form-type-checkbox form-item-views-bulk-operations-2">
-    <label class="i-checks"><input class="vbo-select form-checkbox checkbox" type="checkbox" id="edit-views-bulk-operations-2" name="views_bulk_operations[2]" value=""><i></i></label>
-    </div>
-    </td>
-    <td class="views-field views-field-name">
-    Whoopi Bowers <span class="label bg-info"><a href="/user/49" title="View user profile." class="username">whoopi</a></span> <span class="label label-primary"><a href="/user/49">49</a></span> </td>
-    <td class="views-field views-field-created">
-    01/03/2019 - 10:16 </td>
-    <td class="views-field views-field-payout-method">
-    Bank Account </td>
-    <td class="views-field views-field-php-1">
-    <strong>Account Number</strong> : a<br><strong>Bank Name</strong> : a<br><strong>Swift Code</strong> : a<br><strong>IFSC code</strong> : a<br><strong>Country</strong> : a </td>
-    <td class="views-field views-field-notes">
-    Payout Initiated </td>
-    <td class="views-field views-field-php">
-    $ 1,112.00 </td>
-    <td class="views-field views-field-php-2">
-    $ 111.20 </td>
-    <td class="views-field views-field-php-3">
-    $ 1,000.80
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </div></form></div> </div>-->
-    </div>
-    </div> 
-    </div>
-    </div>
-    </div>
-    
-    <div class="region region-triptych">
-    <div id="block-panel-widget-block-accountswitching-info" class="block block-panel-widget contextual-links-region clearfix">
-    <div class="panel panel-details wrapper-md">
-    <div class="row row-flex">
-    <div class="col-md-4">
-    <div class="about-block">
-    <h4 class="text-md text-dark-dk font-semi-bold">About the Demo</h4>
-    <p class="m-b-md">This is a preset demo. The primary objective of this demo to showcase the generic features and functionalities to you. Our customers also request for a dedicated demo, customized as per their requirements and preferences. You can experience your dedicated demo for 7 days free of charge.</p>
-    <a href="https://www.epixelmlmsoftware.com/get-a-custom-demo" target="_blank" class="btn btn-primary" title="Contact us for dedicated demo">Contact us for dedicated demo</a>
-    </div>
-    </div>
-    <div class="col-md-4">
-    <div class="contact-details-box">
-    <h4 class="text-md text-dark-dk font-semi-bold">Contact Details</h4>
-    <ul class="list-unstyled m-b-md m-t">
-    <li class="m-b-sm"><i class="fa fa-paper-plane text-info"></i> Email : <span class="text-info">sales@epixelsolutions.com</span></li>
-    <li class="m-b-sm"><i class="fa fa-skype text-info"></i> Skype : <span class="text-info">epixelsolutions</span></li>
-    </ul>
-    <a href="/switch-user?z=member-user-switch&amp;u=OW1KTDgybHNxdHBPNUg2L3E2SXAvYlZVTDdMVnRGaVBVdDFQVHRIMjV2WT0%3D&amp;t=57521730950&amp;w=1594881538" class="btn btn-primary btn-addon btn-gradient"><i class="fa fa-toggle-on"></i> Switch To Member Dashboard</a> </div>
-    </div>
-    <div class="col-md-4">
-    <div class="about-more-block">
-    <h4 class="text-md text-dark-dk font-semi-bold">Know more about Epixel MLM Software</h4>
-    <p class="m-b-md m-t-md">
-    <a href="https://www.epixelmlmsoftware.com/" target="_blank" class="btn btn-outline-info btn-xs m-b-sm  m-r-xs" title="MLM Software">MLM Software</a>
-    <a href="https://www.epixelmlmsoftware.com/about-us" target="_blank" class="btn btn-outline-info btn-xs m-b-sm  m-r-xs" title="About MLM">About MLM</a>
-    <a href="https://www.epixelmlmsoftware.com/mlm-software-free-demo" target="_blank" class="btn btn-outline-info btn-xs m-b-sm  m-r-xs" title="MLM Demo">MLM Demo</a>
-    <a href="https://www.epixelmlmsoftware.com/contact-us" target="_blank" class="btn btn-outline-info btn-xs m-b-sm  m-r-xs" title="Contact Us">Contact Us</a>
-    </p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div> 
-    </div>
-    </div>
-    
-    
-    </div>
-    </div>
-    </div>
+                      <div class="panel panel-default">
+                       <div class="table-responsive">
+                           <table class="views-table cols-2 table">
+                               <thead>
+                               <tr>
+                                   <th class="views-field views-field-deduction">Deduction </th>
+                                   <th class="views-field views-net-income">NET INCOME </th>
+                               </tr>
+                               </thead>
+                               <tbody>
+                                   <tr class=" odd views-row-first">
+                                      <td class="views-field views-field-deduction">
+                                          
+                                          <p>Upgrad Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 10,000.00/-</p>
+                                          <p>TDS & SC 19625/-@ 10% = 1,962.50/-</p>
+                                          <p>Total Deduction = 11,962.50/-&nbsp;&nbsp;</p>
+                                      </td>
+                                      
+                                      <td class="views-field views-net-income">
+                                           
+                               <p>TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 29,625.00/-</p>
+                               <p>DEDUCTION : 11,962.50/-</p>
+                                       </td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                       </div>
+                       </div>
+                   </div>
+                   <div>
+                       <br><br>
+                      <i id="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Eligibility Amount Rupees <b>seventeen thousand six hundred sixty two and fifty paise</b> only</i>
+                   </div>
+              
+          </div>
+      </div>	
+  </div>
+</div>
