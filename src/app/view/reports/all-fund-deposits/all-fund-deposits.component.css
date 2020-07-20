@@ -187,7 +187,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     cursor: pointer;
 }
 .btn-info {
-    color: #fff!important;
+    color: #fff;
     background-color: darkgreen;
     border-color: #23b7e5;
 }

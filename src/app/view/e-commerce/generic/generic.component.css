@@ -309,11 +309,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     -webkit-appearance: button;
     cursor: pointer;
 }
-.btn-primary {
-    color: #ffffff !important;
-    background-color: #7266ba;
-    border-color: #7266ba;
-}
+
 .btn-default {
    
     box-shadow: 0 1px 1px rgba(90,90,90,0.1);

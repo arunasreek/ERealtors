@@ -348,7 +348,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     cursor: pointer;
 }
 .btn-primary {
-    color: #ffffff !important;
+    color: #ffffff ;
     background-color: #7266ba;
     border-color: #7266ba;
 }
