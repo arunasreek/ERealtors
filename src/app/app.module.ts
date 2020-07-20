@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +51,11 @@ import { AllTransactionsComponent }  from './view/e-wallet/all-transactions/all-
 import { EarningsFundsComponent }  from './view/e-wallet/earnings-funds/earnings-funds.component';
 import { WithdrawalRequestsComponent }  from './view/payout-reports/withdrawal-requests/withdrawal-requests.component';
 import { ActivePayoutsComponent }  from './view/payout-reports/active-payouts/active-payouts.component';
-
+import { FormsModule } from '@angular/forms';
+import {ServicesModule} from '../app/services/services.module';
+//config module
+import { AppConfigModule, AppConfig } from './config/app.config.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -104,11 +110,17 @@ import { ActivePayoutsComponent }  from './view/payout-reports/active-payouts/ac
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     TabsModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    FormsModule,
+    ServicesModule,
+    AppConfigModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
     
   ],
-  providers: [],
+  providers: [AppConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

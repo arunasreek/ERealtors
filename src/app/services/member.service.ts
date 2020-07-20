@@ -4,7 +4,7 @@ import { AppConfig, APP_CONFIG } from '../config/app.config.module';
 import { map } from 'rxjs/operators';
 
 @Injectable()
-export class CustomerServices {
+export class MemberServices {
     /**
      *
      */
@@ -12,14 +12,9 @@ export class CustomerServices {
 
     }
 
-    getPrivileges() {
-        return this.http.get<any[]>(`${this.config.apiEndpoint}/Privilege`).pipe(map((data: any) => {
-            return data;
-        }));
-    }
 
-    postRolesPrivileges(data: any) {
-        return this.http.post<any>(`${this.config.apiEndpoint}/Role`, data).pipe(map((res: any) => {
+    postMember(data: any) {
+        return this.http.post<any>(`${this.config.apiEndpoint}/ERealtors/Member/PostMemberData`, data).pipe(map((res: any) => {
             return res;
         }))
     }
