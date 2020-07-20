@@ -22,8 +22,8 @@ body{
     padding-left: 0px;
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #768192;
-    background-color: white;
+    color:  white;
+    background-color: cadetblue;
     border-color: #c4c9d0 #c4c9d0 #ebedef;
     border-bottom-color: #fff;
 }
@@ -56,13 +56,83 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+.table-responsive table thead {
+    background-color: white !important;
+    color: #FFB739;
+}
+.table > thead > tr > th{
+    color: #102f66 !important;
+    background-color: #FFB739 !important;
+    font-weight: 800 !important; 
+}
+.fa-3x {
+    font-size: 20px !important;
+}
+.bg-light {
+    background-color: white !important;
+    border:none;
+}
+.b-b {
+    border-bottom: none !important;
+}
+.table > tbody > tr> td{
+    color: #102f66 !important;
+    font-weight:700;
+
+}
+tbody > tr:nth-child(even){
+    background-color: 	#ffffcc !important;
+
+}
+.c-header .c-header-nav .c-header-nav-link, .c-header .c-header-nav .c-header-nav-btn {
+    color: #102f66;
+}
+.ps--active-x>.ps__rail-x, .ps--active-y>.ps__rail-y {
+    display: block;
+    background-color: cadetblue !important;
+}
+.ps__thumb-x, .ps__thumb-y {
+    position: absolute;
+    background-color:#FFB739 !important ;
+    border-radius: 6px;
+}
+h1{
+   
+    color:#102f66 !important;
+}
+.text-muted{
+   
+    color:#102f66 !important;
+    font-size:20px !important;
+}
 .btn{
-    background-color: darkgreen;
-    color:white;
+    background-color:  #FFB739 !important;
+    color:#102f66 !important;
+}
+.input-group-addon{
+    background-color:#FFB739 !important ;
+}
+.btn-primary{
+    background-color:  #FFB739 !important;
+    color:#102f66 !important;
 }
 .c-sidebar .c-sidebar-brand, .c-sidebar .c-sidebar-header {
     background-color:  cadetblue;
+   
 }
+
 .c-sidebar .c-sidebar-minimizer {
     background-color: cadetblue;
+}
+.c-app {
+    color: #102f66;
+    background-color: white;
+    --color: #3c4b64;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: 100vh;
+}
+.nav>li>a:hover {
+    color: #FFB739;
 }
