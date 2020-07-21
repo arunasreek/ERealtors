@@ -51,6 +51,8 @@ import { AllTransactionsComponent }  from './view/e-wallet/all-transactions/all-
 import { EarningsFundsComponent }  from './view/e-wallet/earnings-funds/earnings-funds.component';
 import { WithdrawalRequestsComponent }  from './view/payout-reports/withdrawal-requests/withdrawal-requests.component';
 import { ActivePayoutsComponent }  from './view/payout-reports/active-payouts/active-payouts.component';
+import { PaymentVoucherComponent }  from './view/e-wallet/payment-voucher/payment-voucher.component';
+import { ReceiptVoucherComponent }  from './view/e-wallet/receipt-voucher/receipt-voucher.component';
 import { FormsModule } from '@angular/forms';
 import {ServicesModule} from '../app/services/services.module';
 //config module
@@ -104,8 +106,8 @@ import { ToastrModule } from 'ngx-toastr';
     EarningsFundsComponent,
     WithdrawalRequestsComponent,
     ActivePayoutsComponent,
-  
-
+    PaymentVoucherComponent,
+    ReceiptVoucherComponent,
   ],
   imports: [
     BrowserModule,

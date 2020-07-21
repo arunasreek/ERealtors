@@ -1,0 +1,69 @@
+.receipt{
+    border: 3px solid #FFB739;
+    width:915px;
+    height:auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-radius: 4px;
+    
+  }
+  .Company{
+      padding-left: 14px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  .h1{
+    text-align: center;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  table{
+      border-collapse: collapse;
+  }
+  .column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  
+  }
+  .column2 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+  
+  }
+  .column3 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+  
+  }
+  .column4 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+  
+  }
+  .sample{
+    margin-left: 20px;
+  
+  }
+  
+  .fast
+  {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+  
+  }
+  

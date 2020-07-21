@@ -1,146 +1,148 @@
-<div class="app-content-body">	
-  <div class="hbox hbox-auto-xs hbox-auto-sm">
-      <div class="col">
-        <div class="row">
-          <div class="col-md-12">
-          <div class="region region-content">
-          <div id="block-system-main" class="block block-system clearfix">
-          <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
-          <div class="view-filters">
-          <form action="/afl/track-epin" method="get" id="views-exposed-form-track-epin-admin-page" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
-          <div class="views-exposed-widgets clearfix">
-          <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
-          <label for="edit-pin">
-          Search by Member ID </label>
-          <div class="views-widget">
-          <div class="form-item clearfix form-type-textfield form-item-pin form-group">
-          <input type="text" id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-          </div>
-          </div>
-          </div>
-          <div class="views-exposed-widget views-submit-button form-group m-t-22">
-          <input type="submit" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" /> 
-          <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> 
-          <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
-        </div>
-          </div>
-          </div>
-          </div></form> </div>
-          <div class="business">
-              <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH JUNE 2020</h2><br><br>
-              <div class="containerfluid">
-                  <div class="row">
-                  <div class="col-sm-8 ">
-                  <div class="row ">
-                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay out No :</p>
+<div class="app-content-body">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="region region-content">
+                        <div id="block-system-main" class="block block-system clearfix">
+                            <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
+                                <div class="view-filters">
 
-                  </div>
-                  <div class="row ">
-                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</p>
-                  </div>
-                  <div class="row ">
-                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank :</p>
-                  </div>
-                  <div class="row ">
-                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id Number :</p>
-                  </div>
-                  <div class="row ">
-                      <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :</p>
-                  </div>
-                  </div>
-                  <div class="col-sm-4 white-box">
-                          <div class="div1">
-                                  <span class="border"></span>
-                          </div>
-                  </div>
+                                    <div class="from-panel">
+                                        <div class="views-exposed-form form-inline">
+                                            <div class="views-exposed-widgets clearfix">
+                                                <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
+                                                    <label for="edit-pin">
+                                                               Search by Member ID </label>
+                                                    <div class="views-widget">
+                                                        <div class="form-item clearfix form-type-textfield form-item-pin form-group">
+                                                            <input type="text" #userId id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                                    <input type="button" (click)="searchUser(userId.value)" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
+                                                    <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                                                    <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                  </div>
+                                </div>
+                                <div class="business">
+                                    <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH <span style="text-transform: uppercase;">{{currentMonth}}</span> 2020</h2><br><br>
+                                    <div class="containerfluid">
+                                        <div class="row">
+                                            <div class="col-sm-8 ">
+                                                <div class="row ">
+                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay out No :</p>&nbsp; {{realtorsData?.Payout_Number}}
+                                                </div>
+                                                <div class="row ">
+                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</p>&nbsp; {{realtorsData?.Name}}
+                                                </div>
+                                                <div class="row ">
+                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank :</p>&nbsp; {{realtorsData?.Rank}}
+                                                </div>
+                                                <div class="row ">
+                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id Number :</p>&nbsp; {{realtorsData?.Id_Number}}
+                                                </div>
+                                                <div class="row ">
+                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :</p>&nbsp; <span style="
+                                                    margin-left: 6%;
+                                                ">{{realtorsData?.Address}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 white-box">
+                                                <div class="div1">
+                                                    <span class="border"></span>
+                                                </div>
+                                            </div>
 
-              </div>
-              <div class="container ">
-                  <h3 class="text-center">BUSINESS DETAILS </h3>
-                  <br>
-              </div>
-              
-                 <div class="view-content">
-                     <div class="panel panel-default">
-                      <div class="table-responsive">
-                          <table class="views-table cols-2 table">
-                              <thead>
-                              <tr>
-                                  <th class="views-field views-field-fast-track-income">Fast Track Income </th>
-                                  <th class="views-field views-auto-pool-working-plan">AUTO POOL NON WORKING PLAN </th>
-                              </tr>
-                              </thead>
-                              <tbody>
-                                  <tr class=" odd views-row-first">
-                                      <td class="views-field views-field-fast-track-income">
-                              <p style="margin-left: -23px;">Direct Collection : Rs.25,000/-@ 12.5% = 3,125/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 1st Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 2nd Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 3rd Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 4th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 5th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 6th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team Collection : 7th Level Rs.1,00,000/-@2.5% = 2,500/-</p>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down Line upgrad incentive Rs. 8,000/-</p>
-                              <p style="margin-left:280px">M.F.A. Rs.10,000/-</p>
-                              <p style="margin-left:250px">Eligibility Rs.23,625/-</p>
-                                
-                                      </td>
-                                      <td class="views-field views-field-fast-auto-pool-working-plan">
-                                          <p>1st Level Rs.6,000/-</p>
-                                          <p>2nd Level Rs.6,000/-</p>
-                                          <p>3rd Level Rs.6,000/-</p>
-                                          <p>4th Level Rs.6,000/-</p>
-                                          <p>5th Level Rs.6,000/-</p>
-                                          <p>6th Level Rs.6,000/-</p>
-                                          <p>7th Level Rs.6,000/-</p>
-                                          <p>Eligibility Rs.6,000/-</p>
-                                      </td>
-                                      
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                      </div>
-                  </div>
-                  <div class="view-content">
-                      <div class="panel panel-default">
-                       <div class="table-responsive">
-                           <table class="views-table cols-2 table">
-                               <thead>
-                               <tr>
-                                   <th class="views-field views-field-deduction">Deduction </th>
-                                   <th class="views-field views-net-income">NET INCOME </th>
-                               </tr>
-                               </thead>
-                               <tbody>
-                                   <tr class=" odd views-row-first">
-                                      <td class="views-field views-field-deduction">
-                                          
-                                          <p>Upgrad Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 10,000.00/-</p>
-                                          <p>TDS & SC 19625/-@ 10% = 1,962.50/-</p>
-                                          <p>Total Deduction = 11,962.50/-&nbsp;&nbsp;</p>
-                                      </td>
-                                      
-                                      <td class="views-field views-net-income">
-                                           
-                               <p>TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 29,625.00/-</p>
-                               <p>DEDUCTION : 11,962.50/-</p>
-                                       </td>
-                                   </tr>
-                               </tbody>
-                           </table>
-                       </div>
-                       </div>
-                   </div>
-                   <div>
-                       <br><br>
-                      <i id="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Eligibility Amount Rupees <b>seventeen thousand six hundred sixty two and fifty paise</b> only</i>
-                   </div>
-              
-          </div>
-      </div>	
-  </div>
-</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="container ">
+                                        <h3 class="text-center">BUSINESS DETAILS </h3>
+                                        <br>
+                                    </div>
+
+                                    <div class="view-content">
+                                        <div class="panel panel-default">
+                                            <div class="table-responsive">
+                                                <table class="views-table cols-2 table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="views-field views-field-fast-track-income">Fast Track Income </th>
+                                                            <th class="views-field views-auto-pool-working-plan">AUTO POOL NON WORKING PLAN </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class=" odd views-row-first">
+                                                            <td class="views-field views-field-fast-track-income">
+                                                                <p style="margin-left: -23px;">Direct Collection : {{realtorsData?.Direct_Coll}}</p>
+                                                                <p style="margin-left: -106px;" *ngFor="let item of teamCollection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}</p>
+                                                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down
+                                                                    Line upgrade incentive {{realtorsData?.DownLine_In}}</p>
+                                                                <p style="margin-left:280px">M.F.A. {{realtorsData?.MFA}}</p>
+                                                                <p style="margin-left:250px">Eligibility {{realtorsData?.Eligibility}}</p>
+
+                                                            </td>
+                                                            <td class="views-field views-field-fast-auto-pool-working-plan">
+                                                                <p>1st Level {{realtorsData?.first_Level}}</p>
+                                                                <p>2nd Level Rs.0/-</p>
+                                                                <p>3rd Level Rs.0/-</p>
+                                                                <p>4th Level Rs.0/-</p>
+                                                                <p>5th Level Rs.0/-</p>
+                                                                <p>6th Level Rs.0/-</p>
+                                                                <p>7th Level Rs.0/-</p>
+                                                                <p>Eligibility Rs.0/-</p>
+                                                            </td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view-content">
+                                        <div class="panel panel-default">
+                                            <div class="table-responsive">
+                                                <table class="views-table cols-2 table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="views-field views-field-deduction">Deduction </th>
+                                                            <th class="views-field views-net-income">NET INCOME </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class=" odd views-row-first">
+                                                            <td class="views-field views-field-deduction">
+
+                                                                <p>Upgrade Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {{realtorsData?.Upgrade_Amount}}</p>
+                                                                <p>TDS & SC {{realtorsData?.Eligibility}}@ 10% = {{realtorsData?.TDSANDSC}}</p>
+                                                                <p>Total Deduction = {{realtorsData?.Total_Ded}}&nbsp;&nbsp;</p>
+                                                            </td>
+
+                                                            <td class="views-field views-net-income">
+
+                                                                <p>TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{realtorsData?.Total}}</p>
+                                                                <p>DEDUCTION : {{realtorsData?.Total_Ded}}</p>
+                                                                <hr>
+                                                                <p>Net Income : {{realtorsData?.Total_Income}}</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <br><br>
+                                        <i id="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Eligibility Amount <b>{{realtorsData?.Net_Eligibility_Amt}}</b></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
