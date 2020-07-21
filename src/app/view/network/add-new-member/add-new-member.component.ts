@@ -9,6 +9,10 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./add-new-member.component.css']
 })
 export class AddNewMemberComponent implements OnInit {
+  sponserList : any;
+  memberList : any;
+  currentMonth : string;
+  filterValue : any;
 
   constructor(public memberService: MemberServices,
               public toastr: ToastrService) { }
@@ -40,6 +44,9 @@ export class AddNewMemberComponent implements OnInit {
            UpgradeAmountPaid :0,
   };
   ngOnInit(): void {
+    this.getSponserList();
+    this.getMemberList();
+   
   }
 
   pushMember(){
@@ -54,12 +61,12 @@ export class AddNewMemberComponent implements OnInit {
       Surname  :this.model.Surname,
       Username :this.model.Username,
       Email_Address :this.model.Email_Address,
-      Date_of_Joining : new  Date(),
-      Date_of_Birth  :   new  Date(),
+      Date_of_Joining : this.model.Date_of_Joining,
+      Date_of_Birth  :   this.model.Date_of_Birth,
       perks  :this.model.perks,
       Password :this.model.Password,
       Confirm_Password :this.model.Confirm_Password,
-      Sponsor :this.model.Sponsor,
+      Sponsor : parseInt(this.model.Sponsor),
       Name_of_Nominee :this.model.Name_of_Nominee,
       Mobile_Number :this.model.Mobile_Number,
       Pan_Card_Number :this.model.Pan_Card_Number,
@@ -72,7 +79,41 @@ export class AddNewMemberComponent implements OnInit {
     };
     this.memberService.postMember(data)
     .subscribe(() => {
-       this.toastr.success('Member was added!', 'Success');
+       this.toastr.success('Record Added Successfully ', 'Success');
+    });
+    console.log(this.model);
+  }
+
+  getSponserList(){
+    this.memberService.getSponserList()
+     .subscribe((res) => {
+      this.sponserList = res.Result;
+      console.log(res);
     });
   }
+
+  getMemberList(){
+    this.memberService.getMemberList()
+     .subscribe((res) => {
+      this.memberList = res.Result;
+      this.filterValue = res.Result;
+      console.log(res);
+    });
+  }
+
+  searchMember(value){
+      this.filterValue = this.memberList.filter(x=>x.Id === parseInt(value));
+  }
+
+  searchMemberkey(event : any){
+    console.log(event.target.value);
+    if(event.target.value){
+    const filters =[parseInt(event.target.value)];
+    this.filterValue = this.memberList.filter(function(itm){
+                          return filters.indexOf(itm.Id) > -1;
+                        });
+      }else {
+        this.filterValue = this.memberList;
+      }
+    }
 }

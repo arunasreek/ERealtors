@@ -5,79 +5,88 @@
     <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
     <use xlink:href="assets/brand/coreui-pro.svg#signet"></use>
     </svg>
-    </div>
-    <ul class="c-sidebar-nav ps ps--active-y">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link c-active" href="main.html">
-    <div class="c-sidebar-nav-icon">
-    <i class="fa fa-desktop"></i>
-    </div> Dashboard</a></li>
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-group"></i>
+</div>
+<ul class="c-sidebar-nav ps ps--active-y">
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link c-active" href="main.html">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-desktop"></i>
+            </div> Dashboard</a>
+    </li>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-group"></i>
             </div> Network</a>
-    <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/genealogy']"> Genealogy Tree</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/add-new-member']"> Add New Number</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-members-list']">All Members List</a></li>
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link"[routerLink]="['/network-explorer']"> Network Explorer</a></li>
+        <ul class="c-sidebar-nav-dropdown-items">
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/genealogy']"> Genealogy Tree</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/add-new-member']"> Add New Member</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-members-list']">All Members List</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link"[routerLink]="['/network-explorer']"> Network Explorer</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/downlines-spillovers']">Downlines and Spillovers </a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/sponsored']">Sponsored by me</a></li> -->
-    </ul>
-</li>
-<li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-    <div class="c-sidebar-nav-icon">
-        <i class="fa fa-money"></i>
-        </div> E-Wallet</a>
-    <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/e-wallet-summary']">E-Wallet Summary</a></li>
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link "[routerLink]="['/all-transactions']">All Transations</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/earnings-funds']"> Earnings & Inward Funds</a></li> -->
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdrawals-outward-funds']"> WithDrawals </a></li>
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdraw-from-ewallet']"> Payout Reference</a></li> -->
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/my-withdrawal-requests']"> My Withdrawal Requests</a></li> -->
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/fund-tansfer']"> Fund Transfer</a></li> -->
-        
-    </ul></li>
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-key"></i>
-            </div>E-Pin</a>
-    <ul class="c-sidebar-nav-dropdown-items">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/generate-epin']">Generate E-Pin</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/my-epins']"> My E-Pins</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/epin-history']"> E-Pin History</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-epins']"> All E-Pins</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/epin-configurations']"> E-Pin Configurations</a></li>
-    </ul>
+        </ul>
     </li>
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-building"></i>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-money"></i>
+            </div> E-Wallet</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/e-wallet-summary']">E-Wallet Summary</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link "[routerLink]="['/all-transactions']">All Transations</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/earnings-funds']"> Earnings & Inward Funds</a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdrawals-outward-funds']"> WithDrawals </a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdraw-from-ewallet']"> Payout Reference</a></li> -->
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/my-withdrawal-requests']"> My Withdrawal Requests</a></li> -->
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/fund-tansfer']"> Fund Transfer</a></li> -->
+
+        </ul>
+    </li>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-key"></i>
+            </div>E-Pin</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/generate-epin']">Generate E-Pin</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/my-epins']"> My E-Pins</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/epin-history']"> E-Pin History</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-epins']"> All E-Pins</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/epin-configurations']"> E-Pin Configurations</a></li>
+        </ul>
+    </li>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-building"></i>
             </div> Business</a>
         <ul class="c-sidebar-nav-dropdown-items">
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/transaction-summary']"> Transaction Summary</a></li> -->
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/business-transactions']"> Business Transactions</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/commissions-expenses']"> Commissions & Expenses</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/sales-earnings']"> Sales & Other Earnings</a></li>
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/member-ewallet-balance']"> Member E-Wallet Balence</a></li> -->
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/transaction-summary']"> Transaction Summary</a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/business-transactions']"> Business Transactions</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/commissions-expenses']"> Commissions & Expenses</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/sales-earnings']"> Sales & Other Earnings</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/member-ewallet-balance']"> Member E-Wallet Balence</a></li> -->
         </ul>
-        </li>
-   
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-briefcase"></i>
-            </div>Payout Reports</a>
-    <ul class="c-sidebar-nav-dropdown-items">
-    <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdrawal-requests']">Withdrawal Requests</a></li> -->
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/active-payouts']"> Active Payouts</a></li>
-    <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/payout-remittance']"> Payout in Remittance</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/completed-payments']"> Completed Payments</a></li> -->
-    </ul>
     </li>
-   
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-shopping-cart"></i>
+
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-briefcase"></i>
+            </div>Payout Reports</a>
+        <ul class="c-sidebar-nav-dropdown-items">
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/withdrawal-requests']">Withdrawal Requests</a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/active-payouts']"> Active Payouts</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/payout-remittance']"> Payout in Remittance</a></li>
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/completed-payments']"> Completed Payments</a></li> -->
+        </ul>
+    </li>
+
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-shopping-cart"></i>
             </div>E-Commerce</a>
         <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/manage-products']">Manage Products</a></li>
@@ -85,48 +94,58 @@
             <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/manage-category']"> Manage Category</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/add-new-category']"> Add New Category</a></li> -->
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/orders-report']">Orders Report</a></li>
-            
+
         </ul>
-        </li>
-    
+    </li>
 
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/settings']">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-cog"></i>
+
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" [routerLink]="['/settings']">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-cog"></i>
             </div> Settings</a>
-    <ul class="c-sidebar-nav-dropdown-items">
+        <ul class="c-sidebar-nav-dropdown-items">
 
-    </ul>
+        </ul>
     </li>
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-file"></i>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-file"></i>
             </div> Reports</a>
-    <ul class="c-sidebar-nav-dropdown-items">
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/current-month-payouts']">Current Month Payouts </a></li> -->
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/purchases-report']"> Purchases Reports</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/member-ranks-overview']">Members Rank Overiew</a></li>
-    <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/sales-by-user']"> Sales By User</a></li> -->
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-fund-deposits']"> All Fund Deposits</a></li>
-    <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/rank-analysis']"> Rank Analysis</a></li> -->
-    <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/fund-deposits']"> Fund Deposits</a></li> -->
-    </ul>
+        <ul class="c-sidebar-nav-dropdown-items">
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/current-month-payouts']">Current Month Payouts </a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/purchases-report']"> Purchases Reports</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/member-ranks-overview']">Members Rank Overiew</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/sales-by-user']"> Sales By User</a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/all-fund-deposits']"> All Fund Deposits</a></li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/rank-analysis']"> Rank Analysis</a></li> -->
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/fund-deposits']"> Fund Deposits</a></li> -->
+        </ul>
     </li>
-    <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-key"></i>
+    <li class="c-sidebar-nav-dropdown">
+        <a class="c-sidebar-nav-dropdown-toggle" href="#">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-key"></i>
             </div> Security</a>
         <ul class="c-sidebar-nav-dropdown-items">
-        <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/activity-log']">Activity Log</a></li> -->
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/transaction-password']">Transaction Password</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/user-activity-log']">User Activity Log</a></li>    
-    </ul>
-        </li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="widgets.html">
-        <div class="c-sidebar-nav-icon">
-            <i class="fa fa-sign-out"></i>
-            </div> Logout</a></li>
-   
-    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 617px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 293px;"></div></div></ul>
-    <!-- <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-unfoldable"></button> -->
-  
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/activity-log']">Activity Log</a></li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/transaction-password']">Transaction Password</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" [routerLink]="['/user-activity-log']">User Activity Log</a></li>
+        </ul>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="widgets.html">
+            <div class="c-sidebar-nav-icon">
+                <i class="fa fa-sign-out"></i>
+            </div> Logout</a>
+    </li>
+
+    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+    </div>
+    <div class="ps__rail-y" style="top: 0px; height: 617px; right: 0px;">
+        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 293px;"></div>
+    </div>
+</ul>
+<!-- <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-unfoldable"></button> -->

@@ -19,8 +19,20 @@ export class MemberServices {
         }))
     }
 
-    getPrivilegesByRoleId(id) {
-        return this.http.get<any>(`${this.config.apiEndpoint}/Role/${id}/Previlege`).pipe(map((res: any) => {
+    getSponserList() {
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetSponserList`).pipe(map((res: any) => {
+            return res;
+        }))
+    }
+
+    getMemberData(memberId:number){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberData/${memberId}`).pipe(map((res: any) => {
+            return res;
+        }))
+    }
+
+    getMemberList(){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberList`).pipe(map((res: any) => {
             return res;
         }))
     }

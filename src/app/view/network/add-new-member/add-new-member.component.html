@@ -13,31 +13,39 @@
                                             <div id="block-system-main" class="block block-system clearfix">
                                                 <div class="view view-down-line-members view-id-down_line_members view-display-id-page view-dom-id-70b59c1c0ebdb1eeac7f3181434cd2a7">
                                                     <div class="view-filters">
-                                                        <form action="/afl/down-line-members" method="get" id="views-exposed-form-down-line-members-page" accept-charset="UTF-8">
+                                                        <form>
                                                             <div class="from-panel">
                                                                 <div class="views-exposed-form form-inline">
                                                                     <div class="views-exposed-widgets clearfix">
                                                                         <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
                                                                             <label for="edit-downline-user-id">
-                                     Member Id </label>
+                                                                                  Member Id </label>
                                                                             <div class="views-widget">
                                                                                 <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
-                                                                                    <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                                    <input (keyup)="searchMemberkey($event)" #data type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
                                                                             <label for="edit-level">
-                                           Level </label>
+                                                                                    Level </label>
                                                                             <div class="views-widget">
                                                                                 <div class="form-item clearfix form-type-select form-item-level form-group">
-                                                                                    <select id="edit-level" name="level" class="form-select form-control"></select>
+                                                                                    <select _ngcontent-wyk-c77="" id="edit-level" name="level" class="form-select form-control"><option _ngcontent-wyk-c77="" value="All" selected="selected">- Any -</option><option _ngcontent-wyk-c77="" value="0">-</option><option _ngcontent-wyk-c77="" value="1">First Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="2">Second Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="3">Third Level</option><option _ngcontent-wyk-c77="" value="4">Fourth Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="5">Fifth Level</option><option _ngcontent-wyk-c77="" value="6">Sixth Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="7">Seventh Level</option><option _ngcontent-wyk-c77="" value="8">Eight Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="9">Ninth Level</option><option _ngcontent-wyk-c77="" value="10">Tenth Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="11">Eleventh Level</option><option _ngcontent-wyk-c77="" value="12">Twelfth Level</option><option _ngcontent-wyk-c77="" value="13">Thirteenth Level</option>
+                                                                                        <option _ngcontent-wyk-c77="" value="14">Fourteenth Level</option><option _ngcontent-wyk-c77="" value="15">Fifteenth Level</option>
+                                                                                    </select>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                                                                            <input type="submit" id="edit-submit-down-line-members" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op"
-                                                                                value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
+                                                                            <button type="button" (click)="searchMember(data.value)" id="edit-submit-down-line-members" name="" value="" class="form-submit btn btn-default btn-primary">Search</button> <input
+                                                                                type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -64,6 +72,14 @@
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
+                                                                        <tr *ngFor="let item of filterValue">
+                                                                            <td>{{item.Guid}}</td>
+                                                                            <td>{{item.Member}}</td>
+                                                                            <td>{{item.Star}}</td>
+                                                                            <td>{{item.Sponser}}</td>
+                                                                            <td>{{item.Join_Date.split('T')[0]}}</td>
+                                                                            <td>{{item.AutoPool}}</td>
+                                                                        </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -109,11 +125,11 @@
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
                                                                         <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" placeholder="" class="form-control" bsDatepicker>
+                                                                        <input type="text" placeholder="" class="form-control col-md-2" [(bsValue)]="model.Date_of_Joining" bsDatepicker>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
                                                                         <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" placeholder="" class="form-control" bsDatepicker>
+                                                                        <input type="text" placeholder="" class="form-control col-md-2" [(bsValue)]="model.Date_of_Birth" bsDatepicker>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
                                                                         <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
@@ -130,7 +146,9 @@
                                                                         <div id="field-afl-sponsor-add-more-wrapper">
                                                                             <div class="form-item form-autocomplete clearfix form-type-textfield form-item-field-afl-sponsor-und-0-target-id form-group2" data-toggle="tooltip" title="Please select the Sponsor user">
                                                                                 <label for="edit-field-afl-sponsor-und-0-target-id">Sponsor <span class="form-required" title="This field is required.">*</span></label>
-                                                                                <input type="text" id="edit-field-afl-sponsor-und-0-target-id" [(ngModel)]="model.Sponsor" name="field_afl_sponsor[und][0][target_id]" value="" size="60" maxlength="1024" class="form-text form-control input-lg-3 required form-autocomplete" />
+                                                                                <select class="form-control" id="Sponsor" name="Sponsor" [(ngModel)]="model.Sponsor">
+                                                                                    <option *ngFor="let item of sponserList" [value]="item.SponserId">{{item.SponserValue}}</option>
+                                                                               </select>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -187,13 +205,22 @@
                                                                         <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" />
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                                        <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
+                                                                        <input style="
+                                                                        width: 22px;
+                                                                    " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" [(ngModel)]="model.IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool"
+                                                                            value="" size="60" maxlength="255" />
+                                                                    </div>
+                                                                    <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>
                                                                         <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255" />
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                                                        <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="checkbox" class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60" maxlength="255" />
+                                                                        <label for="perks"> Perks <span class="form-required" title="This field is required.">*</span></label>
+                                                                        <input type="text" class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.perks" id="perks" name="perks" value="" size="60" maxlength="255" />
                                                                     </div>
+
+
                                                                 </div>
                                                             </fieldset>
                                                         </div>
