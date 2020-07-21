@@ -10,6 +10,9 @@ body{
 .label-primary {
     background-color: darkgreen !important;
 }
+fieldset legend{
+    font-weight: 700 !important;
+}
 .bg-info {
     background-color: darkgreen !important;
 }

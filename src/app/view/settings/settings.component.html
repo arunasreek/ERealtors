@@ -23,24 +23,50 @@
     <div class="col-md-12">
         <div>
             <tabset>
-              <tab heading="Settings" id="tab1"><div class="region region-content">
+              <tab heading="Target Units" id="tab1"><div class="region region-content">
                 <div id="block-system-main" class="block block-system clearfix">
-                <form action="/afl-admin" method="post" id="afl-system-configurations-form" accept-charset="UTF-8"><div class="from-panel"><fieldset class="form-wrapper" id="edit-variable-realm-selector-language"><legend><span class="fieldset-legend">There are <em class="placeholder">multilingual</em> variables in this form</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">Check you are editing the variables for the right <em class="placeholder">Language</em> value or select the desired <em class="placeholder">Language</em>.</div><div id="edit-select-key" class="form-item clearfix form-type-item form-group">
-                <strong><a href="/afl-admin?variable_realm_key_language=en" class="active">English</a></strong> | <a href="/afl-admin?variable_realm_key_language=es" class="active">Spanish</a> | <a href="/afl-admin?variable_realm_key_language=ar" class="active">Arabic</a> | <a href="/afl-admin?variable_realm_key_language=ab" class="active">Abkhazian</a> | <a href="/afl-admin?variable_realm_key_language=bn" class="active">Bengali</a> | <a href="/afl-admin?variable_realm_key_language=zh-hans" class="active">Chinese, Simplified</a> | <a href="/afl-admin?variable_realm_key_language=zh-hant" class="active">Chinese, Traditional</a> | <a href="/afl-admin?variable_realm_key_language=fr" class="active">French</a> | <a href="/afl-admin?variable_realm_key_language=de" class="active">German</a> | <a href="/afl-admin?variable_realm_key_language=it" class="active">Italian</a> | <a href="/afl-admin?variable_realm_key_language=ms" class="active">Malay</a> | <a href="/afl-admin?variable_realm_key_language=ru" class="active">Russian</a> | <a href="/afl-admin?variable_realm_key_language=sv" class="active">Swedish</a>
+                <form action="/afl-admin" method="post" id="afl-system-configurations-form" accept-charset="UTF-8"><div class="from-panel">
+                <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                    <label for="edit-level">
+Cader</label>
+                    <div class="views-widget">
+                        <div class="form-item clearfix form-type-select form-item-level form-group">
+                            <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                        </div>
+                    </div>
                 </div>
-                </div></fieldset>
-                <div class="form-item clearfix form-type-textfield form-item-site-name form-group" data-toggle="tooltip" title="Please mention name of the website This is a multilingual variable. ">
-                <label for="edit-site-name">Website Name <span class="form-required" title="This field is required.">*</span></label>
-                <input class="i18n-variable form-text form-control input-lg-3 required" type="text" id="edit-site-name" name="site_name" value="Epixel Matrix Demo" size="60" maxlength="128" />
+                <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+                  <label for="edit-downline-user-id">
+Plots in SQYDS </label>
+                  <div class="views-widget">
+                      <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                          <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                      </div>
+                  </div>
+              </div>
+              <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+                <label for="edit-downline-user-id">
+Target Units </label>
+                <div class="views-widget">
+                    <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                        <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                    </div>
                 </div>
-                <input type="hidden" name="form_build_id" value="form-84EyNetraRwe2w3aZEaG6eq96aV8LW3PaW7PaZKob04" />
-                <input type="hidden" name="form_token" value="VfV_z5jr1sJNLcCpqSfYiFcFjRGlgtrQCxolB0gnnOo" />
-                <input type="hidden" name="form_id" value="afl_system_configurations_form" />
+            </div>
+            <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+              <label for="edit-downline-user-id">
+Rate per Plot </label>
+              <div class="views-widget">
+                  <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                      <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                  </div>
+              </div>
+          </div>
                 <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save configuration" class="form-submit btn btn-default btn-primary" /></div></div></form>
                 </div> 
                 </div>
             </tab>
-              <tab heading="Compensations">
+              <tab heading="Incentives">
                 <div class="region region-content">
                     <div id="block-system-main" class="block block-system clearfix">
                     <form action="/afl-admin/compensation-settings" method="post" id="afl-compensation-types" accept-charset="UTF-8"><div class="from-panel"><table class="table sticky-enabled">
@@ -79,7 +105,7 @@
                     </div> 
                     </div>
               </tab>
-              <tab heading="Fund deposit">
+              <tab heading="MFA">
                 <div class="region region-content">
                     <div id="block-system-main" class="block block-system clearfix">
                     <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config"><legend><span class="fieldset-legend">Fund deposit configuration</span></legend><div class="fieldset-wrapper"><div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
@@ -102,7 +128,7 @@
                     </div> 
                     </div>
               </tab>
-              <tab heading="Plan Configuration"><div class="region region-content">
+              <tab heading="Bonanza"><div class="region region-content">
                 <div id="block-system-main" class="block block-system clearfix">
                 <form action="/afl-admin/genealogy-config" method="post" id="afl-genealogy-config" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-plan-with form-group">
                 <label for="edit-afl-plan-with">Width <span class="form-required" title="This field is required.">*</span></label>
@@ -120,7 +146,7 @@
                 </div>
                 
             </tab>
-              <tab heading="Rank">
+              <tab heading="Cader Settings">
                 <div class="region region-content">
                     <div id="rank-settings-form"><div id="block-system-main" class="block block-system clearfix">
                     <form action="/afl-admin/rank" method="post" id="afl-rank-settings" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-rank-expiry-criteria form-group" data-toggle="tooltip" title="Please mention the rank expiry periods">
@@ -213,7 +239,7 @@
                     </div>
                     </div>
               </tab>
-              <tab heading="Payout">
+              <tab heading="Auto Pool Settings">
                 <div class="region region-content">
                     <div id="block-system-main" class="block block-system clearfix">
                     <form action="/afl-admin/payout-settings" method="post" id="afl-payout-settings" accept-charset="UTF-8"><div class="from-panel"><div class="form-item clearfix form-type-select form-item-afl-system-payout-frequency form-group" data-toggle="tooltip" title="Please mention Payment to E-wallet Frequency">
