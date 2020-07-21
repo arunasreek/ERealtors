@@ -115,5 +115,6 @@ export class AddNewMemberComponent implements OnInit {
       }else {
         this.filterValue = this.memberList;
       }
+      
     }
 }
