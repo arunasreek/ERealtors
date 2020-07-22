@@ -47,6 +47,12 @@ import { WithdrawalRequestsComponent }  from './view/payout-reports/withdrawal-r
 import { ActivePayoutsComponent }  from './view/payout-reports/active-payouts/active-payouts.component';
 import { PaymentVoucherComponent }  from './view/e-wallet/payment-voucher/payment-voucher.component';
 import { ReceiptVoucherComponent }  from './view/e-wallet/receipt-voucher/receipt-voucher.component';
+import { JournalVoucherComponent } from './view/e-wallet/journal-voucher/journal-voucher.component';
+import { PurchaseInvoiceComponent } from './view/e-wallet/purchase-invoice/purchase-invoice.component';
+import { StatementAccountComponent } from './view/e-wallet/statement-account/statement-account.component';
+import { ProfitLossAccountComponent } from './view/e-wallet/profit-loss-account/profit-loss-account.component';
+import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-sheet.component';
+import { StoreComponent }  from './view/e-commerce/store/store.component';
 
 const routes: Routes = [ 
 { path: 'dashboard', component: DashboardComponent },
@@ -93,6 +99,12 @@ const routes: Routes = [
 { path: 'active-payouts', component:ActivePayoutsComponent },
 { path: 'payment-voucher', component:PaymentVoucherComponent },
 { path: 'receipt-voucher', component:ReceiptVoucherComponent },
+{ path: 'journal-voucher', component:JournalVoucherComponent },
+{ path: 'purchase-invoice', component:PurchaseInvoiceComponent },
+{ path: 'statement-account', component:StatementAccountComponent },
+{ path: 'profit-loss-account', component:ProfitLossAccountComponent },
+{ path: 'balance-sheet', component:BalanceSheetComponent },
+{ path: 'store', component:StoreComponent },
 ];
 
 @NgModule({

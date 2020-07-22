@@ -8,13 +8,12 @@
     border-radius: 4px;
     
   }
-  label{
-    font-weight: 700;
-  }
   .Company{
       padding-left: 14px;
   }
-  
+  label{
+    font-weight: 700;
+  }
   * {
     box-sizing: border-box;
   }
@@ -70,7 +69,7 @@
   
   }
   
- .from-panel {
+  .from-panel {
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #dee5e7;
@@ -79,6 +78,7 @@
     border-color: #dee5e7;
     padding: 15px;
 }
+
   .hbox .col .business {
     border: 3px solid #ffa31a;
     width: 900px;
@@ -289,7 +289,7 @@ legend {
 }
 
 label {
-    font-weight: 800 !important;
+  font-weight: 800 !important;
 }
 
 label {
@@ -575,7 +575,7 @@ textarea {
 }
 
 .m-t-22 {
-    margin-top: 27px;
+    margin-top: 22px;
 }
 
 .view-filters .from-panel .form-inline .btn {

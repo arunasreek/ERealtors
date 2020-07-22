@@ -15,6 +15,7 @@ import { ManageProductsComponent }  from './view/e-commerce/manage-products/mana
 import { EcommerceStoreComponent }  from './view/e-commerce/ecommerce-store/ecommerce-store.component';
 import { ManageCategoryComponent }  from './view/e-commerce/manage-category/manage-category.component';
 import { GenericComponent }  from './view/e-commerce/generic/generic.component';
+import { StoreComponent }  from './view/e-commerce/store/store.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AllMembersListComponent }  from './view/network/all-members-list/all-members-list.component';
@@ -55,9 +56,15 @@ import { PaymentVoucherComponent }  from './view/e-wallet/payment-voucher/paymen
 import { ReceiptVoucherComponent }  from './view/e-wallet/receipt-voucher/receipt-voucher.component';
 import { FormsModule } from '@angular/forms';
 import {ServicesModule} from '../app/services/services.module';
+import { JournalVoucherComponent } from './view/e-wallet/journal-voucher/journal-voucher.component';
+import { PurchaseInvoiceComponent } from './view/e-wallet/purchase-invoice/purchase-invoice.component';
+import { StatementAccountComponent } from './view/e-wallet/statement-account/statement-account.component';
+import { ProfitLossAccountComponent } from './view/e-wallet/profit-loss-account/profit-loss-account.component';
+import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-sheet.component';
 //config module
 import { AppConfigModule, AppConfig } from './config/app.config.module';
 import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -108,6 +115,12 @@ import { ToastrModule } from 'ngx-toastr';
     ActivePayoutsComponent,
     PaymentVoucherComponent,
     ReceiptVoucherComponent,
+    JournalVoucherComponent,
+    PurchaseInvoiceComponent,
+    StatementAccountComponent,
+    ProfitLossAccountComponent,
+    BalanceSheetComponent,
+    StoreComponent,
   ],
   imports: [
     BrowserModule,
