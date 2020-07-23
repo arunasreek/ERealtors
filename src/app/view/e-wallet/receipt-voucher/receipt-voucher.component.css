@@ -352,6 +352,7 @@ label {
     display: table-cell;
 }
 
+
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:first-child>.btn-group:not(:first-child)>.btn,
@@ -581,7 +582,13 @@ textarea {
 .view-filters .from-panel .form-inline .btn {
     margin-right: 4px;
 }
-
+.m-t-24{
+    margin-top:20px;
+    text-align:center;
+}
+.form-submit{
+    margin-left:5px;
+}
 .app-content-body {
     float: left;
     width: 100%;
@@ -741,11 +748,10 @@ p {
     border-right: solid 0px #cecece;
     color: #cc0000;
     font-weight: bold;
-    font-size: 20px;
+  
     padding-left: 2%;
     text-align: center;
-    font-family: sans-serif;
-    font-style: italic;
+
 }
 
 tbody {
@@ -792,7 +798,7 @@ tbody {
 .table-responsive tbody td {
     text-align: center;
     border-right: solid 0px #ccc!important;
-    font-size: 14px;
+   
     color: #3f4454;
     border-bottom: solid 0px #ccc!important;
 }

@@ -3,146 +3,297 @@
         <div class="col">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="region region-content">
-                        <div id="block-system-main" class="block block-system clearfix">
-                            <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
+                    <div>
+                        <tabset>
+                          <tab heading="Payout List" id="tab1">
+                            <div class="region region-content">
+                                <div id="block-system-main" class="block block-system clearfix">
+                                <div class="view view-e-wallet-transactions view-id-e_wallet_transactions view-display-id-page_2 view-dom-id-6f6063f804c3121f115cbb3413b70812">
                                 <div class="view-filters">
-
-                                    <div class="from-panel">
-                                        <div class="views-exposed-form form-inline">
-                                            <div class="views-exposed-widgets clearfix">
-                                                <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
-                                                    <label for="edit-pin">
-                                                               Search by Member ID </label>
-                                                    <div class="views-widget">
-                                                        <div class="form-item clearfix form-type-textfield form-item-pin form-group">
-                                                            <input type="text" #userId id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                <form action="/afl/expenses-history" method="get" id="views-exposed-form-e-wallet-transactions-page-2" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
+                                <div class="views-exposed-widgets clearfix">
+                                <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                Member Name </label>
+                                <div class="views-widget">
+                                <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                </div>
+                                </div>
+                                </div>
+                                <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                  <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                  Sponser Name </label>
+                                  <div class="views-widget">
+                                  <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                  <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                  </div>
+                                  </div>
+                                  </div>
+                                  <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                    <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                    Cadre </label>
+                                    <div class="views-widget">
+                                    <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                        <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                    </div>
+                                    </div>
+                                    </div>
+                                <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                                <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                            </div>
+                                </div>
+                                </div>
+                                </div></form> </div>
+                                <div class="view-content">
+                                <div class="panel panel-default">
+                                <div class="table-responsive">
+                                <table class="views-table cols-5 table">
+                                <thead>
+                                <tr>
+                                 <th class="views-field views-field-counter">
+                                # </th>
+                                <th class="views-field views-field-category">
+                                Member Name</th>
+                                <th class="views-field views-field-name">
+                                Sponser Name </th>
+                                <th class="views-field views-field-php">
+                                Cadre </th>
+                                <th class="views-field views-field-created">
+                                Auto Pool Level </th>
+                                <th class="views-field views-field-created">
+                                  Actions </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="odd views-row-first">
+                                <td class="views-field views-field-counter">
+                                1 </td>
+                                <td class="views-field views-field-category">
+                                E-Pin Generation </td>
+                                <td class="views-field views-field-name">
+                                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                                <td class="views-field views-field-php">
+                                <span class="small text-primary"></span> 1,057.87 USD <span class="label2 bg-danger"> Debited </span> </td>
+                                <td class="views-field views-field-created">
+                                06/07/2020 </td>
+                                <td>
+                                                              
+                                  <a href="#" data-lity="">
+                                      <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                                  </a>
+                                
+                                  <a >
+                                      <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                                  </a>
+                                  <a >
+                                    <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                                </a>
+                              </td>
+                                </tr>
+                                <tr class="even">
+                                <td class="views-field views-field-counter">
+                                2 </td>
+                                <td class="views-field views-field-category">
+                                E-Pin Generation </td>
+                                <td class="views-field views-field-name">
+                                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                                <td class="views-field views-field-php">
+                                <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                                <td class="views-field views-field-created">
+                                02/16/2019 </td>
+                                </tr>
+                                <tr class="odd">
+                                <td class="views-field views-field-counter">
+                                3 </td>
+                                <td class="views-field views-field-category">
+                                E-Pin Generation </td>
+                                <td class="views-field views-field-name">
+                                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                                <td class="views-field views-field-php">
+                                <span class="small text-primary"></span> 165.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                                <td class="views-field views-field-created">
+                                01/29/2019 </td>
+                                </tr>
+                                <tr class="even">
+                                <td class="views-field views-field-counter">
+                                4 </td>
+                                <td class="views-field views-field-category">
+                                E-Pin Generation </td>
+                                <td class="views-field views-field-name">
+                                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                                <td class="views-field views-field-php">
+                                <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                                <td class="views-field views-field-created">
+                                01/25/2019 </td>
+                                </tr>
+                                <tr class="odd views-row-last">
+                                <td class="views-field views-field-counter">
+                                5 </td>
+                                <td class="views-field views-field-category">
+                                Withdrawal </td>
+                                <td class="views-field views-field-name">
+                                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                                <td class="views-field views-field-php">
+                                <span class="small text-primary"></span> 333.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                                <td class="views-field views-field-created">
+                                09/28/2017 </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div> 
+                                </div>
+                          </tab>
+                          <tab heading="Memeber Payout Report">
+                            <div class="region region-content">
+                                <div id="block-system-main" class="block block-system clearfix">
+                                    <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
+                                        <div class="view-filters">
+        
+                                            <div class="from-panel">
+                                                <div class="views-exposed-form form-inline">
+                                                    <div class="views-exposed-widgets clearfix">
+                                                        <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
+                                                            <label for="edit-pin">
+                                                                       Search by Member ID </label>
+                                                            <div class="views-widget">
+                                                                <div class="form-item clearfix form-type-textfield form-item-pin form-group">
+                                                                    <input type="text" #userId id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                                            <input type="button" (click)="searchUser(userId.value)" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
+                                                            <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                                                            <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                                                    <input type="button" (click)="searchUser(userId.value)" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
-                                                    <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
-                                                    <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                            </div>
+        
+                                        </div>
+                                        <div class="business">
+                                            <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH <span style="text-transform: uppercase;">{{currentMonth}}</span> 2020</h2><br><br>
+                                            <div class="containerfluid">
+                                                <div class="row">
+                                                    <div class="col-sm-8 ">
+                                                        <div class="row ">
+                                                            <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay out No :</p>&nbsp; {{realtorsData?.Payout_Number}}
+                                                        </div>
+                                                        <div class="row ">
+                                                            <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</p>&nbsp; {{realtorsData?.Name}}
+                                                        </div>
+                                                        <div class="row ">
+                                                            <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank :</p>&nbsp; {{realtorsData?.Rank}}
+                                                        </div>
+                                                        <div class="row ">
+                                                            <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id Number :</p>&nbsp; {{realtorsData?.Id_Number}}
+                                                        </div>
+                                                        <div class="row ">
+                                                            <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :</p>&nbsp; <span style="
+                                                            margin-left: 6%;
+                                                        ">{{realtorsData?.Address}}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 white-box">
+                                                        <div class="div1">
+                                                            <span class="border"></span>
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+        
+                                            </div>
+                                            <div class="container ">
+                                                <h3 class="text-center">BUSINESS DETAILS </h3>
+                                                <br>
+                                            </div>
+        
+                                            <div class="view-content">
+                                                <div class="panel panel-default">
+                                                    <div class="table-responsive">
+                                                        <table class="views-table cols-2 table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="views-field views-field-fast-track-income">Fast Track Income </th>
+                                                                    <th class="views-field views-auto-pool-working-plan">AUTO POOL NON WORKING PLAN </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class=" odd views-row-first">
+                                                                    <td class="views-field views-field-fast-track-income">
+                                                                        <p style="margin-left: -23px;">Direct Collection : {{realtorsData?.Direct_Coll}}</p>
+                                                                        <p style="margin-left: -106px;" *ngFor="let item of teamCollection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}</p>
+                                                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down
+                                                                            Line upgrade incentive {{realtorsData?.DownLine_In}}</p>
+                                                                        <p style="margin-left:280px">M.F.A. {{realtorsData?.MFA}}</p>
+                                                                        <p style="margin-left:250px">Eligibility {{realtorsData?.Eligibility}}</p>
+        
+                                                                    </td>
+                                                                    <td class="views-field views-field-fast-auto-pool-working-plan">
+                                                                        <p>1st Level {{realtorsData?.first_Level}}</p>
+                                                                        <p>2nd Level Rs.0/-</p>
+                                                                        <p>3rd Level Rs.0/-</p>
+                                                                        <p>4th Level Rs.0/-</p>
+                                                                        <p>5th Level Rs.0/-</p>
+                                                                        <p>6th Level Rs.0/-</p>
+                                                                        <p>7th Level Rs.0/-</p>
+                                                                        <p>Eligibility Rs.0/-</p>
+                                                                    </td>
+        
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="view-content">
+                                                <div class="panel panel-default">
+                                                    <div class="table-responsive">
+                                                        <table class="views-table cols-2 table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="views-field views-field-deduction">Deduction </th>
+                                                                    <th class="views-field views-net-income">NET INCOME </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class=" odd views-row-first">
+                                                                    <td class="views-field views-field-deduction">
+        
+                                                                        <p>Upgrade Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {{realtorsData?.Upgrade_Amount}}</p>
+                                                                        <p>TDS & SC {{realtorsData?.Eligibility}}@ 10% = {{realtorsData?.TDSANDSC}}</p>
+                                                                        <p>Total Deduction = {{realtorsData?.Total_Ded}}&nbsp;&nbsp;</p>
+                                                                    </td>
+        
+                                                                    <td class="views-field views-net-income">
+        
+                                                                        <p>TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{realtorsData?.Total}}</p>
+                                                                        <p>DEDUCTION : {{realtorsData?.Total_Ded}}</p>
+                                                                        <hr>
+                                                                        <p>Net Income : {{realtorsData?.Total_Income}}</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <br><br>
+                                                <i id="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Eligibility Amount <b>{{realtorsData?.Net_Eligibility_Amt}}</b></i>
+                                            </div>
+        
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="business">
-                                    <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH <span style="text-transform: uppercase;">{{currentMonth}}</span> 2020</h2><br><br>
-                                    <div class="containerfluid">
-                                        <div class="row">
-                                            <div class="col-sm-8 ">
-                                                <div class="row ">
-                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay out No :</p>&nbsp; {{realtorsData?.Payout_Number}}
-                                                </div>
-                                                <div class="row ">
-                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</p>&nbsp; {{realtorsData?.Name}}
-                                                </div>
-                                                <div class="row ">
-                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank :</p>&nbsp; {{realtorsData?.Rank}}
-                                                </div>
-                                                <div class="row ">
-                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Id Number :</p>&nbsp; {{realtorsData?.Id_Number}}
-                                                </div>
-                                                <div class="row ">
-                                                    <p class="frow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :</p>&nbsp; <span style="
-                                                    margin-left: 6%;
-                                                ">{{realtorsData?.Address}}</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 white-box">
-                                                <div class="div1">
-                                                    <span class="border"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="container ">
-                                        <h3 class="text-center">BUSINESS DETAILS </h3>
-                                        <br>
-                                    </div>
-
-                                    <div class="view-content">
-                                        <div class="panel panel-default">
-                                            <div class="table-responsive">
-                                                <table class="views-table cols-2 table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="views-field views-field-fast-track-income">Fast Track Income </th>
-                                                            <th class="views-field views-auto-pool-working-plan">AUTO POOL NON WORKING PLAN </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class=" odd views-row-first">
-                                                            <td class="views-field views-field-fast-track-income">
-                                                                <p style="margin-left: -23px;">Direct Collection : {{realtorsData?.Direct_Coll}}</p>
-                                                                <p style="margin-left: -106px;" *ngFor="let item of teamCollection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}</p>
-                                                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down
-                                                                    Line upgrade incentive {{realtorsData?.DownLine_In}}</p>
-                                                                <p style="margin-left:280px">M.F.A. {{realtorsData?.MFA}}</p>
-                                                                <p style="margin-left:250px">Eligibility {{realtorsData?.Eligibility}}</p>
-
-                                                            </td>
-                                                            <td class="views-field views-field-fast-auto-pool-working-plan">
-                                                                <p>1st Level {{realtorsData?.first_Level}}</p>
-                                                                <p>2nd Level Rs.0/-</p>
-                                                                <p>3rd Level Rs.0/-</p>
-                                                                <p>4th Level Rs.0/-</p>
-                                                                <p>5th Level Rs.0/-</p>
-                                                                <p>6th Level Rs.0/-</p>
-                                                                <p>7th Level Rs.0/-</p>
-                                                                <p>Eligibility Rs.0/-</p>
-                                                            </td>
-
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="view-content">
-                                        <div class="panel panel-default">
-                                            <div class="table-responsive">
-                                                <table class="views-table cols-2 table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="views-field views-field-deduction">Deduction </th>
-                                                            <th class="views-field views-net-income">NET INCOME </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class=" odd views-row-first">
-                                                            <td class="views-field views-field-deduction">
-
-                                                                <p>Upgrade Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {{realtorsData?.Upgrade_Amount}}</p>
-                                                                <p>TDS & SC {{realtorsData?.Eligibility}}@ 10% = {{realtorsData?.TDSANDSC}}</p>
-                                                                <p>Total Deduction = {{realtorsData?.Total_Ded}}&nbsp;&nbsp;</p>
-                                                            </td>
-
-                                                            <td class="views-field views-net-income">
-
-                                                                <p>TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{realtorsData?.Total}}</p>
-                                                                <p>DEDUCTION : {{realtorsData?.Total_Ded}}</p>
-                                                                <hr>
-                                                                <p>Net Income : {{realtorsData?.Total_Income}}</p>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <br><br>
-                                        <i id="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net Eligibility Amount <b>{{realtorsData?.Net_Eligibility_Amt}}</b></i>
-                                    </div>
-
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                          </tab>
+                        </tabset>
+                      </div>
+                   

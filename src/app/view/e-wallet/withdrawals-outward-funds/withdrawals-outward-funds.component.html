@@ -62,7 +62,9 @@
                   </div>
                   </div>
                   <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                  <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
+                  <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                  <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                </div>
                   </div>
                   </div>
                   </div></form> </div>
@@ -82,6 +84,8 @@
                   Amount </th>
                   <th class="views-field views-field-created">
                   Transaction Date </th>
+                  <th class="views-field views-field-created">
+                    Actions </th>
                   </tr>
                   </thead>
                   <tbody>
@@ -96,6 +100,21 @@
                   <span class="small text-primary"></span> 1,057.87 USD <span class="label2 bg-danger"> Debited </span> </td>
                   <td class="views-field views-field-created">
                   06/07/2020 </td>
+                  <td>
+                                                
+                    <a href="#" data-lity="">
+                        <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                    </a>
+                    <a>
+                        <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                    </a>
+                    <a >
+                        <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                    </a>
+                    <a >
+                      <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                  </a>
+                </td>
                   </tr>
                   <tr class="even">
                   <td class="views-field views-field-counter">
@@ -194,17 +213,114 @@
                   </div>
                   </div>
                   <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                  <input type="submit" id="edit-submit-e-wallet-transactions-monthly" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
+                  <input type="submit" id="edit-submit-e-wallet-transactions-monthly" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                  <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                </div>
                   </div>
                 </div>
                 </div>
               </form> </div>
-              <div class="view-empty">
-              <div class="panel b-a">
-              <div class="panel-heading ">
-              No transaction history
-              </div>
-              </div> </div>
+              <div class="view-content">
+                <div class="panel panel-default">
+                <div class="table-responsive">
+                <table class="views-table cols-5 table">
+                <thead>
+                <tr>
+                 <th class="views-field views-field-counter">
+                # </th>
+                <th class="views-field views-field-category">
+                Source</th>
+                <th class="views-field views-field-name">
+                Details of Transaction </th>
+                <th class="views-field views-field-php">
+                Amount </th>
+                <th class="views-field views-field-created">
+                Transaction Date </th>
+                <th class="views-field views-field-created">
+                  Actions </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd views-row-first">
+                <td class="views-field views-field-counter">
+                1 </td>
+                <td class="views-field views-field-category">
+                E-Pin Generation </td>
+                <td class="views-field views-field-name">
+                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                <td class="views-field views-field-php">
+                <span class="small text-primary"></span> 1,057.87 USD <span class="label2 bg-danger"> Debited </span> </td>
+                <td class="views-field views-field-created">
+                06/07/2020 </td>
+                <td>
+                                              
+                  <a href="#" data-lity="">
+                      <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                  </a>
+                  <a>
+                      <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                  </a>
+                  <a >
+                      <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                  </a>
+                  <a >
+                    <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                </a>
+              </td>
+                </tr>
+                <tr class="even">
+                <td class="views-field views-field-counter">
+                2 </td>
+                <td class="views-field views-field-category">
+                E-Pin Generation </td>
+                <td class="views-field views-field-name">
+                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                <td class="views-field views-field-php">
+                <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                <td class="views-field views-field-created">
+                02/16/2019 </td>
+                </tr>
+                <tr class="odd">
+                <td class="views-field views-field-counter">
+                3 </td>
+                <td class="views-field views-field-category">
+                E-Pin Generation </td>
+                <td class="views-field views-field-name">
+                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                <td class="views-field views-field-php">
+                <span class="small text-primary"></span> 165.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                <td class="views-field views-field-created">
+                01/29/2019 </td>
+                </tr>
+                <tr class="even">
+                <td class="views-field views-field-counter">
+                4 </td>
+                <td class="views-field views-field-category">
+                E-Pin Generation </td>
+                <td class="views-field views-field-name">
+                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                <td class="views-field views-field-php">
+                <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                <td class="views-field views-field-created">
+                01/25/2019 </td>
+                </tr>
+                <tr class="odd views-row-last">
+                <td class="views-field views-field-counter">
+                5 </td>
+                <td class="views-field views-field-category">
+                Withdrawal </td>
+                <td class="views-field views-field-name">
+                Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+                <td class="views-field views-field-php">
+                <span class="small text-primary"></span> 333.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+                <td class="views-field views-field-created">
+                09/28/2017 </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
               </div>
               </div> 
               </div>
@@ -250,17 +366,114 @@
                 </div>
                 </div>
                 <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                <input type="submit" id="edit-submit-e-wallet-transactions-monthly" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
+                <input type="submit" id="edit-submit-e-wallet-transactions-monthly" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> 
+                <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+              </div>
                 </div>
               </div>
               </div>
             </form> </div>
-            <div class="view-empty">
-            <div class="panel b-a">
-            <div class="panel-heading ">
-            No transaction history
-            </div>
-            </div> </div>
+            <div class="view-content">
+              <div class="panel panel-default">
+              <div class="table-responsive">
+              <table class="views-table cols-5 table">
+              <thead>
+              <tr>
+               <th class="views-field views-field-counter">
+              # </th>
+              <th class="views-field views-field-category">
+              Source</th>
+              <th class="views-field views-field-name">
+              Details of Transaction </th>
+              <th class="views-field views-field-php">
+              Amount </th>
+              <th class="views-field views-field-created">
+              Transaction Date </th>
+              <th class="views-field views-field-created">
+                Actions </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="odd views-row-first">
+              <td class="views-field views-field-counter">
+              1 </td>
+              <td class="views-field views-field-category">
+              E-Pin Generation </td>
+              <td class="views-field views-field-name">
+              Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+              <td class="views-field views-field-php">
+              <span class="small text-primary"></span> 1,057.87 USD <span class="label2 bg-danger"> Debited </span> </td>
+              <td class="views-field views-field-created">
+              06/07/2020 </td>
+              <td>
+                                            
+                <a href="#" data-lity="">
+                    <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                </a>
+                <a>
+                    <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                </a>
+                <a >
+                    <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                </a>
+                <a >
+                  <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+              </a>
+            </td>
+              </tr>
+              <tr class="even">
+              <td class="views-field views-field-counter">
+              2 </td>
+              <td class="views-field views-field-category">
+              E-Pin Generation </td>
+              <td class="views-field views-field-name">
+              Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+              <td class="views-field views-field-php">
+              <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+              <td class="views-field views-field-created">
+              02/16/2019 </td>
+              </tr>
+              <tr class="odd">
+              <td class="views-field views-field-counter">
+              3 </td>
+              <td class="views-field views-field-category">
+              E-Pin Generation </td>
+              <td class="views-field views-field-name">
+              Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+              <td class="views-field views-field-php">
+              <span class="small text-primary"></span> 165.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+              <td class="views-field views-field-created">
+              01/29/2019 </td>
+              </tr>
+              <tr class="even">
+              <td class="views-field views-field-counter">
+              4 </td>
+              <td class="views-field views-field-category">
+              E-Pin Generation </td>
+              <td class="views-field views-field-name">
+              Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+              <td class="views-field views-field-php">
+              <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+              <td class="views-field views-field-created">
+              01/25/2019 </td>
+              </tr>
+              <tr class="odd views-row-last">
+              <td class="views-field views-field-counter">
+              5 </td>
+              <td class="views-field views-field-category">
+              Withdrawal </td>
+              <td class="views-field views-field-name">
+              Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
+              <td class="views-field views-field-php">
+              <span class="small text-primary"></span> 333.00 USD <span class="label2 bg-danger"> Debited </span> </td>
+              <td class="views-field views-field-created">
+              09/28/2017 </td>
+              </tr>
+              </tbody>
+              </table>
+              </div>
+              </div>
+              </div>
             </div>
             </div> 
             </div>
