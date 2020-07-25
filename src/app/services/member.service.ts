@@ -31,9 +31,15 @@ export class MemberServices {
         }))
     }
 
-    getMemberList(){
-        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberList`).pipe(map((res: any) => {
+    getMemberList(actionTaken:string,memberId:number){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberList/${actionTaken}/${memberId}`).pipe(map((res: any) => {
             return res;
         }))
+    }
+
+    uploadMemberImage(formData: any) {
+        return this.http.post<string>(`${this.config.apiEndpoint}/ERealtors/Member/PostMember/MemberImage`, formData).pipe(map((data: string) => {
+            return data;
+        }));
     }
 }

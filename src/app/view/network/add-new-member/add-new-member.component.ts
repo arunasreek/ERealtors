@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef, ChangeDetectorRef } from '@angular/core';
 import { DATE } from 'ngx-bootstrap/chronos/units/constants';
 import {  MemberServices } from 'src/app/services';
 import { ToastrService } from 'ngx-toastr';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-new-member',
@@ -9,13 +13,19 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./add-new-member.component.css']
 })
 export class AddNewMemberComponent implements OnInit {
+  @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
+  modalRef: BsModalRef;
   sponserList : any;
   memberList : any;
   currentMonth : string;
   filterValue : any;
-
-  constructor(public memberService: MemberServices,
-              public toastr: ToastrService) { }
+  file : any;
+  imageUrl : string;
+  Guid : string;
+  events: Subscription[] = [];
+  messages: string[] = [];
+  constructor(private modalService: BsModalService,public memberService: MemberServices,
+              public toastr: ToastrService,private changeDetection: ChangeDetectorRef) { }
   model = {
            RefId :0,
            plot_sqyds :0,
@@ -42,6 +52,7 @@ export class AddNewMemberComponent implements OnInit {
            Bank_Account_Number :'',
            IsOptingforStar1Autopool :0,
            UpgradeAmountPaid :0,
+           Id:0
   };
   ngOnInit(): void {
     this.getSponserList();
@@ -51,6 +62,8 @@ export class AddNewMemberComponent implements OnInit {
 
   pushMember(){
     const data = {
+      ActionTaken : this.Guid?'Update':'Insert',
+      Id : this.model.Id,
       RefId :parseInt(this.model.RefId.toString()),
       plot_sqyds : parseInt(this.model.plot_sqyds.toString()),
       no_of_plots : parseInt(this.model.no_of_plots.toString()),
@@ -75,13 +88,22 @@ export class AddNewMemberComponent implements OnInit {
       IFSC_Code :this.model.IFSC_Code,
       Bank_Account_Number :this.model.Bank_Account_Number,
       IsOptingforStar1Autopool : this.model.IsOptingforStar1Autopool?1:0,
-      UpgradeAmountPaid :this.model.UpgradeAmountPaid
+      UpgradeAmountPaid :this.model.UpgradeAmountPaid,
+      ImageUrl : this.imageUrl
     };
     this.memberService.postMember(data)
     .subscribe(() => {
-       this.toastr.success('Record Added Successfully ', 'Success');
+      this.getMemberList();
+      
+       this.toastr.success(' '+this.Guid?'Record Updated Successfully':'Record Added Successfully'+'  ', 'Success');
+       this.staticTabs.tabs[0].active = true;
     });
+    //Reset 
+    this.reset();
+
     console.log(this.model);
+    
+    
   }
 
   getSponserList(){
@@ -93,7 +115,7 @@ export class AddNewMemberComponent implements OnInit {
   }
 
   getMemberList(){
-    this.memberService.getMemberList()
+    this.memberService.getMemberList('View',null)
      .subscribe((res) => {
       this.memberList = res.Result;
       this.filterValue = res.Result;
@@ -117,4 +139,145 @@ export class AddNewMemberComponent implements OnInit {
       }
       
     }
+
+    onFileChanged(event: any) {
+      if (event.target.files.length > 0) {
+          const file = event.target.files[0];
+          const fileExtensitions = ["jpg", "jpeg", "png"];
+          if (fileExtensitions.indexOf(file.name.split('.').pop()) > -1) {
+              const formData = new FormData();
+              this.file = file;
+              formData.append('file', file);
+              this.memberService.uploadMemberImage(formData).subscribe((data: string) => {
+                  if(data){}
+                    this.imageUrl = data;
+                    this.toastr.success('Image Added Successfully ', 'Success');
+              });
+          } else {
+              this.toastr.error('Allowed file formats jpg, jpeg, png, only','Error');
+          }
+      }
+  }
+
+  viewMember(guid:any){
+    this.staticTabs.tabs[1].active = true;
+         var data =  this.memberList.find(x=>x.Guid === guid);
+         this.Guid = data.Guid;
+          this.model.RefId = 0;
+          this.model.plot_sqyds =0;
+          this.model.no_of_plots =0;
+          this.model.rate_per_plot =0;
+          this.model.address  = data.address;
+          this.model.First_Name =data.First_Name;
+          this.model.Surname  =data.Surname;
+          this.model.Username =data.Username;
+          this.model.Email_Address = data.Email_Address;
+          this.model.Date_of_Joining = new Date(data.Date_of_Joining);
+          this.model.Date_of_Birth  = new Date(data.Date_of_Birth);
+          this.model.perks  = data.perks;
+          this.model.Password = data.Password;
+          this.model.Confirm_Password =data.Confirm_Password;
+          this.model.Sponsor =data.Sponsor;
+          this.model.Name_of_Nominee =data.Name_of_Nominee;
+          this.model.Mobile_Number =data.Mobile_Number;
+          this.model.Pan_Card_Number =data.Pan_Card_Number;
+          this.model.Aadhaar_Number =data.Aadhaar_Number;
+          this.model.Bank_Name =data.Bank_Name;
+          this.model.IFSC_Code =data.IFSC_Code;
+          this.model.Bank_Account_Number = data.Bank_Account_Number;
+          this.model.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
+          this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
+          this.model.Id = data.Id;
+  }
+
+  deleteMember(Id:any){
+    this.memberService.getMemberList('Delete',Id)
+    .subscribe((res) => {
+     this.getMemberList();
+     this.toastr.success('Member Deleted Successfully','Success');
+   });
+  }
+  
+  openModal(template: TemplateRef<any>,guid : any) {
+    const _combine = combineLatest(
+      this.modalService.onShow,
+      this.modalService.onShown,
+      this.modalService.onHide,
+      this.modalService.onHidden
+    ).subscribe(() => this.changeDetection.markForCheck());
+
+    var data =  this.memberList.find(x=>x.Guid === guid);
+    this.Guid = data.Guid;
+     this.model.RefId = 0;
+     this.model.plot_sqyds =0;
+     this.model.no_of_plots =0;
+     this.model.rate_per_plot =0;
+     this.model.address  = data.address;
+     this.model.First_Name =data.First_Name;
+     this.model.Surname  =data.Surname;
+     this.model.Username =data.Username;
+     this.model.Email_Address = data.Email_Address;
+     this.model.Date_of_Joining = new Date(data.Date_of_Joining);
+     this.model.Date_of_Birth  = new Date(data.Date_of_Birth);
+     this.model.perks  = data.perks;
+     this.model.Password = data.Password;
+     this.model.Confirm_Password =data.Confirm_Password;
+     this.model.Sponsor =data.Sponsor;
+     this.model.Name_of_Nominee =data.Name_of_Nominee;
+     this.model.Mobile_Number =data.Mobile_Number;
+     this.model.Pan_Card_Number =data.Pan_Card_Number;
+     this.model.Aadhaar_Number =data.Aadhaar_Number;
+     this.model.Bank_Name =data.Bank_Name;
+     this.model.IFSC_Code =data.IFSC_Code;
+     this.model.Bank_Account_Number = data.Bank_Account_Number;
+     this.model.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
+     this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
+     this.model.Id = data.Id;
+
+     this.events.push(
+      this.modalService.onHidden.subscribe((reason: string) => {
+        const _reason = reason ? `, dismissed by ${reason}` : '';
+        this.reset();
+        this.unsubscribe();
+      })
+    );
+ 
+    this.events.push(_combine);
+    this.modalRef = this.modalService.show(template);
+   
+  }
+  unsubscribe() {
+    this.events.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
+    });
+    this.events = [];
+  }
+
+  reset(){
+    this.Guid=null;
+    this.model.RefId = 0;
+    this.model.plot_sqyds =0;
+    this.model.no_of_plots =0;
+    this.model.rate_per_plot =0;
+    this.model.address = '';
+    this.model.First_Name = '';
+    this.model.Surname  = '';
+    this.model.Username = '';
+    this.model.Email_Address = ''; 
+    this.model.Date_of_Joining = new Date(); 
+    this.model.Date_of_Birth  = new Date(); 
+    this.model.perks  = ''; 
+    this.model.Password = ''; 
+    this.model.Confirm_Password = '';
+    this.model.Sponsor = ''; 
+    this.model.Name_of_Nominee = '';
+    this.model.Mobile_Number = '';
+    this.model.Pan_Card_Number = '';
+    this.model.Aadhaar_Number = '';
+    this.model.Bank_Name = '';
+    this.model.IFSC_Code = '';
+    this.model.Bank_Account_Number = '';
+    this.model.IsOptingforStar1Autopool = 0; 
+    this.model.UpgradeAmountPaid = 0; 
+  }
 }

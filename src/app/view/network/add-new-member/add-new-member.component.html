@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div>
-                                <tabset>
+                                <tabset #staticTabs>
                                     <tab heading="Members List" id="tab1">
                                         <div class="region region-content">
                                             <div id="block-system-main" class="block block-system clearfix">
@@ -38,7 +38,7 @@
                                                                         </div>
                                                                         <div id="edit-field-afl-surname-value-wrapper" class="views-exposed-widget views-widget-filter-field_afl_surname_value form-group">
                                                                             <label for="edit-field-afl-surname-value">
-                                                                            Sponser Name </label>
+                                                                            Sponsor Name </label>
                                                                             <div class="views-widget">
                                                                                 <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-value form-group">
                                                                                     <input type="text" id="edit-field-afl-surname-value" name="field_afl_surname_value" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
@@ -62,7 +62,7 @@
                                                                         </div>
                                                                         <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
                                                                             <label for="edit-level">
-                                                                                    Cader </label>
+                                                                                    Cadre </label>
                                                                             <div class="views-widget">
                                                                                 <div class="form-item clearfix form-type-select form-item-level form-group">
                                                                                     <select _ngcontent-wyk-c77="" id="edit-level" name="level" class="form-select form-control"><option _ngcontent-wyk-c77="" value="All" selected="selected">- Select Cader -</option><option _ngcontent-wyk-c77="" value="1">Star 1</option>
@@ -97,7 +97,7 @@
                                                                             <th class="views-field views-field-level">
                                                                                 Cadre </th>
                                                                             <th class="views-field views-field-php-1">
-                                                                                Sponser Name </th>
+                                                                                Sponsor Name </th>
                                                                             <th class="views-field views-field-created">
                                                                                 Joined date </th>
                                                                             <th class="views-field views-field-php">
@@ -116,13 +116,13 @@
                                                                             <td>{{item.AutoPool}}</td>
                                                                             <td>
 
-                                                                                <a href="#" data-lity="">
+                                                                                <a (click)="openModal(template,item.Guid)" data-lity="">
                                                                                     <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                                                                                 </a>
-                                                                                <a>
+                                                                                <a (click)="viewMember(item.Guid)">
                                                                                     <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                                                                                 </a>
-                                                                                <a>
+                                                                                <a (click)="deleteMember(item.Id)">
                                                                                     <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;"></i>
                                                                                 </a>
                                                                             </td>
@@ -239,10 +239,11 @@
                                                                         <div id="edit-field-product-image-und-0-ajax-wrapper">
                                                                             <div class="form-item clearfix form-type-managed-file form-item-field-product-image-und-0 form-group" data-toggle="tooltip" title="Click on the image and drag to mark how the image will be cropped">
                                                                                 <label for="edit-field-product-image-und-0-upload">Image </label>
-                                                                                <div class="imagefield-crop-widget form-managed-file clearfix"></div><input type="file" id="edit-field-product-image-und-0-upload" name="files[field_product_image_und_0]" size="22" class="form-file" /><input type="submit" id="edit-field-product-image-und-0-upload-button"
+                                                                                <div class="imagefield-crop-widget form-managed-file clearfix"></div>
+                                                                                <input (change)="onFileChanged($event)" accept=".jpg, .jpeg, .png" #fileInput type="file" id="edit-field-product-image-und-0-upload" onclick="this.value = null" name="files[field_product_image_und_0]" size="22" class="form-file" #fileInput/>
+                                                                                <!-- <input type="submit" id="edit-field-product-image-und-0-upload-button"
                                                                                     name="field_product_image_und_0_upload_button" value="Upload" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="field_product_image[und][0][fid]"
-                                                                                    value="0" />
-                                                                                <input type="hidden" name="field_product_image[und][0][display]" value="1" />
+                                                                                    value="0" /> -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -255,7 +256,7 @@
                                                                         <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255" />
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                                                        <label for="edit-field-afl-bank-account-number-und-0-value"> Rate Per Plot <span class="form-required" title="This field is required.">*</span></label>
+                                                                        <label for="edit-field-afl-bank-account-number-und-0-value"> Entry Amount <span class="form-required" title="This field is required.">*</span></label>
                                                                         <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" />
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
@@ -279,6 +280,8 @@
                                                             </fieldset>
                                                         </div>
                                                         <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                                        <button type='button' (click)="reset()" class="btn btn-primary" style="margin-top: 10px;">Clear</button>
+
                                                     </div>
                                                 </form>
                                             </div>
@@ -290,3 +293,155 @@
                         </div>
                     </div>
                 </div>
+
+                <ng-template #template>
+                    <div class="modal-header">
+                        <h4 class="modal-title pull-left">Modal</h4>
+                        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="from-panel">
+                            <div id="checkboxes-div">
+                                <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
+                                    <legend><span class="fieldset-legend">Members Details</span></legend>
+                                    <div class="fieldset-wrapper">
+                                        <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
+                                            <div class="form-item clearfix form-type-select form-item-field-country-und form-group2">
+                                                <label for="edit-field-country-und">Country <span class="form-required" title="This field is required.">*</span></label>
+                                                <select [(ngModel)]="model.Country" id="edit-field-country-und" name="field_country[und]" class="form-select form-control required">
+                                                    <option value="India">India</option>
+                                                    <option value="USA">USA</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your first name.">
+                                            <label for="edit-field-afl-first-name-und-0-value">First Name <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.First_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="field_afl_first_name" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
+                                            <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
+                                            <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="username form-text form-control input-lg-3 required" [(ngModel)]="model.Username" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-mail form-group2" data-toggle="tooltip">
+                                            <label for="edit-mail">E-mail address <span class="form-required" title="This field is required.">*</span></label>
+                                            <input type="text" id="edit-mail" name="mail" value="" size="60" [(ngModel)]="model.Email_Address" maxlength="254" class="form-text form-control input-lg-3 required" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
+                                            <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
+                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Joining" bsDatepicker>
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
+                                            <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
+                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Birth" bsDatepicker>
+                                        </div>
+                                        <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
+                                            <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="password-field form-text form-control required" [(ngModel)]="model.Password" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-password form-item-pass-pass2 form-group2">
+                                            <label for="edit-pass-pass2">Confirm password <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="password-confirm form-text form-control required" [(ngModel)]="model.Confirm_Password" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128" />
+                                        </div>
+                                        <div class="field-type-entityreference field-name-field-afl-parent field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-parent">
+                                            <div id="field-afl-parent-add-more-wrapper"></div>
+                                        </div>
+                                        <div class="field-type-entityreference field-name-field-afl-sponsor field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-sponsor">
+                                            <div id="field-afl-sponsor-add-more-wrapper">
+                                                <div class="form-item form-autocomplete clearfix form-type-textfield form-item-field-afl-sponsor-und-0-target-id form-group2" data-toggle="tooltip" title="Please select the Sponsor user">
+                                                    <label for="edit-field-afl-sponsor-und-0-target-id">Sponsor <span class="form-required" title="This field is required.">*</span></label>
+                                                    <select class="form-control" id="Sponsor" name="Sponsor" [(ngModel)]="model.Sponsor">
+                                                        <option *ngFor="let item of sponserList" [value]="item.SponserId">{{item.SponserValue}}</option>
+                                                   </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your nominee name.">
+                                            <label for="edit-field-afl-nominee-name-und-0-value"> Name of the Nominee (optional) <span class="form-required" title="This field is required."></span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Name_of_Nominee" type="text" id="edit-field-afl-first-name-und-0-value" name="Name_of_Nominee" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="field-type-text field-name-field-mobile-number field-widget-text-textfield form-wrapper" id="edit-field-mobile-number">
+                                            <div id="field-mobile-number-add-more-wrapper">
+                                                <div class="form-item clearfix form-type-textfield form-item-field-mobile-number-und-0-value form-group2">
+                                                    <label for="edit-field-mobile-number-und-0-value">Mobile Number </label>
+                                                    <input class="text-full form-text form-control input-lg-3" [(ngModel)]="model.Mobile_Number" type="text" id="edit-field-mobile-number-und-0-value" name="field_mobile_number" value="" size="60" maxlength="255" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-address-und-0-value form-group2" data-toggle="tooltip" title="Please provide your address.">
+                                            <label for="edit-field-afl-address-und-0-value">Address <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.address" type="text" id="edit-field-afl-address-und-0-value" name="address" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your pan card number.">
+                                            <label for="edit-field-afl-pan-number-und-0-value"> Pan Card Number<span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Pan_Card_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Pan_Card_Number" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your aadhar-number.">
+                                            <label for="edit-field-afl-aadhar-number-und-0-value"> Aadhar number <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Aadhaar_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Aadhaar_Number" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank name.">
+                                            <label for="edit-field-afl-bank-name-und-0-value">Bank Name <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Bank_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Name" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank ifsc code.">
+                                            <label for="edit-field-afl-Ifsc-code-und-0-value"> IFSC code <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.IFSC_Code" type="text" id="edit-field-afl-first-name-und-0-value" name="IFSC_Code" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Bank Account Number <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Bank_Account_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Account_Number" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="field-type-imagefield-crop field-name-field-product-image field-widget-imagefield-crop-widget form-wrapper" id="edit-field-product-image">
+                                            <div id="edit-field-product-image-und-0-ajax-wrapper">
+                                                <div class="form-item clearfix form-type-managed-file form-item-field-product-image-und-0 form-group" data-toggle="tooltip" title="Click on the image and drag to mark how the image will be cropped">
+                                                    <label for="edit-field-product-image-und-0-upload">Image </label>
+                                                    <div class="imagefield-crop-widget form-managed-file clearfix"></div>
+                                                    <input (change)="onFileChanged($event)" accept=".jpg, .jpeg, .png" #fileInput type="file" id="edit-field-product-image-und-0-upload" onclick="this.value = null" name="files[field_product_image_und_0]" size="22" class="form-file" #fileInput/>
+                                                    <!-- <input type="submit" id="edit-field-product-image-und-0-upload-button"
+                                                        name="field_product_image_und_0_upload_button" value="Upload" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="field_product_image[und][0][fid]"
+                                                        value="0" /> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Plot Sqyds <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.plot_sqyds" type="text" id="edit-field-afl-first-name-und-0-value" name="plot_sqyds" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> No Of Plots <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Entry Amount <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
+                                            <input style="
+                                            width: 22px;
+                                        " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" [(ngModel)]="model.IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60"
+                                                maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>
+                                            <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255" />
+                                        </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                            <label for="perks"> Perks <span class="form-required" title="This field is required.">*</span></label>
+                                            <input type="text" class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.perks" id="perks" name="perks" value="" size="60" maxlength="255" />
+                                        </div>
+
+
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
+                        </div>
+                    </div>
+                </ng-template>

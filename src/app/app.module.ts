@@ -64,6 +64,7 @@ import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-she
 //config module
 import { AppConfigModule, AppConfig } from './config/app.config.module';
 import { ToastrModule } from 'ngx-toastr';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -132,7 +133,8 @@ import { ToastrModule } from 'ngx-toastr';
     ServicesModule,
     AppConfigModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
     
   ],
   providers: [AppConfig],
