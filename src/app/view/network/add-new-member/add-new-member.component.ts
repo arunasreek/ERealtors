@@ -53,7 +53,8 @@ export class AddNewMemberComponent implements OnInit {
            IsOptingforStar1Autopool :0,
            UpgradeAmountPaid :0,
            Id:0,
-           Gender:'Male'
+           Gender:'Male',
+           Admin:0
   };
   ngOnInit(): void {
     this.getSponserList();
@@ -91,7 +92,8 @@ export class AddNewMemberComponent implements OnInit {
       IsOptingforStar1Autopool : this.model.IsOptingforStar1Autopool?1:0,
       UpgradeAmountPaid :this.model.UpgradeAmountPaid,
       ImageUrl : this.imageUrl,
-      Gender:this.model.Gender
+      Gender:this.model.Gender,
+      IsAdmin: this.model.Admin?1:0
     };
     this.memberService.postMember(data)
     .subscribe(() => {
@@ -261,5 +263,6 @@ export class AddNewMemberComponent implements OnInit {
      this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
      this.model.Id = data.Id;
      this.model.Gender = data.Gender;
+     this.model.Admin = data.IsAdmin;
   }
 }

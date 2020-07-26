@@ -28,42 +28,35 @@
                                                                 <table class="views-table cols-6 table">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th class="views-field views-field-counter">
-                                                                                # </th>
                                                                             <th class="views-field views-field-name">
-                                                                                Member </th>
-                                                                            <th class="views-field views-field-level">
                                                                                 Cadre </th>
+                                                                            <th class="views-field views-field-level">
+                                                                                Target Units </th>
                                                                             <th class="views-field views-field-php-1">
-                                                                                Sponsor Name </th>
+                                                                                Downline Members </th>
                                                                             <th class="views-field views-field-created">
-                                                                                Joined date </th>
+                                                                                Plots SQYDS </th>
                                                                             <th class="views-field views-field-php">
-                                                                                Autopool Level </th>
+                                                                                Rate Per Plot </th>
                                                                             <th class="views-field views-field-php">
                                                                                 Actions </th>
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                        <tr>
-                                                                            <!-- <td>{{item.Guid}}</td>
-                                                                            <td>{{item.Member}}</td>
-                                                                            <td>{{item.Star}}</td>
-                                                                            <td>{{item.Sponser}}</td>
-                                                                            <td>{{item.Join_Date.split('T')[0]}}</td>
-                                                                            <td>{{item.AutoPool}}</td>
+                                                                        <tr *ngFor="let item of settingList">
+                                                                            <td>{{item.Cadre}}</td>
+                                                                            <td>{{item.Target_Units}}</td>
+                                                                            <td>{{item.Downline_Members}}</td>
+                                                                            <td>{{item.Plots_SQYDS}}</td>
+                                                                            <td>{{item.Rate_per_Plot}}</td>
                                                                             <td>
-
-                                                                                <a (click)="openModal(template,item.Guid)" data-lity="">
-                                                                                    <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
-                                                                                </a>
-                                                                                <a (click)="viewMember(item.Guid)">
+                                                                                <a>
                                                                                     <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                                                                                 </a>
-                                                                                <a (click)="deleteMember(item.Id)">
+                                                                                <a>
                                                                                     <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;"></i>
                                                                                 </a>
-                                                                            </td> -->
+                                                                            </td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
