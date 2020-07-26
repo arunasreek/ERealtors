@@ -1,278 +1,363 @@
 <div id="content" class="app-content" role="main">
     <div class="app-content-body ">
-    <div class="hbox hbox-auto-xs hbox-auto-sm">
-    <div class="col">
-    
-    <div class="bg-light lter b-b wrapper-md">
-    <div class="row">
-    <div class="col-sm-12 col-xs-12">
-    <h1 class="m-n h3">System Configurations</h1>
-    </div>
-    
-    </div>
-    </div>
-    
-    
-    <div class="wrapper-md ">
-    
-    
-    
-    
-    
-    <div class="row">
-    <div class="col-md-12">
-        <div>
-            <tabset>
-              <tab heading="Target Units" id="tab1"><div class="region region-content">
-                <div id="block-system-main" class="block block-system clearfix">
-                <form action="/afl-admin" method="post" id="afl-system-configurations-form" accept-charset="UTF-8"><div class="from-panel">
-                <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                    <label for="edit-level">
-Cadre</label>
-                    <div class="views-widget">
-                        <div class="form-item clearfix form-type-select form-item-level form-group">
-                            <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+        <div class="hbox hbox-auto-xs hbox-auto-sm">
+            <div class="col">
+
+                <div class="bg-light lter b-b wrapper-md">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <h1 class="m-n h3">System Configurations</h1>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="wrapper-md ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <tabset #staticTabs>
+                                    <tab heading="Setting List" id="tab1">
+                                        <div class="region region-content">
+                                            <div id="block-system-main" class="block block-system clearfix">
+                                                <div class="view view-down-line-members view-id-down_line_members view-display-id-page view-dom-id-70b59c1c0ebdb1eeac7f3181434cd2a7">
+                                                    <div class="view-content">
+                                                        <div class="panel panel-default">
+                                                            <div class="table-responsive">
+                                                                <table class="views-table cols-6 table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="views-field views-field-counter">
+                                                                                # </th>
+                                                                            <th class="views-field views-field-name">
+                                                                                Member </th>
+                                                                            <th class="views-field views-field-level">
+                                                                                Cadre </th>
+                                                                            <th class="views-field views-field-php-1">
+                                                                                Sponsor Name </th>
+                                                                            <th class="views-field views-field-created">
+                                                                                Joined date </th>
+                                                                            <th class="views-field views-field-php">
+                                                                                Autopool Level </th>
+                                                                            <th class="views-field views-field-php">
+                                                                                Actions </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <!-- <td>{{item.Guid}}</td>
+                                                                            <td>{{item.Member}}</td>
+                                                                            <td>{{item.Star}}</td>
+                                                                            <td>{{item.Sponser}}</td>
+                                                                            <td>{{item.Join_Date.split('T')[0]}}</td>
+                                                                            <td>{{item.AutoPool}}</td>
+                                                                            <td>
+
+                                                                                <a (click)="openModal(template,item.Guid)" data-lity="">
+                                                                                    <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                                                                                </a>
+                                                                                <a (click)="viewMember(item.Guid)">
+                                                                                    <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                                                                                </a>
+                                                                                <a (click)="deleteMember(item.Id)">
+                                                                                    <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;"></i>
+                                                                                </a>
+                                                                            </td> -->
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </tab>
+                                    <tab heading="Setting" id="tab2">
+                                        <tabset>
+                                            <tab heading="Cadre Settings">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                                                                                 Cadre</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount"> Target Units </label>
+                                                                                <div class="input-group m-b"><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">Downline Members </label>
+                                                                                <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128"
+                                                                                    /></div>
+                                                                            </div>
+                                                                            <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+                                                                                <label for="edit-downline-user-id">
+                                                                                        Plots in SQYDS </label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                                                                                        <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+                                                                                <label for="edit-downline-user-id">
+                                                                                    Target Units </label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                                                                                        <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
+                                                                                <label for="edit-downline-user-id">
+                                                                                        Rate per Plot </label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
+                                                                                        <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </tab>
+                                            <tab heading="Incentives">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Cadre</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount">Maximum Amount </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3"
+                                                                                    /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">Incentive Percentage </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee"
+                                                                                        value="10%" size="10" maxlength="128" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </tab>
+                                            <tab heading="MFA">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Cadre</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount">Minimum Amount </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3"
+                                                                                    /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">MFA Percentage </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee"
+                                                                                        value="10%" size="10" maxlength="128" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </tab>
+                                            <tab heading="Bonanza">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Cadre</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount">Maximum Amount </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3"
+                                                                                    /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">Bonanza Percentage </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee"
+                                                                                        value="10%" size="10" maxlength="128" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </tab>
+                                            <tab heading="Perks">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Cadre</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount">Perk 1 </label>
+                                                                                <div class="input-group m-b"><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">Perk 2 </label>
+                                                                                <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128"
+                                                                                    /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </tab>
+                                            <tab heading="Auto Pool Settings">
+                                                <div class="region region-content">
+                                                    <div id="block-system-main" class="block block-system clearfix">
+
+                                                        <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8">
+                                                            <div class="from-panel">
+                                                                <div id="checkboxes-div">
+                                                                    <fieldset class="form-wrapper" id="edit-fund-deposit-config">
+                                                                        <div class="fieldset-wrapper">
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Auto Pool Star Level</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Auto Pool Star Level -</option><option value="1">Auto Pool Star 1</option><option value="2">Auto Pool Star 2</option><option value="3">Auto Pool Star 3</option><option value="4">Auto Pool Star 4</option><option value="5">Auto Pool Star 5</option><option value="6">Auto Pool Star 6</option><option value="7">Auto Pool Star 7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
+                                                                                <label for="edit-level">
+                Auto Pool Level</label>
+                                                                                <div class="views-widget">
+                                                                                    <div class="form-item clearfix form-type-select form-item-level form-group">
+                                                                                        <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Auto Pool Level -</option><option value="1">Level-1</option><option value="2">Level-2</option><option value="3">Level-3</option><option value="4">Level-4</option><option value="5">Level-5</option><option value="6">Level-6</option><option value="7">Level-7</option></select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
+                                                                                <label for="edit-minimum-amount"> Upgrade Amount </label>
+                                                                                <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3"
+                                                                                    /></div>
+                                                                            </div>
+
+                                                                            <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
+                                                                                <label for="edit-deposit-fee">Downline Members </label>
+                                                                                <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128"
+                                                                                    /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ"
+                                                                />
+                                                                <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
+                                                                <input type="hidden" name="form_id" value="fund_deposit_form" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </tab>
+                                        </tabset>
+                                    </tab>
+                                </tabset>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
-                  <label for="edit-downline-user-id">
-Plots in SQYDS </label>
-                  <div class="views-widget">
-                      <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
-                          <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                      </div>
-                  </div>
-              </div>
-              <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
-                <label for="edit-downline-user-id">
-Target Units </label>
-                <div class="views-widget">
-                    <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
-                        <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                    </div>
-                </div>
-            </div>
-            <div id="edit-downline-user-id-wrapper" class="views-exposed-widget views-widget-filter-downline_user_id form-group">
-              <label for="edit-downline-user-id">
-Rate per Plot </label>
-              <div class="views-widget">
-                  <div class="form-item clearfix form-type-textfield form-item-downline-user-id form-group">
-                      <input type="text" id="edit-downline-user-id" name="downline_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                  </div>
-              </div>
-          </div>
-                <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save configuration" class="form-submit btn btn-default btn-primary" /></div></div></form>
-                </div> 
-                </div>
-            </tab>
-              <tab heading="Incentives">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Cadre</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount">Maximum Amount </label>
-                    <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">Incentive Percentage </label>
-                    <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-              </tab>
-              <tab heading="MFA">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Cadre</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount">Minimum Amount </label>
-                    <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">MFA Percentage </label>
-                    <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-              </tab>
-              <tab heading="Bonanza">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Cadre</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount">Maximum Amount </label>
-                    <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">Bonanza Percentage </label>
-                    <div class="input-group m-b"><span class="input-group-addon">%</span><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-                
-            </tab>
-            <tab heading="Perks">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Cadre</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount">Perk 1 </label>
-                    <div class="input-group m-b"><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">Perk 2 </label>
-                    <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-                
-            </tab>
-              <tab heading="Cadre Settings">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Cadre</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Cader -</option><option value="1">Star-1</option><option value="2">Star-2</option><option value="3">Star-3</option><option value="4">Star-4</option><option value="5">Star-5</option><option value="6">Star-6</option><option value="7">Star-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount"> Target Units </label>
-                    <div class="input-group m-b"><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">Downline Members </label>
-                    <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-                
-              </tab>
-              <tab heading="Auto Pool Settings">
-                <div class="region region-content">
-                    <div id="block-system-main" class="block block-system clearfix">
-                        
-                    <form action="/afl-admin/fund-deposit" method="post" id="fund-deposit-form" accept-charset="UTF-8"><div class="from-panel"><div id="checkboxes-div"><fieldset class="form-wrapper" id="edit-fund-deposit-config">
-                        <div class="fieldset-wrapper">
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Auto Pool Star Level</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Auto Pool Star Level -</option><option value="1">Auto Pool Star 1</option><option value="2">Auto Pool Star 2</option><option value="3">Auto Pool Star 3</option><option value="4">Auto Pool Star 4</option><option value="5">Auto Pool Star 5</option><option value="6">Auto Pool Star 6</option><option value="7">Auto Pool Star 7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="edit-level-wrapper" class="views-exposed-widget views-widget-filter-level form-group">
-                            <label for="edit-level">
-        Auto Pool Level</label>
-                            <div class="views-widget">
-                                <div class="form-item clearfix form-type-select form-item-level form-group">
-                                    <select id="edit-level" name="level" class="form-select form-control"><option value="All" selected="selected">- Select Auto Pool Level -</option><option value="1">Level-1</option><option value="2">Level-2</option><option value="3">Level-3</option><option value="4">Level-4</option><option value="5">Level-5</option><option value="6">Level-6</option><option value="7">Level-7</option></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-item clearfix form-type-textfield form-item-minimum-amount form-group" data-toggle="tooltip" title="Minimum amount can deposit">
-                    <label for="edit-minimum-amount"> Upgrade Amount </label>
-                    <div class="input-group m-b"><span class="input-group-addon">&#x20b9;</span><input groupfields="$" type="text" id="edit-minimum-amount" name="minimum_amount" value="100" size="10" maxlength="128" class="form-text form-control input-lg-3" /></div>
-                    </div>
-                  
-                    <div class="form-item clearfix form-type-textfield form-item-deposit-fee form-group" data-toggle="tooltip" title="Charges taken for fund deposit, for percentage add &quot;%&quot; symbol.">
-                    <label for="edit-deposit-fee">Downline Members </label>
-                    <div class="input-group m-b"><input groupfields="$" class="percentage-n-amount form-text form-control input-lg-3" type="text" id="edit-deposit-fee" name="deposit_fee" value="10%" size="10" maxlength="128" /></div>
-                    </div>
-                    </div></fieldset>
-                    </div><input type="submit" id="edit-submit" name="op" value="Save Configurations" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-D4uXVh0OUJaWBgbsOtzQsv8SU7_Din1Hg3ZUfFeefcQ" />
-                    <input type="hidden" name="form_token" value="sGcWZ_eQxRzmjcUv2CJaq4Vc9x9iha5lHHtSl4rvxpA" />
-                    <input type="hidden" name="form_id" value="fund_deposit_form" />
-                    </div></form>
-                    </div> 
-                    </div>
-                
-              </tab>
-            </tabset>
-          </div> 
-    </div>
-    </div>
-    </div>

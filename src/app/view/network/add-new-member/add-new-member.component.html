@@ -162,6 +162,14 @@
                                                                         <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
                                                                         <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" />
                                                                     </div>
+                                                                    <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
+                                                                        <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
+                                                                        <select class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Gender" type="text" id="Gender" name="Gender">
+                                                                            <option value="Male">Male</option>
+                                                                            <option value="FeMale">FeMale</option>
+                                                                            <option value="Others">Others</option>
+                                                                        </select>
+                                                                    </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
                                                                         <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
                                                                         <input class="username form-text form-control input-lg-3 required" [(ngModel)]="model.Username" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
@@ -324,6 +332,14 @@
                                             <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
                                             <input class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" />
                                         </div>
+                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
+                                            <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
+                                            <select class="text-full form-text form-control input-lg-3 required" [(ngModel)]="model.Gender" type="text" id="Gender" name="Gender">
+                                                <option value="Male">Male</option>
+                                                <option value="FeMale">FeMale</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
                                         <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
                                             <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
                                             <input class="username form-text form-control input-lg-3 required" [(ngModel)]="model.Username" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
@@ -334,11 +350,11 @@
                                         </div>
                                         <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
                                             <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Joining" bsDatepicker>
+                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Joining" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
                                         </div>
                                         <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
                                             <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Birth" bsDatepicker>
+                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Birth" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
                                         </div>
                                         <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
                                             <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
@@ -423,10 +439,8 @@
                                         </div>
                                         <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
                                             <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
-                                            <input style="
-                                            width: 22px;
-                                        " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" [(ngModel)]="model.IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60"
-                                                maxlength="255" />
+                                            <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" [(ngModel)]="model.IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60" maxlength="255"
+                                            />
                                         </div>
                                         <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
                                             <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>

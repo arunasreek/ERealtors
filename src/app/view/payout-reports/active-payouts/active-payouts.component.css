@@ -536,7 +536,7 @@ textarea {
     transform: translateY(-50%);
     margin: 0 auto;
     height: 150px;
-    width: 100px;
+    width: 150px;
     border-radius: 5px;
     border: 3px solid #ffa31a;
 }
@@ -660,7 +660,6 @@ p {
     border-right: solid 0px #cecece;
     color: #cc0000;
     font-weight: bold;
-
     padding-left: 2%;
     text-align: center;
 }

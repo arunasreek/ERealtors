@@ -52,12 +52,13 @@ export class AddNewMemberComponent implements OnInit {
            Bank_Account_Number :'',
            IsOptingforStar1Autopool :0,
            UpgradeAmountPaid :0,
-           Id:0
+           Id:0,
+           Gender:'Male'
   };
   ngOnInit(): void {
     this.getSponserList();
     this.getMemberList();
-   
+    this.Guid = null;
   }
 
   pushMember(){
@@ -89,13 +90,14 @@ export class AddNewMemberComponent implements OnInit {
       Bank_Account_Number :this.model.Bank_Account_Number,
       IsOptingforStar1Autopool : this.model.IsOptingforStar1Autopool?1:0,
       UpgradeAmountPaid :this.model.UpgradeAmountPaid,
-      ImageUrl : this.imageUrl
+      ImageUrl : this.imageUrl,
+      Gender:this.model.Gender
     };
     this.memberService.postMember(data)
     .subscribe(() => {
       this.getMemberList();
       
-       this.toastr.success(' '+this.Guid?'Record Updated Successfully':'Record Added Successfully'+'  ', 'Success');
+       this.toastr.success(' '+data.ActionTaken==='Update'?'Record Updated Successfully':'Record Added Successfully'+'  ', 'Success');
        this.staticTabs.tabs[0].active = true;
     });
     //Reset 
@@ -160,34 +162,8 @@ export class AddNewMemberComponent implements OnInit {
   }
 
   viewMember(guid:any){
-    this.staticTabs.tabs[1].active = true;
-         var data =  this.memberList.find(x=>x.Guid === guid);
-         this.Guid = data.Guid;
-          this.model.RefId = 0;
-          this.model.plot_sqyds =0;
-          this.model.no_of_plots =0;
-          this.model.rate_per_plot =0;
-          this.model.address  = data.address;
-          this.model.First_Name =data.First_Name;
-          this.model.Surname  =data.Surname;
-          this.model.Username =data.Username;
-          this.model.Email_Address = data.Email_Address;
-          this.model.Date_of_Joining = new Date(data.Date_of_Joining);
-          this.model.Date_of_Birth  = new Date(data.Date_of_Birth);
-          this.model.perks  = data.perks;
-          this.model.Password = data.Password;
-          this.model.Confirm_Password =data.Confirm_Password;
-          this.model.Sponsor =data.Sponsor;
-          this.model.Name_of_Nominee =data.Name_of_Nominee;
-          this.model.Mobile_Number =data.Mobile_Number;
-          this.model.Pan_Card_Number =data.Pan_Card_Number;
-          this.model.Aadhaar_Number =data.Aadhaar_Number;
-          this.model.Bank_Name =data.Bank_Name;
-          this.model.IFSC_Code =data.IFSC_Code;
-          this.model.Bank_Account_Number = data.Bank_Account_Number;
-          this.model.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
-          this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
-          this.model.Id = data.Id;
+        this.staticTabs.tabs[1].active = true;
+        this.getMemberData(guid);
   }
 
   deleteMember(Id:any){
@@ -206,33 +182,7 @@ export class AddNewMemberComponent implements OnInit {
       this.modalService.onHidden
     ).subscribe(() => this.changeDetection.markForCheck());
 
-    var data =  this.memberList.find(x=>x.Guid === guid);
-    this.Guid = data.Guid;
-     this.model.RefId = 0;
-     this.model.plot_sqyds =0;
-     this.model.no_of_plots =0;
-     this.model.rate_per_plot =0;
-     this.model.address  = data.address;
-     this.model.First_Name =data.First_Name;
-     this.model.Surname  =data.Surname;
-     this.model.Username =data.Username;
-     this.model.Email_Address = data.Email_Address;
-     this.model.Date_of_Joining = new Date(data.Date_of_Joining);
-     this.model.Date_of_Birth  = new Date(data.Date_of_Birth);
-     this.model.perks  = data.perks;
-     this.model.Password = data.Password;
-     this.model.Confirm_Password =data.Confirm_Password;
-     this.model.Sponsor =data.Sponsor;
-     this.model.Name_of_Nominee =data.Name_of_Nominee;
-     this.model.Mobile_Number =data.Mobile_Number;
-     this.model.Pan_Card_Number =data.Pan_Card_Number;
-     this.model.Aadhaar_Number =data.Aadhaar_Number;
-     this.model.Bank_Name =data.Bank_Name;
-     this.model.IFSC_Code =data.IFSC_Code;
-     this.model.Bank_Account_Number = data.Bank_Account_Number;
-     this.model.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
-     this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
-     this.model.Id = data.Id;
+    this.getMemberData(guid);
 
      this.events.push(
       this.modalService.onHidden.subscribe((reason: string) => {
@@ -254,7 +204,7 @@ export class AddNewMemberComponent implements OnInit {
   }
 
   reset(){
-    this.Guid=null;
+    this.Guid = null;
     this.model.RefId = 0;
     this.model.plot_sqyds =0;
     this.model.no_of_plots =0;
@@ -279,5 +229,37 @@ export class AddNewMemberComponent implements OnInit {
     this.model.Bank_Account_Number = '';
     this.model.IsOptingforStar1Autopool = 0; 
     this.model.UpgradeAmountPaid = 0; 
+    this.model.Gender='Male'
+  }
+
+  getMemberData(guid:any){
+    var data =  this.memberList.find(x=>x.Guid === guid);
+     this.Guid = data.Guid;
+     this.model.RefId = 0;
+     this.model.plot_sqyds = data.plot_sqyds;
+     this.model.no_of_plots = data.no_of_plots;
+     this.model.rate_per_plot = data.rate_per_plot;
+     this.model.address  = data.address;
+     this.model.First_Name =data.First_Name;
+     this.model.Surname  =data.Surname;
+     this.model.Username =data.Username;
+     this.model.Email_Address = data.Email_Address;
+     this.model.Date_of_Joining = new Date(data.Date_of_Joining);
+     this.model.Date_of_Birth  = new Date(data.Date_of_Birth);
+     this.model.perks  = data.perks;
+     this.model.Password = data.Password;
+     this.model.Confirm_Password =data.Confirm_Password;
+     this.model.Sponsor =data.Sponsor;
+     this.model.Name_of_Nominee =data.Name_of_Nominee;
+     this.model.Mobile_Number =data.Mobile_Number;
+     this.model.Pan_Card_Number =data.Pan_Card_Number;
+     this.model.Aadhaar_Number =data.Aadhaar_Number;
+     this.model.Bank_Name =data.Bank_Name;
+     this.model.IFSC_Code =data.IFSC_Code;
+     this.model.Bank_Account_Number = data.Bank_Account_Number;
+     this.model.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
+     this.model.UpgradeAmountPaid = data.UpgradeAmountPaid;
+     this.model.Id = data.Id;
+     this.model.Gender = data.Gender;
   }
 }

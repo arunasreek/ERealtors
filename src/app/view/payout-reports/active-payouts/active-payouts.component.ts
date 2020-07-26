@@ -10,7 +10,7 @@ export class ActivePayoutsComponent implements OnInit {
   realtorsData : any;
   teamCollection : any = [];
   currentMonth : string;
-
+  image : string;
   constructor(public memberService: MemberServices) { }
 
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class ActivePayoutsComponent implements OnInit {
     .subscribe((res) => {
      this.realtorsData = res.Result[0];
      var data = res.Result[0].Team_Coll.split(':');
+     this.image = "http://devapi.rajadhanihousingprojects.com/MemberImage/" + res.Result[0].Image;
      if(data){
         data.forEach(element => {
           this.teamCollection.push(element)
