@@ -6,7 +6,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { combineLatest, Subscription } from 'rxjs';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { FormGroup,  FormBuilder,  Validators, FormGroupDirective } from '@angular/forms';
 
 
 @Component({
@@ -35,7 +35,11 @@ export class AddNewMemberComponent implements OnInit {
   ngOnInit(): void {
     this.getSponserList();
     this.getMemberList();
-    this.Guid = null;
+    this.Guid = null; 
+    this.setRegisterForm();
+  }
+
+  setRegisterForm(){
     this.registerForm = this.formBuilder.group({
       First_Name: ['', [Validators.required, Validators.minLength(3)]],
       Surname: ['',Validators.required],
@@ -58,7 +62,7 @@ export class AddNewMemberComponent implements OnInit {
       plot_sqyds: [0, Validators.required],
       no_of_plots: [0, Validators.required],
       rate_per_plot: [0, Validators.required],
-      IsOptingforStar1Autopool: [0, Validators.required],
+      IsOptingforStar1Autopool: [0],
       Admin: [0],
       UpgradeAmountPaid: [0, Validators.required],
       perks: ['', Validators.required]
@@ -66,10 +70,11 @@ export class AddNewMemberComponent implements OnInit {
   }, {
   
   });
-   
   }
   get f() { return this.registerForm.controls; }
   
+
+
   pushMember(){
     this.submitted = true;
     console.log(this.registerForm.value);
@@ -80,7 +85,6 @@ export class AddNewMemberComponent implements OnInit {
     const data = {
       ActionTaken : this.Guid?'Update':'Insert',
       Id : this.currentId,
-      RefId :0,
       plot_sqyds : parseInt(this.registerForm.value.plot_sqyds.toString()),
       no_of_plots : parseInt(this.registerForm.value.no_of_plots.toString()),
       rate_per_plot : parseInt(this.registerForm.value.rate_per_plot.toString()),
@@ -106,18 +110,22 @@ export class AddNewMemberComponent implements OnInit {
       IsOptingforStar1Autopool : this.registerForm.value.IsOptingforStar1Autopool?1:0,
       UpgradeAmountPaid :this.registerForm.value.UpgradeAmountPaid,
       ImageUrl : this.imageUrl,
-      Gender:this.registerForm.value.Gender
+      Gender:this.registerForm.value.Gender,
+      IsAdmin: this.registerForm.value.Admin?1:0
     };
     this.memberService.postMember(data)
     .subscribe(() => {
       this.getMemberList();
-      
-       this.toastr.success(' '+data.ActionTaken==='Update'?'Record Updated Successfully':'Record Added Successfully'+'  ', 'Success');
+      console.log(data.ActionTaken);
+       this.toastr.success(data.ActionTaken ==='Update'?'Record Updated Successfully':'Record Added Successfully', 'Success');
        this.staticTabs.tabs[0].active = true;
+       this.registerForm.reset();
+       this.submitted=false;
+       this.Guid =null;
+       this.currentId = null;
+
     });
     //Reset 
-    this.registerForm.reset();   
-    
   }
 
   getSponserList(){
@@ -215,34 +223,42 @@ export class AddNewMemberComponent implements OnInit {
     this.events = [];
   }
 
+  reset(){
+    this.registerForm.reset();
+  }
+
   getMemberData(guid:any){
+    this.registerForm.clearValidators();
     var data =  this.memberList.find(x=>x.Guid === guid);
      this.Guid = data.Guid;
-     this.registerForm.value.plot_sqyds = data.plot_sqyds;
-     this.registerForm.value.no_of_plots = data.no_of_plots;
-     this.registerForm.value.rate_per_plot = data.rate_per_plot;
-     this.registerForm.value.address  = data.address;
-     this.registerForm.value.First_Name =data.First_Name;
-     this.registerForm.value.Surname  =data.Surname;
-     this.registerForm.value.Username =data.Username;
-     this.registerForm.value.Email_Address = data.Email_Address;
-     this.registerForm.value.Date_of_Joining = new Date(data.Date_of_Joining);
-     this.registerForm.value.Date_of_Birth  = new Date(data.Date_of_Birth);
-     this.registerForm.value.perks  = data.perks;
-     this.registerForm.value.Password = data.Password;
-     this.registerForm.value.Confirm_Password =data.Confirm_Password;
-     this.registerForm.value.Sponsor =data.Sponsor;
-     this.registerForm.value.Name_of_Nominee =data.Name_of_Nominee;
-     this.registerForm.value.Mobile_Number =data.Mobile_Number;
-     this.registerForm.value.Pan_Card_Number =data.Pan_Card_Number;
-     this.registerForm.value.Aadhaar_Number =data.Aadhaar_Number;
-     this.registerForm.value.Bank_Name =data.Bank_Name;
-     this.registerForm.value.IFSC_Code =data.IFSC_Code;
-     this.registerForm.value.Bank_Account_Number = data.Bank_Account_Number;
-     this.registerForm.value.IsOptingforStar1Autopool = data.IsOptingforStar1Autopool;
-     this.registerForm.value.UpgradeAmountPaid = data.UpgradeAmountPaid;
-     this.registerForm.value.Id = data.Id;
-     this.registerForm.value.Gender = data.Gender;
-     this.registerForm.value.Admin = data.IsAdmin;
+     this.currentId = data.Id;
+     this.registerForm.setValue({
+      plot_sqyds : data.plot_sqyds,
+      no_of_plots : data.no_of_plots,
+      rate_per_plot : data.rate_per_plot,
+      address  : data.address,
+      First_Name :data.First_Name,
+      Surname  :data.Surname,
+      UserName :data.Username,
+      Email_Address : data.Email_Address,
+      Date_of_Joining : new Date(data.Date_of_Joining),
+      Date_of_Birth  : new Date(data.Date_of_Birth),
+      perks  : data.perks,
+      Password : data.Password,
+      Confirm_Password :data.Confirm_Password,
+      Sponsor :data.Sponsor,
+      Name_of_Nominee :data.Name_of_Nominee,
+      Mobile_Number :data.Mobile_Number,
+      Pan_Card_Number :data.Pan_Card_Number,
+      Aadhaar_Number :data.Aadhaar_Number,
+      Bank_Name :data.Bank_Name,
+      IFSC_Code :data.IFSC_Code,
+      Bank_Account_Number : data.Bank_Account_Number,
+      IsOptingforStar1Autopool : data.IsOptingforStar1Autopool,
+      UpgradeAmountPaid : data.UpgradeAmountPaid,
+      Gender : data.Gender,
+      Admin : data.IsAdmin
+     });
+
   }
 }
