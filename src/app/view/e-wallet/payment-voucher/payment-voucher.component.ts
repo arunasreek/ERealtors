@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-payment-voucher',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment-voucher.component.css']
 })
 export class PaymentVoucherComponent implements OnInit {
-
-  constructor() { }
+  Guid : string;
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit(): void {
+    this.Guid = null;
   }
 
 }

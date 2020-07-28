@@ -80,10 +80,10 @@
                         06/07/2020 </td>
                         <td>
                                                       
-                          <a href="#" data-lity="">
+                          <a (click)="openModal(template,item.Guid)" data-lity="">
                               <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
-                          <a>
+                          <a (click)="viewMember(item.Guid)">
                               <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
                           <a >
@@ -199,15 +199,15 @@
      </div>
    </div>
    <div class="sample"><br>
-     <label >Received From:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-     <label >of&nbsp;&nbsp;&#x20B9;<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+     <label >Received From:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
+    
    </div>
    <div class="sample"><br>
-     <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+     <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
      <label >only</label>
    </div>
    <div class="sample"><br>
-     <label >For Payment of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
+     <label >For Receipt of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
     
    </div>
    <div class="row">
@@ -219,9 +219,11 @@
      <div class="column3">
      </div>
      <div class="column4">
-       <label>Payment in:</label>
+     
      </div>
    </div>
+   <br>
+   <br>
    <div class="row">
      <div class="column1" >
        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
@@ -236,28 +238,10 @@
      </div>
      <div class="column3" style="text-align: right;">
        
-       <label>Cash</label><br>
-       <label>Notes</label><br>
-       <label>Cheque</label>
+      
      </div>
      <div class="column4">
-       <table width="60%">
-     
-     <tbody>
-       <tr>
-         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-         <td>&nbsp;&nbsp; </td>
-       </tr>
-       <tr>
-         <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-         <td>&nbsp;&nbsp;</td>
-       </tr>
-       <tr>
-           <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-         <td>&nbsp;&nbsp;</td>
-       </tr>
-   </tbody>
-   </table>
+      
      </div>
    </div>
    <br><br>
@@ -298,3 +282,36 @@
           </div>
           </div>
           </div>
+
+
+          <ng-template #template>
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Receipt View</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="from-panel">
+                    <div id="checkboxes-div">
+                        <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
+                            <legend><span class="fieldset-legend">Receipt Details</span></legend>
+                            <div class="fieldset-wrapper">
+                                <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
+                                    <div class="form-item clearfix form-type-select form-item-field-country-und form-group2">
+                                        <label for="edit-field-country-und">Country <span class="form-required" title="This field is required.">*</span></label>
+                                        <select formControlName="Country" id="edit-field-country-und" name="field_country[und]" class="form-select form-control required">
+                                            <option value="India">India</option>
+                                            <option value="USA">USA</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                               
+
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
+                </div>
+            </div>
+        </ng-template>          

@@ -80,10 +80,10 @@
                         06/07/2020 </td>
                         <td>
                                                       
-                          <a href="#" data-lity="">
+                          <a (click)="openModal(template,item.Guid)" data-lity="">
                               <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
-                          <a>
+                          <a (click)="viewMember(item.Guid)">
                               <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
                           <a >
@@ -199,11 +199,11 @@
      </div>
    </div>
    <div class="sample"><br>
-     <label >Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-     <label >of&nbsp;&nbsp;&#x20B9;<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+     <label >Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
+    
    </div>
    <div class="sample"><br>
-     <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+     <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
      <label >only</label>
    </div>
    <div class="sample"><br>
@@ -219,9 +219,11 @@
      <div class="column3">
      </div>
      <div class="column4">
-       <label>Received By:</label>
+     
      </div>
    </div>
+   <br>
+   <br>
    <div class="row">
      <div class="column1" >
        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
@@ -235,29 +237,11 @@
        
      </div>
      <div class="column3" style="text-align: right;">
-       
-       <label>Cash</label><br>
-       <label>Notes</label><br>
-       <label>Cheque</label>
+      
      </div>
      <div class="column4">
-       <table width="60%">
-     
-     <tbody>
-       <tr>
-         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-         <td>&nbsp;&nbsp; </td>
-       </tr>
-       <tr>
-         <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-         <td>&nbsp;&nbsp;</td>
-       </tr>
-       <tr>
-           <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-         <td>&nbsp;&nbsp;</td>
-       </tr>
-   </tbody>
-   </table>
+       
+
      </div>
    </div>
    <br><br>
