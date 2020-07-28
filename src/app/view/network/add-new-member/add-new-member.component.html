@@ -156,70 +156,76 @@
                                                                     </div> -->
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your first name.">
                                                                         <label for="edit-field-afl-first-name-und-0-value">First Name <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="First_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="field_afl_first_name" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('First_Name').touched && registerForm.get('First_Name').invalid }" />
-                                                                        <div  *ngIf="submitted && f.First_Name.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="First_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="field_afl_first_name" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('First_Name').touched && registerForm.get('First_Name').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.First_Name.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.First_Name.errors.required" style="color:red">First Name is required</div>
                                                                             <div *ngIf="submitted && f.First_Name.errors.minlength" style="color:red">First Name must be atleast 3 characters</div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
                                                                         <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Surname').touched && registerForm.get('Surname').invalid }" />
-                                                                        <div  *ngIf=" submitted && f.Surname.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Surname').touched && registerForm.get('Surname').invalid }"
+                                                                        />
+                                                                        <div *ngIf=" submitted && f.Surname.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Surname.errors.required" style="color:red">SurName is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
                                                                         <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Gender').touched && registerForm.get('Gender').invalid }">
+                                                                        <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Gender').touched && registerForm.get('Gender').invalid }">
                                                                             <option value="Male">Male</option>
                                                                             <option value="FeMale">FeMale</option>
                                                                             <option value="Others">Others</option>
                                                                         </select>
-                                                                        <div  *ngIf="submitted && f.Gender.errors " class="help-block">
+                                                                        <div *ngIf="submitted && f.Gender.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Gender.errors.required" style="color:red">Gender is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
                                                                         <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="username form-text form-control input-lg-3 required" formControlName="UserName" type="text" id="edit-name" name="name" value="" size="60" maxlength="60"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('UserName').touched && registerForm.get('UserName').invalid }" />
-                                                                        <div  *ngIf="submitted && f.UserName.errors " class="help-block">
+                                                                        <input class="username form-text form-control input-lg-3 required" formControlName="UserName" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" [ngClass]="{ 'is-invalid':submitted && registerForm.get('UserName').touched && registerForm.get('UserName').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.UserName.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.UserName.errors.required" style="color:red">UserName is required</div>
                                                                             <div *ngIf="submitted && f.UserName.errors.minlength" style="color:red">UserName must be atleast 6 characters</div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-mail form-group2" data-toggle="tooltip">
                                                                         <label for="edit-mail">E-mail address <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" id="edit-mail" name="mail" value="" size="60" formControlName="Email_Address" maxlength="254" class="form-text form-control input-lg-3 required"  [ngClass]="{ 'is-invalid': submitted && registerForm.get('Email_Address').touched && registerForm.get('Email_Address').invalid }" />
-                                                                        <div  *ngIf="submitted && f.Email_Address.errors" class="help-block">
+                                                                        <input type="text" id="edit-mail" name="mail" value="" size="60" formControlName="Email_Address" maxlength="254" class="form-text form-control input-lg-3 required" [ngClass]="{ 'is-invalid': submitted && registerForm.get('Email_Address').touched && registerForm.get('Email_Address').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.Email_Address.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.Email_Address.errors.required" style="color:red">Email Address is required</div>
                                                                             <div *ngIf="submitted && f.Email_Address.errors.email" style="color:red">Email Address is not valid</div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
                                                                         <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" placeholder="" class="form-control col-md-2" [(bsValue)]="model.Date_of_Joining" bsDatepicker>
+                                                                        <input type="text" placeholder="" class="form-control col-md-2" formControlName="Date_of_Joining" bsDatepicker>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
                                                                         <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" placeholder="" class="form-control col-md-2" [(bsValue)]="model.Date_of_Birth" bsDatepicker>
+                                                                        <input type="text" placeholder="" class="form-control col-md-2" formControlName="Date_of_Birth" bsDatepicker>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
                                                                         <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="password-field form-text form-control required" formControlName="Password" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Password').touched && registerForm.get('Password').invalid }" />
-                                                                        <div  *ngIf=" submitted && f.Password.errors " class="help-block">
+                                                                        <input class="password-field form-text form-control required" formControlName="Password" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Password').touched && registerForm.get('Password').invalid }"
+                                                                        />
+                                                                        <div *ngIf=" submitted && f.Password.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Password.errors.required" style="color:red">Password is required</div>
                                                                             <div *ngIf="submitted && f.Password.errors.minlength" style="color:red">Password must be atleast 6 characters</div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-password form-item-pass-pass2 form-group2">
                                                                         <label for="edit-pass-pass2">Confirm password <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="password-confirm form-text form-control required" formControlName="Confirm_Password" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Confirm_Password').touched && registerForm.get('Confirm_Password').invalid }" />
-                                                                        <div  *ngIf="submitted && f.Confirm_Password.errors " class="help-block">
+                                                                        <input class="password-confirm form-text form-control required" formControlName="Confirm_Password" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Confirm_Password').touched && registerForm.get('Confirm_Password').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.Confirm_Password.errors " class="help-block">
                                                                             <div *ngIf="f.Confirm_Password.errors.required" style="color:red">Confirm Password is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="field-type-entityreference field-name-field-afl-parent field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-parent">
@@ -237,14 +243,15 @@
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your nominee name.">
                                                                         <label for="edit-field-afl-nominee-name-und-0-value"> Name of the Nominee (optional) <span class="form-required" title="This field is required."></span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Name_of_Nominee" type="text" id="edit-field-afl-first-name-und-0-value" name="Name_of_Nominee" value="" size="60" maxlength="255"   />
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Name_of_Nominee" type="text" id="edit-field-afl-first-name-und-0-value" name="Name_of_Nominee" value="" size="60" maxlength="255" />
                                                                     </div>
                                                                     <div class="field-type-text field-name-field-mobile-number field-widget-text-textfield form-wrapper" id="edit-field-mobile-number">
                                                                         <div id="field-mobile-number-add-more-wrapper">
                                                                             <div class="form-item clearfix form-type-textfield form-item-field-mobile-number-und-0-value form-group2">
                                                                                 <label for="edit-field-mobile-number-und-0-value">Mobile Number <span class="form-required" title="This field is required.">*</span> </label>
-                                                                                <input class="text-full form-text form-control input-lg-3" formControlName="Mobile_Number" type="text" id="edit-field-mobile-number-und-0-value" name="field_mobile_number" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Mobile_Number').touched && registerForm.get('Mobile_Number').invalid }" />
-                                                                                <div  *ngIf="submitted && f.Mobile_Number.errors" class="help-block">
+                                                                                <input class="text-full form-text form-control input-lg-3" formControlName="Mobile_Number" type="text" id="edit-field-mobile-number-und-0-value" name="field_mobile_number" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Mobile_Number').touched && registerForm.get('Mobile_Number').invalid }"
+                                                                                />
+                                                                                <div *ngIf="submitted && f.Mobile_Number.errors" class="help-block">
                                                                                     <div *ngIf="submitted && f.Mobile_Number.errors.required" style="color:red">Mobile Number is required</div>
                                                                                     <div *ngIf="f.Mobile_Number.errors.pattern" style="color:red">Please Enter 10 digit mobile number</div>
                                                                                 </div>
@@ -253,50 +260,56 @@
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-address-und-0-value form-group2" data-toggle="tooltip" title="Please provide your address.">
                                                                         <label for="edit-field-afl-address-und-0-value">Address <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="address" type="text" id="edit-field-afl-address-und-0-value" name="address" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('address').touched && registerForm.get('address').invalid }" />
-                                                                        <div  *ngIf="submitted && f.address.errors" class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="address" type="text" id="edit-field-afl-address-und-0-value" name="address" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('address').touched && registerForm.get('address').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.address.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.address.errors.required" style="color:red">Address is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your pan card number.">
                                                                         <label for="edit-field-afl-pan-number-und-0-value"> Pan Card Number<span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Pan_Card_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Pan_Card_Number" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Pan_Card_Number').touched && registerForm.get('Pan_Card_Number').invalid }" />
-                                                                        <div  *ngIf="submitted && f.Pan_Card_Number.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Pan_Card_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Pan_Card_Number" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Pan_Card_Number').touched && registerForm.get('Pan_Card_Number').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.Pan_Card_Number.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Pan_Card_Number.errors.required" style="color:red">Pan Card Number is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your aadhar-number.">
                                                                         <label for="edit-field-afl-aadhar-number-und-0-value"> Aadhar number <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Aadhaar_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Aadhaar_Number" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Aadhaar_Number').touched && registerForm.get('Aadhaar_Number').invalid }" />
-                                                                        <div  *ngIf="submitted && f.Aadhaar_Number.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Aadhaar_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Aadhaar_Number" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Aadhaar_Number').touched && registerForm.get('Aadhaar_Number').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.Aadhaar_Number.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Aadhaar_Number.errors.required" style="color:red">Aadhaar Number is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank name.">
                                                                         <label for="edit-field-afl-bank-name-und-0-value">Bank Name <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Name" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Bank_Name').touched && registerForm.get('Bank_Name').invalid }" />
-                                                                        <div  *ngIf="submitted && f.Bank_Name.errors" class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Name" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Bank_Name').touched && registerForm.get('Bank_Name').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.Bank_Name.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.Bank_Name.errors.required" style="color:red">Bank Name is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank ifsc code.">
                                                                         <label for="edit-field-afl-Ifsc-code-und-0-value"> IFSC code <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="IFSC_Code" type="text" id="edit-field-afl-first-name-und-0-value" name="IFSC_Code" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('IFSC_Code').touched && registerForm.get('IFSC_Code').invalid }" />
-                                                                        <div  *ngIf="submitted && f.IFSC_Code.errors" class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="IFSC_Code" type="text" id="edit-field-afl-first-name-und-0-value" name="IFSC_Code" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('IFSC_Code').touched && registerForm.get('IFSC_Code').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.IFSC_Code.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.IFSC_Code.errors.required" style="color:red">IFSC Code is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> Bank Account Number <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Account_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Account_Number" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('Bank_Account_Number').touched && registerForm.get('Bank_Account_Number').invalid }" />
-                                                                        <div  *ngIf=" submitted && f.Bank_Account_Number.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Account_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Account_Number" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Bank_Account_Number').touched && registerForm.get('Bank_Account_Number').invalid }"
+                                                                        />
+                                                                        <div *ngIf=" submitted && f.Bank_Account_Number.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.Bank_Account_Number.errors.required" style="color:red">Bank Account Number is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="field-type-imagefield-crop field-name-field-product-image field-widget-imagefield-crop-widget form-wrapper" id="edit-field-product-image">
@@ -313,26 +326,29 @@
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please enter Plot Sqyds.">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> Plot Sqyds <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="plot_sqyds" type="text" id="edit-field-afl-first-name-und-0-value" name="plot_sqyds" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('plot_sqyds').touched && registerForm.get('plot_sqyds').invalid }" />
-                                                                        <div  *ngIf="submitted && f.plot_sqyds.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="plot_sqyds" type="text" id="edit-field-afl-first-name-und-0-value" name="plot_sqyds" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('plot_sqyds').touched && registerForm.get('plot_sqyds').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.plot_sqyds.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.plot_sqyds.errors.required" style="color:red">Plot Sqyds is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please enter  No. of Plots .">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> No Of Plots <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('no_of_plots').touched && registerForm.get('no_of_plots').invalid }" />
-                                                                        <div  *ngIf="submitted && f.no_of_plots.errors" class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('no_of_plots').touched && registerForm.get('no_of_plots').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.no_of_plots.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.no_of_plots.errors.required" style="color:red">No of Plots is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please enter Entry Amount.">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> Entry Amount <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('rate_per_plot').touched && registerForm.get('rate_per_plot').invalid }" />
-                                                                        <div  *ngIf="submitted && f.rate_per_plot.errors" class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('rate_per_plot').touched && registerForm.get('rate_per_plot').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.rate_per_plot.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.rate_per_plot.errors.required" style="color:red">Entry Amount is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please click the checkBox.">
@@ -340,36 +356,39 @@
                                                                         <input style="
                                                                         width: 22px;
                                                                     " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool"
-                                                                            value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('IsOptingforStar1Autopool').touched && registerForm.get('IsOptingforStar1Autopool').invalid }" />
-                                                                            <div  *ngIf="submitted && f.IsOptingforStar1Autopool.errors" class="help-block">
-                                                                                <div *ngIf="submitted && f.IsOptingforStar1Autopool.errors.required" style="color:red">CheckBox is required</div>
-                                                                           
-                                                                            </div>
+                                                                            value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('IsOptingforStar1Autopool').touched && registerForm.get('IsOptingforStar1Autopool').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.IsOptingforStar1Autopool.errors" class="help-block">
+                                                                            <div *ngIf="submitted && f.IsOptingforStar1Autopool.errors.required" style="color:red">CheckBox is required</div>
+
                                                                         </div>
-                                                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide if you are admin or not.">
-                                                                            <label for="Admin"> Is Admin <span class="form-required" title="This field is required.">*</span></label>
-                                                                            <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="Admin" id="Admin" name="Admin" value="" size="60" maxlength="255" />
-                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide if you are admin or not.">
+                                                                        <label for="Admin"> Is Admin <span class="form-required" title="This field is required.">*</span></label>
+                                                                        <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="Admin" id="Admin" name="Admin" value="" size="60" maxlength="255" />
+                                                                    </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your Upgarde amount Paid.">
                                                                         <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('UpgradeAmountPaid').touched && registerForm.get('UpgradeAmountPaid').invalid }" />
-                                                                        <div  *ngIf="submitted && f.UpgradeAmountPaid.errors " class="help-block">
+                                                                        <input class="text-full form-text form-control input-lg-3 required" formControlName="UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('UpgradeAmountPaid').touched && registerForm.get('UpgradeAmountPaid').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.UpgradeAmountPaid.errors " class="help-block">
                                                                             <div *ngIf="submitted && f.UpgradeAmountPaid.errors.required" style="color:red">Upgrade Amount Paid is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your perks.">
                                                                         <label for="perks"> Perks <span class="form-required" title="This field is required.">*</span></label>
-                                                                        <input type="text" class="text-full form-text form-control input-lg-3 required" formControlName="perks" id="perks" name="perks" value="" size="60" maxlength="255"  [ngClass]="{ 'is-invalid':submitted && registerForm.get('perks').touched && registerForm.get('perks').invalid }" />
-                                                                        <div  *ngIf="submitted && f.perks.errors" class="help-block">
+                                                                        <input type="text" class="text-full form-text form-control input-lg-3 required" formControlName="perks" id="perks" name="perks" value="" size="60" maxlength="255" [ngClass]="{ 'is-invalid':submitted && registerForm.get('perks').touched && registerForm.get('perks').invalid }"
+                                                                        />
+                                                                        <div *ngIf="submitted && f.perks.errors" class="help-block">
                                                                             <div *ngIf="submitted && f.perks.errors.required" style="color:red">Perks is required</div>
-                                                                       
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
                                                         </div>
-                                                        <button  class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                                        <button class="btn btn-primary" style="margin-top: 10px;">Submit</button>
                                                         <button type='button' (click)="reset()" class="btn btn-primary" style="margin-top: 10px;">Clear</button>
 
                                                     </div>
@@ -392,12 +411,13 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                        <div class="from-panel">
-                            <div id="checkboxes-div">
-                                <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
-                                    <legend><span class="fieldset-legend">Members Details</span></legend>
-                                    <div class="fieldset-wrapper">
-                                        <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
+                        <form [formGroup]="registerForm">
+                            <div class="from-panel">
+                                <div id="checkboxes-div">
+                                    <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
+                                        <legend><span class="fieldset-legend">Members Details</span></legend>
+                                        <div class="fieldset-wrapper">
+                                            <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
                                             <div class="form-item clearfix form-type-select form-item-field-country-und form-group2">
                                                 <label for="edit-field-country-und">Country <span class="form-required" title="This field is required.">*</span></label>
                                                 <select formControlName="Country" id="edit-field-country-und" name="field_country[und]" class="form-select form-control required">
@@ -406,138 +426,143 @@
                                                 </select>
                                             </div>
                                         </div> -->
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your first name.">
-                                            <label for="edit-field-afl-first-name-und-0-value">First Name <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="First_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="field_afl_first_name" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
-                                            <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
-                                            <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
-                                            <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender">
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your first name.">
+                                                <label for="edit-field-afl-first-name-und-0-value">First Name <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="First_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="field_afl_first_name" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
+                                                <label for="edit-field-afl-surname-und-0-value">Surname <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Surname" type="text" id="edit-field-afl-surname-und-0-value" name="field_afl_surname" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-surname-und-0-value form-group2" data-toggle="tooltip" title="Please provide your surname">
+                                                <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
+                                                <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender">
                                                 <option value="Male">Male</option>
                                                 <option value="FeMale">FeMale</option>
                                                 <option value="Others">Others</option>
                                             </select>
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
-                                            <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="username form-text form-control input-lg-3 required" formControlName="Username" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-mail form-group2" data-toggle="tooltip">
-                                            <label for="edit-mail">E-mail address <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" id="edit-mail" name="mail" value="" size="60" formControlName="Email_Address" maxlength="254" class="form-text form-control input-lg-3 required" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
-                                            <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Joining" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
-                                            <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" placeholder="" class="form-control col-md-4" [(bsValue)]="model.Date_of_Birth" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
-                                        </div>
-                                        <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
-                                            <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="password-field form-text form-control required" formControlName="Password" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-password form-item-pass-pass2 form-group2">
-                                            <label for="edit-pass-pass2">Confirm password <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="password-confirm form-text form-control required" formControlName="Confirm_Password" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128" />
-                                        </div>
-                                        <div class="field-type-entityreference field-name-field-afl-parent field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-parent">
-                                            <div id="field-afl-parent-add-more-wrapper"></div>
-                                        </div>
-                                        <div class="field-type-entityreference field-name-field-afl-sponsor field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-sponsor">
-                                            <div id="field-afl-sponsor-add-more-wrapper">
-                                                <div class="form-item form-autocomplete clearfix form-type-textfield form-item-field-afl-sponsor-und-0-target-id form-group2" data-toggle="tooltip" title="Please select the Sponsor user">
-                                                    <label for="edit-field-afl-sponsor-und-0-target-id">Sponsor <span class="form-required" title="This field is required.">*</span></label>
-                                                    <select class="form-control" id="Sponsor" name="Sponsor" formControlName="Sponsor">
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-name form-group2" data-toggle="tooltip">
+                                                <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="username form-text form-control input-lg-3 required" formControlName="UserName" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-mail form-group2" data-toggle="tooltip">
+                                                <label for="edit-mail">E-mail address <span class="form-required" title="This field is required.">*</span></label>
+                                                <input type="text" id="edit-mail" name="mail" value="" size="60" formControlName="Email_Address" maxlength="254" class="form-text form-control input-lg-3 required" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of joining.">
+                                                <label for="edit-field-afl-date-of-joining-und-0-value"> Date of Joining <span class="form-required" title="This field is required.">*</span></label>
+                                                <input type="text" placeholder="" class="form-control col-md-4" formControlName="Date_of_Joining" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your date of birth.">
+                                                <label for="edit-field-afl-date-of-birth-und-0-value"> Date of Birth <span class="form-required" title="This field is required.">*</span></label>
+                                                <input type="text" placeholder="" class="form-control col-md-4" formControlName="Date_of_Birth" bsDatepicker [bsConfig]="{ showWeekNumbers:false }">
+                                            </div>
+                                            <div class="form-item clearfix form-type-password form-item-pass-pass1 form-group2">
+                                                <label for="edit-pass-pass1">Password <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="password-field form-text form-control required" formControlName="Password" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-password form-item-pass-pass2 form-group2">
+                                                <label for="edit-pass-pass2">Confirm password <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="password-confirm form-text form-control required" formControlName="Confirm_Password" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128" />
+                                            </div>
+                                            <div class="field-type-entityreference field-name-field-afl-parent field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-parent">
+                                                <div id="field-afl-parent-add-more-wrapper"></div>
+                                            </div>
+                                            <div class="field-type-entityreference field-name-field-afl-sponsor field-widget-entityreference-autocomplete form-wrapper" id="edit-field-afl-sponsor">
+                                                <div id="field-afl-sponsor-add-more-wrapper">
+                                                    <div class="form-item form-autocomplete clearfix form-type-textfield form-item-field-afl-sponsor-und-0-target-id form-group2" data-toggle="tooltip" title="Please select the Sponsor user">
+                                                        <label for="edit-field-afl-sponsor-und-0-target-id">Sponsor <span class="form-required" title="This field is required.">*</span></label>
+                                                        <select class="form-control" id="Sponsor" name="Sponsor" formControlName="Sponsor">
                                                         <option *ngFor="let item of sponserList" [value]="item.SponserId">{{item.SponserValue}}</option>
                                                    </select>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your nominee name.">
-                                            <label for="edit-field-afl-nominee-name-und-0-value"> Name of the Nominee (optional) <span class="form-required" title="This field is required."></span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Name_of_Nominee" type="text" id="edit-field-afl-first-name-und-0-value" name="Name_of_Nominee" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="field-type-text field-name-field-mobile-number field-widget-text-textfield form-wrapper" id="edit-field-mobile-number">
-                                            <div id="field-mobile-number-add-more-wrapper">
-                                                <div class="form-item clearfix form-type-textfield form-item-field-mobile-number-und-0-value form-group2">
-                                                    <label for="edit-field-mobile-number-und-0-value">Mobile Number </label>
-                                                    <input class="text-full form-text form-control input-lg-3" formControlName="Mobile_Number" type="text" id="edit-field-mobile-number-und-0-value" name="field_mobile_number" value="" size="60" maxlength="255" />
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your nominee name.">
+                                                <label for="edit-field-afl-nominee-name-und-0-value"> Name of the Nominee (optional) <span class="form-required" title="This field is required."></span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Name_of_Nominee" type="text" id="edit-field-afl-first-name-und-0-value" name="Name_of_Nominee" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="field-type-text field-name-field-mobile-number field-widget-text-textfield form-wrapper" id="edit-field-mobile-number">
+                                                <div id="field-mobile-number-add-more-wrapper">
+                                                    <div class="form-item clearfix form-type-textfield form-item-field-mobile-number-und-0-value form-group2">
+                                                        <label for="edit-field-mobile-number-und-0-value">Mobile Number </label>
+                                                        <input class="text-full form-text form-control input-lg-3" formControlName="Mobile_Number" type="text" id="edit-field-mobile-number-und-0-value" name="field_mobile_number" value="" size="60" maxlength="255" />
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-address-und-0-value form-group2" data-toggle="tooltip" title="Please provide your address.">
-                                            <label for="edit-field-afl-address-und-0-value">Address <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="address" type="text" id="edit-field-afl-address-und-0-value" name="address" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your pan card number.">
-                                            <label for="edit-field-afl-pan-number-und-0-value"> Pan Card Number<span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Pan_Card_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Pan_Card_Number" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your aadhar-number.">
-                                            <label for="edit-field-afl-aadhar-number-und-0-value"> Aadhar number <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Aadhaar_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Aadhaar_Number" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank name.">
-                                            <label for="edit-field-afl-bank-name-und-0-value">Bank Name <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Name" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank ifsc code.">
-                                            <label for="edit-field-afl-Ifsc-code-und-0-value"> IFSC code <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="IFSC_Code" type="text" id="edit-field-afl-first-name-und-0-value" name="IFSC_Code" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Bank Account Number <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Account_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Account_Number" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="field-type-imagefield-crop field-name-field-product-image field-widget-imagefield-crop-widget form-wrapper" id="edit-field-product-image">
-                                            <div id="edit-field-product-image-und-0-ajax-wrapper">
-                                                <div class="form-item clearfix form-type-managed-file form-item-field-product-image-und-0 form-group" data-toggle="tooltip" title="Click on the image and drag to mark how the image will be cropped">
-                                                    <label for="edit-field-product-image-und-0-upload">Image </label>
-                                                    <div class="imagefield-crop-widget form-managed-file clearfix"></div>
-                                                    <input (change)="onFileChanged($event)" accept=".jpg, .jpeg, .png" #fileInput type="file" id="edit-field-product-image-und-0-upload" onclick="this.value = null" name="files[field_product_image_und_0]" size="22" class="form-file" #fileInput/>
-                                                    <!-- <input type="submit" id="edit-field-product-image-und-0-upload-button"
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-address-und-0-value form-group2" data-toggle="tooltip" title="Please provide your address.">
+                                                <label for="edit-field-afl-address-und-0-value">Address <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="address" type="text" id="edit-field-afl-address-und-0-value" name="address" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your pan card number.">
+                                                <label for="edit-field-afl-pan-number-und-0-value"> Pan Card Number<span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Pan_Card_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Pan_Card_Number" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your aadhar-number.">
+                                                <label for="edit-field-afl-aadhar-number-und-0-value"> Aadhar number <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Aadhaar_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Aadhaar_Number" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank name.">
+                                                <label for="edit-field-afl-bank-name-und-0-value">Bank Name <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Name" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Name" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank ifsc code.">
+                                                <label for="edit-field-afl-Ifsc-code-und-0-value"> IFSC code <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="IFSC_Code" type="text" id="edit-field-afl-first-name-und-0-value" name="IFSC_Code" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> Bank Account Number <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="Bank_Account_Number" type="text" id="edit-field-afl-first-name-und-0-value" name="Bank_Account_Number" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="field-type-imagefield-crop field-name-field-product-image field-widget-imagefield-crop-widget form-wrapper" id="edit-field-product-image">
+                                                <div id="edit-field-product-image-und-0-ajax-wrapper">
+                                                    <div class="form-item clearfix form-type-managed-file form-item-field-product-image-und-0 form-group" data-toggle="tooltip" title="Click on the image and drag to mark how the image will be cropped">
+                                                        <label for="edit-field-product-image-und-0-upload">Image </label>
+                                                        <div class="imagefield-crop-widget form-managed-file clearfix"></div>
+                                                        <input (change)="onFileChanged($event)" accept=".jpg, .jpeg, .png" #fileInput type="file" id="edit-field-product-image-und-0-upload" onclick="this.value = null" name="files[field_product_image_und_0]" size="22" class="form-file" #fileInput/>
+                                                        <!-- <input type="submit" id="edit-field-product-image-und-0-upload-button"
                                                         name="field_product_image_und_0_upload_button" value="Upload" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="field_product_image[und][0][fid]"
                                                         value="0" /> -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Plot Sqyds <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="plot_sqyds" type="text" id="edit-field-afl-first-name-und-0-value" name="plot_sqyds" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> No Of Plots <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Entry Amount <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
-                                            <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60" maxlength="255"
-                                            />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>
-                                            <input class="text-full form-text form-control input-lg-3 required" formControlName="UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255" />
-                                        </div>
-                                        <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
-                                            <label for="perks"> Perks <span class="form-required" title="This field is required.">*</span></label>
-                                            <input type="text" class="text-full form-text form-control input-lg-3 required" formControlName="perks" id="perks" name="perks" value="" size="60" maxlength="255" />
-                                        </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> Plot Sqyds <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="plot_sqyds" type="text" id="edit-field-afl-first-name-und-0-value" name="plot_sqyds" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> No Of Plots <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="no_of_plots" type="text" id="edit-field-afl-first-name-und-0-value" name="no_of_plots" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> Entry Amount <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="rate_per_plot" type="text" id="edit-field-afl-first-name-und-0-value" name="rate_per_plot" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> Is Opting for Star1 Autopool <span class="form-required" title="This field is required.">*</span></label>
+                                                <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="IsOptingforStar1Autopool" id="edit-field-afl-first-name-und-0-value" name="IsOptingforStar1Autopool" value="" size="60" maxlength="255"
+                                                />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="Admin"> Is Admin <span class="form-required" title="This field is required.">*</span></label>
+                                                <input style="width: 22px; " type="checkbox" class="text-full form-text form-control input-lg-3 col-md-2" formControlName="Admin" id="Admin" name="Admin" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="edit-field-afl-bank-account-number-und-0-value"> Upgrade Amount Paid <span class="form-required" title="This field is required.">*</span></label>
+                                                <input class="text-full form-text form-control input-lg-3 required" formControlName="UpgradeAmountPaid" type="text" id="edit-field-afl-first-name-und-0-value" name="UpgradeAmountPaid" value="" size="60" maxlength="255" />
+                                            </div>
+                                            <div class="form-item clearfix form-type-textfield form-item-field-afl-first-name-und-0-value form-group2" data-toggle="tooltip" title="Please provide your bank account number.">
+                                                <label for="perks"> Perks <span class="form-required" title="This field is required.">*</span></label>
+                                                <input type="text" class="text-full form-text form-control input-lg-3 required" formControlName="perks" id="perks" name="perks" value="" size="60" maxlength="255" />
+                                            </div>
 
 
-                                    </div>
-                                </fieldset>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
                             </div>
-                            <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
-                        </div>
+                        </form>
                     </div>
                 </ng-template>
