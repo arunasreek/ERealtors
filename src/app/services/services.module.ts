@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import {
     MemberServices,
-    SettingServices
+    SettingServices,
+    ReceiptServices,
+    PaymentServices
 
 } from './'
 
 @NgModule({
     providers: [
         MemberServices,
-        SettingServices
+        SettingServices,
+        ReceiptServices,
+        PaymentServices
     ]
 })
 

@@ -67,17 +67,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="odd views-row-first">
-                        <td class="views-field views-field-counter">
-                        1 </td>
-                        <td class="views-field views-field-category">
-                        E-Pin Generation </td>
-                        <td class="views-field views-field-name">
-                        Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
-                        <td class="views-field views-field-php">
-                        <span class="small text-primary"></span> 1,057.87 USD <span class="label2 bg-danger"> Debited </span> </td>
-                        <td class="views-field views-field-created">
-                        06/07/2020 </td>
+                          <tr *ngFor="let item of paymentVoucherList">
+                            <td>{{item.GUID}}</td>
+                            <td>{{item.PaidTo}}</td>
+                            <td>{{item.TransactionDetails}}</td>
+                            <td>{{item.Amount}}</td>
+                            <td>{{item.TransactionDate}}</td>
                         <td>
                                                       
                           <a (click)="openModal(template)" data-lity="">
@@ -94,54 +89,7 @@
                         </a>
                       </td>
                         </tr>
-                        <tr class="even">
-                        <td class="views-field views-field-counter">
-                        2 </td>
-                        <td class="views-field views-field-category">
-                        E-Pin Generation </td>
-                        <td class="views-field views-field-name">
-                        Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
-                        <td class="views-field views-field-php">
-                        <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
-                        <td class="views-field views-field-created">
-                        02/16/2019 </td>
-                        </tr>
-                        <tr class="odd">
-                        <td class="views-field views-field-counter">
-                        3 </td>
-                        <td class="views-field views-field-category">
-                        E-Pin Generation </td>
-                        <td class="views-field views-field-name">
-                        Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
-                        <td class="views-field views-field-php">
-                        <span class="small text-primary"></span> 165.00 USD <span class="label2 bg-danger"> Debited </span> </td>
-                        <td class="views-field views-field-created">
-                        01/29/2019 </td>
-                        </tr>
-                        <tr class="even">
-                        <td class="views-field views-field-counter">
-                        4 </td>
-                        <td class="views-field views-field-category">
-                        E-Pin Generation </td>
-                        <td class="views-field views-field-name">
-                        Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
-                        <td class="views-field views-field-php">
-                        <span class="small text-primary"></span> 110.00 USD <span class="label2 bg-danger"> Debited </span> </td>
-                        <td class="views-field views-field-created">
-                        01/25/2019 </td>
-                        </tr>
-                        <tr class="odd views-row-last">
-                        <td class="views-field views-field-counter">
-                        5 </td>
-                        <td class="views-field views-field-category">
-                        Withdrawal </td>
-                        <td class="views-field views-field-name">
-                        Business Director <span class="label bg-info username-hide-show"><a href="/user/3" title="View user profile." class="username">business.admin</a></span> <span class="label1 label-primary">3</span> </td>
-                        <td class="views-field views-field-php">
-                        <span class="small text-primary"></span> 333.00 USD <span class="label2 bg-danger"> Debited </span> </td>
-                        <td class="views-field views-field-created">
-                        09/28/2017 </td>
-                        </tr>
+                        
                         </tbody>
                         </table>
                         </div>
