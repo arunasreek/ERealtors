@@ -92,7 +92,7 @@ export class AddNewMemberComponent implements OnInit {
       Country :this.registerForm.value.Country,
       First_Name :this.registerForm.value.First_Name,
       Surname  :this.registerForm.value.Surname,
-      Username :this.registerForm.value.Username,
+      Username :this.registerForm.value.UserName,
       Email_Address :this.registerForm.value.Email_Address,
       Date_of_Joining : this.registerForm.value.Date_of_Joining,
       Date_of_Birth  :   this.registerForm.value.Date_of_Birth,
