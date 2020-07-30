@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -66,6 +67,7 @@ import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-she
 import { AppConfigModule, AppConfig } from './config/app.config.module';
 import { ToastrModule } from 'ngx-toastr';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProfileComponent } from './view/profile/profile.component';
 
 
 @NgModule({
@@ -123,6 +125,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ProfitLossAccountComponent,
     BalanceSheetComponent,
     StoreComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -136,8 +139,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    CarouselModule.forRoot()    
   ],
   providers: [AppConfig],
   bootstrap: [AppComponent]

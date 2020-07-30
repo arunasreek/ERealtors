@@ -53,6 +53,7 @@ import { StatementAccountComponent } from './view/e-wallet/statement-account/sta
 import { ProfitLossAccountComponent } from './view/e-wallet/profit-loss-account/profit-loss-account.component';
 import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-sheet.component';
 import { StoreComponent }  from './view/e-commerce/store/store.component';
+import { ProfileComponent } from './view/profile/profile.component';
 
 const routes: Routes = [ 
 { path: 'dashboard', component: DashboardComponent },
@@ -105,6 +106,7 @@ const routes: Routes = [
 { path: 'profit-loss-account', component:ProfitLossAccountComponent },
 { path: 'balance-sheet', component:BalanceSheetComponent },
 { path: 'store', component:StoreComponent },
+{ path: 'profile', component:ProfileComponent },
 ];
 
 @NgModule({

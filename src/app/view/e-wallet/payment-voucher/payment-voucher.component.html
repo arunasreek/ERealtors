@@ -80,10 +80,10 @@
                         06/07/2020 </td>
                         <td>
                                                       
-                          <a (click)="openModal(template,item.Guid)" data-lity="">
+                          <a (click)="openModal(template)" data-lity="">
                               <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
-                          <a (click)="viewMember(item.Guid)">
+                          <a >
                               <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
                           </a>
                           <a >
@@ -245,7 +245,9 @@
      </div>
    </div>
    <br><br>
-   <hr class="fast"/><br><br>
+   <hr class="fast"/>
+   <h3 style="text-align: center;">For Office use only</h3>
+   <br>
    
    <div class="sample">
      <label >Prepared by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
@@ -280,3 +282,121 @@
 </div>
 </div>
 </div>
+
+<ng-template #template>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">Payment View</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="from-panel">
+          <div id="checkboxes-div">
+              <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
+                  <legend><span class="fieldset-legend">Payment Details</span></legend>
+                  <div class="fieldset-wrapper">
+                      <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
+                          <div class="form-item clearfix form-type-select form-item-field-country-und form-group2">
+                              <label for="edit-field-country-und">Country <span class="form-required" title="This field is required.">*</span></label>
+                              <select formControlName="Country" id="edit-field-country-und" name="field_country[und]" class="form-select form-control required">
+                                  <option value="India">India</option>
+                                  <option value="USA">USA</option>
+                              </select>
+                          </div>
+                      </div> -->
+                      <div class="receipt" style="margin-left: 0px;border:none;height:850px">
+                        <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
+                     
+                     <div class="row">
+                       <div class="column1">
+                         <label>&nbsp;&nbsp;&nbsp;Receipt#:123456789</label>
+                       </div>
+                       <div class="column2"  style="text-align: right">
+                         <label>Amount</label>
+                       </div>
+                       <div class="column3">
+                     <input type="text" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
+                       </div>
+                       <div class="column4">
+                         <label style="margin-left: 125px;">Date:DD/MM/YY</label>
+                       </div>
+                     </div>
+                     <div class="sample"><br>
+                       <label >Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
+                      
+                     </div>
+                     <div class="sample"><br>
+                       <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
+                       <label >only</label>
+                     </div>
+                     <div class="sample"><br>
+                       <label >For Payment of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
+                      
+                     </div>
+                     <div class="row">
+                       <div class="column1">
+                       </div>
+                       <div class="column2">
+                         
+                       </div>
+                       <div class="column3">
+                       </div>
+                       <div class="column4">
+                       
+                       </div>
+                     </div>
+                     <br>
+                     <br>
+                     <div class="row">
+                       <div class="column1" >
+                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
+                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amount Paid</label><br><br>
+                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Due</label>
+                       </div>
+                       <div class="column2">
+                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
+                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
+                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
+                         
+                       </div>
+                       <div class="column3" style="text-align: right;">
+                        
+                       </div>
+                       <div class="column4">
+                         
+                  
+                       </div>
+                     </div>
+                     <br><br>
+                     <hr class="fast"/>
+                     <h3 style="text-align: center;">For Office use only</h3>
+                     <br>
+                     
+                     <div class="sample">
+                       <label >Prepared by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                     </div>
+                     <div class="sample"><br>
+                       <label >Approved by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                     </div>
+                     <div class="sample"><br>
+                       <label >Recorded by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                     </div>
+                    
+                    </div>
+                    
+                                         
+
+                  </div>
+              </fieldset>
+          </div>
+          <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
+      </div>
+  </div>
+</ng-template>   
