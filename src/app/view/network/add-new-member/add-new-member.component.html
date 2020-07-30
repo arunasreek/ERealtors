@@ -176,7 +176,7 @@
                                                                         <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
                                                                         <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender" [ngClass]="{ 'is-invalid':submitted && registerForm.get('Gender').touched && registerForm.get('Gender').invalid }">
                                                                             <option value="Male">Male</option>
-                                                                            <option value="FeMale">FeMale</option>
+                                                                            <option value="Female">Female</option>
                                                                             <option value="Others">Others</option>
                                                                         </select>
                                                                         <div *ngIf="submitted && f.Gender.errors " class="help-block">
@@ -438,7 +438,7 @@
                                                 <label for="Gender">Gender <span class="form-required" title="This field is required.">*</span></label>
                                                 <select class="text-full form-text form-control input-lg-3 required" formControlName="Gender" type="text" id="Gender" name="Gender">
                                                 <option value="Male">Male</option>
-                                                <option value="FeMale">FeMale</option>
+                                                <option value="Female">Female</option>
                                                 <option value="Others">Others</option>
                                             </select>
                                             </div>

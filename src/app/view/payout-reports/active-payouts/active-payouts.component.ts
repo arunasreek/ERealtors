@@ -23,11 +23,13 @@ export class ActivePayoutsComponent implements OnInit {
   }
 
   searchUser(userId:number){
+    this.teamCollection= [];
     this.memberService.getMemberData(userId)
     .subscribe((res) => {
      this.realtorsData = res.Result[0];
      var data = res.Result[0].Team_Coll.split(':');
-     this.image = "http://devapi.rajadhanihousingprojects.com/MemberImage/" + res.Result[0].Image;
+     //this.image = "http://devapi.rajadhanihousingprojects.com/MemberImage/" + res.Result[0].Image;
+     this.image = "http://api.rajadhanihousingprojects.com/MemberImage/" + res.Result[0].Image;
      if(data){
         data.forEach(element => {
           this.teamCollection.push(element)
