@@ -127,7 +127,8 @@
     </div>
   
   </div>
-  <div class="receipt" [formGroup]="receiptForm" (ngSubmit)="pushReceipt()">
+  <form [formGroup]="receiptForm" (ngSubmit)="pushReceipt()">
+  <div class="receipt" >
      
       <img src="assets/img/logo.png" style="width:100%;height:25%" />
       <h1 style="text-align:center">Receipt Voucher</h1><br>
@@ -220,6 +221,7 @@
     <input type="submit" id="edit-reset" name="op" value="Cancel" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;"/>
   </div>
    </div>
+  </form>
   
                             </div>
                         </div>
