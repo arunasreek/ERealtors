@@ -38,3 +38,9 @@ export class PaymentVoucherComponent implements OnInit {
     });
   }
 }
+// usp_IU_Payment
+// @Action='Insert',
+// @Id=10001,
+// @payment=20306.25,
+// @TransactionDate='2020-6-25',
+// @TransactionDetails='June Payout'

@@ -18,8 +18,9 @@ export class ReceiptVoucherComponent implements OnInit {
   Amountdue:any;
   AmountReceived:any;
   Balancedue:any;
-  receiptForm:any;
-
+  receiptForm:FormGroup;
+  submitted= false;
+  currentId:number;
  
   constructor(private modalService: BsModalService,public receiptService: ReceiptServices,private formBuilder: FormBuilder) { }
 
@@ -44,7 +45,7 @@ export class ReceiptVoucherComponent implements OnInit {
       payment: [''],
       TransactionDate:[''],
       TransactionDetails:[''],
-      amount:[''],
+      Amount:[''],
       in_rupees:[''],
       for_receipt_of:[''],
 
@@ -73,22 +74,54 @@ export class ReceiptVoucherComponent implements OnInit {
       console.log(res);
     });
   }
-  postReceiptVoucher(){
-    var data={
-      SpName : "usp_IU_Receipt",
-       Action:"Insert",
-        Id:10001,
-        payment:25000,
-        TransactionDate:"2020-07-30",
-        TransactionDetails:"Test"
+
+  pushReceipt(){
     
-  }
+    const data = {
+      SpName : "usp_IU_Receipt",
+      ActionTaken : this.Guid?'Update':'Insert',
+      Id : this.currentId,
+      payment  :this.receiptForm.value.payment,
+      TransactionDate:this.receiptForm.value.TransactionDate,
+      TransactionDetails :this.receiptForm.value.TransactionDetails,
+      Amount :this.receiptForm.value.Amount,
+      in_rupees :this.receiptForm.value.in_rupees,
+      for_receipt_of :this.receiptForm.value.for_receipt_of,
+     
+     
+    };
     this.receiptService.postReceiptVoucher(data)
-     .subscribe((res) => {
-       this.ReceiptVoucherList = res.Result;
-      console.log(res);
+    .subscribe(() => {
+      this.getView();
+      console.log(data.ActionTaken);
+      //  this.toastr.success(data.ActionTaken ==='Update'?'Record Updated Successfully':'Record Added Successfully', 'Success');
+      //  this.staticTabs.tabs[0].active = true;
+       this.receiptForm.reset();
+       this.submitted=false;
+       this.Guid =null;
+      
+
     });
+    //Reset 
   }
+
+
+  // postReceiptVoucher(){
+  //   var data={
+  //     SpName : "usp_IU_Receipt",
+  //      Action:"Insert",
+  //       Id:10001,
+  //       payment:25000,
+  //       TransactionDate:"2020-07-30",
+  //       TransactionDetails:"Test"
+    
+  // }
+  //   this.receiptService.postReceiptVoucher(data)
+  //    .subscribe((res) => {
+  //      this.ReceiptVoucherList = res.Result;
+  //     console.log(res);
+  //   });
+  // }
   getDue(){
     var data={
       SpName : "usp_IU_Receipt",
