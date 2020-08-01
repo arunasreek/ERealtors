@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
+import {  ReceiptServices } from 'src/app/services';
 import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
@@ -10,14 +11,36 @@ import { combineLatest, Subscription } from 'rxjs';
 })
 export class PaymentVoucherComponent implements OnInit {
   Guid : string;
-  
+  paymentVoucherList:any;
   modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { }
+  constructor(private modalService: BsModalService,public receiptService: ReceiptServices) { }
 
   ngOnInit(): void {
     this.Guid = null;
+    this.getView();
   }
   openModal(template: TemplateRef<any>){
     this.modalRef = this.modalService.show(template);  
   }
+  getView(){
+    var data={
+     SpName :"usp_IU_Payment",
+      Action:"View",
+      Id:null,
+      payment:null,
+      TransactionDate:null,
+      TransactionDetails:null
+  }
+    this.receiptService.getView(data)
+     .subscribe((res) => {
+       this.paymentVoucherList = res.Result;
+      console.log(res);
+    });
+  }
 }
+// usp_IU_Payment
+// @Action='Insert',
+// @Id=10001,
+// @payment=20306.25,
+// @TransactionDate='2020-6-25',
+// @TransactionDetails='June Payout'
