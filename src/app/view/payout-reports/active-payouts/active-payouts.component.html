@@ -21,18 +21,29 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="form-item clearfix form-type-select form-item-pin form-group" style=" margin-top: 22px;">
+                                                        <select class="form-control" #month>
+                                                            <option *ngFor="let item of monthNames" [value]="item">{{item}}</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-item clearfix form-type-select form-item-pin form-group" style=" margin-top: 22px;">
+                                                        <select class="form-control" #year>
+                                                                <option *ngFor="let item of allYears" [value]="item">{{item}}</option>
+                                                            </select>
+                                                    </div>
                                                     <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                                                        <input type="button" (click)="searchUser(userId.value)" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
+                                                        <input type="button" (click)="searchUser(userId.value,month.value,year.value)" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
                                                         <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
                                                         <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="business" style="display: inline-block !important">
-                                        <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH <span style="text-transform: uppercase;">{{currentMonth}}</span> 2020</h2><br><br>
+                                        <h2 class="text-center">BUSINESS STATEMENT OF THE MONTH <span style="text-transform: uppercase;">{{currentMonth}}</span> {{currentYear}}</h2><br><br>
                                         <div class="containerfluid">
                                             <div class="row">
                                                 <div class="col-sm-8 ">
@@ -85,22 +96,15 @@
                                                             <tr class=" odd views-row-first">
                                                                 <td class="views-field views-field-fast-track-income">
                                                                     <p style="margin-left: -23px;">Direct Collection : {{realtorsData?.Direct_Coll}}</p>
-                                                                    <p style="margin-left: -106px;" *ngFor="let item of teamCollection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}</p>
-                                                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Down
-                                                                        Line upgrade incentive {{realtorsData?.DownLine_In}}</p>
-                                                                    <p style="margin-left:280px">M.F.A. {{realtorsData?.MFA}}</p>
-                                                                    <p style="margin-left:250px">Eligibility {{realtorsData?.Eligibility}}</p>
+                                                                    <p style="margin-left: -23px;" *ngFor="let item of teamCollection">{{item}}</p>
+                                                                    <p style="margin-left: -23px;">DownLine upgrade incentive {{realtorsData?.DownLine_In}}</p>
+                                                                    <p style="margin-left:-23px">M.F.A. {{realtorsData?.MFA}}</p>
+                                                                    <p style="margin-left:-23px">Fast-track Eligibility {{realtorsData?.Eligibility}}</p>
 
                                                                 </td>
                                                                 <td class="views-field views-field-fast-auto-pool-working-plan">
-                                                                    <p>1st Level {{realtorsData?.first_Level}}</p>
-                                                                    <p>2nd Level Rs.0/-</p>
-                                                                    <p>3rd Level Rs.0/-</p>
-                                                                    <p>4th Level Rs.0/-</p>
-                                                                    <p>5th Level Rs.0/-</p>
-                                                                    <p>6th Level Rs.0/-</p>
-                                                                    <p>7th Level Rs.0/-</p>
-                                                                    <p>Eligibility Rs.0/-</p>
+                                                                    <p *ngFor="let item of autoPoolCollection">{{item}}</p>
+                                                                    <p>Autopool Eligibility {{realtorsData?.Eligibility1}}</p>
                                                                 </td>
 
                                                             </tr>
@@ -125,6 +129,7 @@
 
                                                                     <p>Upgrade Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= {{realtorsData?.Upgrade_Amount}}</p>
                                                                     <p>TDS & SC {{realtorsData?.Eligibility}}@ 10% = {{realtorsData?.TDSANDSC}}</p>
+                                                                    <hr>
                                                                     <p>Total Deduction = {{realtorsData?.Total_Ded}}&nbsp;&nbsp;</p>
                                                                 </td>
 

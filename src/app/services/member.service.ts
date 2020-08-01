@@ -25,8 +25,8 @@ export class MemberServices {
         }))
     }
 
-    getMemberData(memberId:number){
-        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberData/${memberId}`).pipe(map((res: any) => {
+    getMemberData(memberId:number,MonYear:string){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberData/${memberId}/${MonYear}`).pipe(map((res: any) => {
             return res;
         }))
     }
@@ -39,6 +39,18 @@ export class MemberServices {
 
     uploadMemberImage(formData: any) {
         return this.http.post<string>(`${this.config.apiEndpoint}/ERealtors/Member/PostMember/MemberImage`, formData).pipe(map((data: string) => {
+            return data;
+        }));
+    }
+
+    getBusinessTransaction(){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetBusinessTransactions`).pipe(map((data: any) => {
+            return data;
+        }));
+    }
+
+    getMemberRanks(){
+        return this.http.get<any>(`${this.config.apiEndpoint}/ERealtors/Member/GetMemberRanks`).pipe(map((data: any) => {
             return data;
         }));
     }

@@ -18,4 +18,16 @@ export class SettingServices {
         }))
     }
 
+    postSetting(data :  any){
+        return this.http.post<any>(`${this.config.apiEndpoint}/ERealtors/Setting/PostSetting`,data).pipe(map((res: any) => {
+            return res;
+        }))
+    }
+
+    postAutoPoolSetting(data :  any){
+        return this.http.post<any>(`${this.config.apiEndpoint}/ERealtors/Setting/PostAutoSetting`,data).pipe(map((res: any) => {
+            return res;
+        }))
+    }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemberServices } from 'src/app/services';
 
 @Component({
   selector: 'app-business-transactions',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business-transactions.component.css']
 })
 export class BusinessTransactionsComponent implements OnInit {
-
-  constructor() { }
+  businessTransaction:any;
+  constructor(public memberService: MemberServices) { }
 
   ngOnInit(): void {
+    this.getBusniessTransaction();
+  }
+
+  getBusniessTransaction(){
+    this.memberService.getBusinessTransaction().subscribe((res)=>{
+        this.businessTransaction = res.Result;
+        console.log(this.businessTransaction);
+    });
   }
 
 }
