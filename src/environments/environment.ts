@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   //apiEndpoint: 'http://localhost:50363/api',
-  //  apiEndpoint: 'http://api.rajadhanihousingprojects.com/api',
-  apiEndpoint: 'http://devapi.rajadhanihousingprojects.com/api',
+   apiEndpoint: 'http://api.rajadhanihousingprojects.com/api',
+  //apiEndpoint: 'http://devapi.rajadhanihousingprojects.com/api',
 };
 
 /*
