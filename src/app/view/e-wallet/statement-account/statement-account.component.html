@@ -1,66 +1,148 @@
-
-	<div class="statement"><br><br><br>
-        <table style="width:50%;margin-left: 50px;text-align:center">
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>No.</th>
-                <th>Description</th>
-                <th>Amount</th>
-                <th>Payment</th>
-                <th>Remaining</th>
-            </tr>
-        </thead>
+<div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <div class="col">
+    
+    <!-- <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">Commissions &amp; Other Expenses</h1>
+    <small class="text-muted"></small>
+    </div> -->
+    
+    </div>
+    </div>
+    
+    
+    <div class="wrapper-md ">
+    
+    
+    <div class="row">
+    <div class="region region-announcements">
+    
+    </div>
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div class="region region-content">
+    <div id="block-system-main" class="block block-system clearfix">
+    <div class="view view-business-transactions view-id-business_transactions view-display-id-page_2 view-dom-id-08cfdcee99b448f0a8f63386d0c4ef5c">
+    <div class="view-filters">
+    <form action="/afl-admin/business-expenses" method="get" id="views-exposed-form-business-transactions-page-2" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
+    <div class="views-exposed-widgets clearfix">
+    <div id="edit-uid-wrapper" class="views-exposed-widget views-widget-filter-uid form-group">
+    <label for="edit-uid">
+    Transaction Id </label>
+    <div class="views-widget">
+    <div class="form-item clearfix form-type-textfield form-item-uid form-group">
+    <input type="text" id="edit-uid" name="uid" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+    </div>
+    </div>
+    </div>
+    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+        <label for="edit-category">
+             Month </label>
+        <div class="views-widget">
+            <div class="form-item clearfix form-type-select form-item-category form-group">
+                <select _ngcontent-wcf-c124="" class="form-control">
+                    <option _ngcontent-wcf-c124="" value="January" ng-reflect-value="January">January</option>
+                    <option _ngcontent-wcf-c124="" value="February" ng-reflect-value="February">February</option>
+                    <option _ngcontent-wcf-c124="" value="March" ng-reflect-value="March">March</option>
+                    <option _ngcontent-wcf-c124="" value="April" ng-reflect-value="April">April</option>
+                    <option _ngcontent-wcf-c124="" value="May" ng-reflect-value="May">May</option>
+                    <option _ngcontent-wcf-c124="" value="June" ng-reflect-value="June">June</option>
+                    <option _ngcontent-wcf-c124="" value="July" ng-reflect-value="July">July</option>
+                    <option _ngcontent-wcf-c124="" value="August" ng-reflect-value="August">August</option>
+                    <option _ngcontent-wcf-c124="" value="September" ng-reflect-value="September">September</option>
+                    <option _ngcontent-wcf-c124="" value="October" ng-reflect-value="October">October</option>
+                    <option _ngcontent-wcf-c124="" value="November" ng-reflect-value="November">November</option>
+                    <option _ngcontent-wcf-c124="" value="December" ng-reflect-value="December">December</option><!--bindings={
+                "ng-reflect-ng-for-of": "January,February,March,April,M"
+              }--></select>
+            </div>
+        </div>
+    </div>
+	<div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+        <label for="edit-category">
+            Year </label>
+        <div class="views-widget">
+            <div class="form-item clearfix form-type-select form-item-category form-group">
+                <select _ngcontent-wcf-c124="" class="form-control">
+                    <option _ngcontent-wcf-c124="" value="2020" ng-reflect-value="2020">2020</option>
+                    <option _ngcontent-wcf-c124="" value="2021" ng-reflect-value="2021">2021</option>
+                    <option _ngcontent-wcf-c124="" value="2022" ng-reflect-value="2022">2022</option>
+                    <option _ngcontent-wcf-c124="" value="2023" ng-reflect-value="2023">2023</option>
+                    <option _ngcontent-wcf-c124="" value="2024" ng-reflect-value="2024">2024</option>
+                    <option _ngcontent-wcf-c124="" value="2025" ng-reflect-value="2025">2025</option>
+                    <option _ngcontent-wcf-c124="" value="2026" ng-reflect-value="2026">2026</option>
+                    <option _ngcontent-wcf-c124="" value="2027" ng-reflect-value="2027">2027</option>
+                    <option _ngcontent-wcf-c124="" value="2028" ng-reflect-value="2028">2028</option>
+                    <option _ngcontent-wcf-c124="" value="2029" ng-reflect-value="2029">2029</option>
+                    <option _ngcontent-wcf-c124="" value="2030" ng-reflect-value="2030">2030</option>
+                    <option _ngcontent-wcf-c124="" value="2031" ng-reflect-value="2031">2031</option>
+                    <option _ngcontent-wcf-c124="" value="2032" ng-reflect-value="2032">2032</option>
+                    <option _ngcontent-wcf-c124="" value="2033" ng-reflect-value="2033">2033</option>
+                    <option _ngcontent-wcf-c124="" value="2034" ng-reflect-value="2034">2034</option>
+                    <option _ngcontent-wcf-c124="" value="2035" ng-reflect-value="2035">2035</option>
+                    <option _ngcontent-wcf-c124="" value="2036" ng-reflect-value="2036">2036</option>
+                    <option _ngcontent-wcf-c124="" value="2037" ng-reflect-value="2037">2037</option>
+                    <option _ngcontent-wcf-c124="" value="2038" ng-reflect-value="2038">2038</option>
+                    <option _ngcontent-wcf-c124="" value="2039" ng-reflect-value="2039">2039</option>
+                    <option _ngcontent-wcf-c124="" value="2040" ng-reflect-value="2040">2040</option>
+                    <option _ngcontent-wcf-c124="" value="2041" ng-reflect-value="2041">2041</option>
+                    <option _ngcontent-wcf-c124="" value="2042" ng-reflect-value="2042">2042</option>
+                    <option _ngcontent-wcf-c124="" value="2043" ng-reflect-value="2043">2043</option>
+                    <option _ngcontent-wcf-c124="" value="2044" ng-reflect-value="2044">2044</option>
+                    <option _ngcontent-wcf-c124="" value="2045" ng-reflect-value="2045">2045</option>
+                    <option _ngcontent-wcf-c124="" value="2046" ng-reflect-value="2046">2046</option>
+                    <option _ngcontent-wcf-c124="" value="2047" ng-reflect-value="2047">2047</option>
+                    <option _ngcontent-wcf-c124="" value="2048" ng-reflect-value="2048">2048</option>
+                    <option _ngcontent-wcf-c124="" value="2049" ng-reflect-value="2049">2049</option>
+                    <option _ngcontent-wcf-c124="" value="2050" ng-reflect-value="2050">2050</option><!--bindings={
+          "ng-reflect-ng-for-of": "2020,2021,2022,2023,2024,2025,"
+        }--></select>
+            </div>
+        </div>
+    </div>
+    <div class="views-exposed-widget views-submit-button form-group m-t-22">
+    <input type="submit" id="edit-submit-business-transactions" name="" value="Filter" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" /> </div>
+    </div>
+    </div>
+    </div></form> </div>
+    <div class="view-content">
+    <div class="panel panel-default">
+    <div class="table-responsive">
+    <table class="views-table cols-6 table">
+    <thead>
+    <tr>
+    <th class="views-field views-field-counter">
+    # </th>
+    <th class="views-field views-field-category">
+    Date </th>
+    <th class="views-field views-field-name">
+    Transaction Id No </th>
+    <th class="views-field views-field-name-1">
+    Description </th>
+    <th class="views-field views-field-php">
+    Receipt Amount </th>
+    <th class="views-field views-field-created">
+	Payment Amount</th>
+	<th class="views-field views-field-php">
+	Balance Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+	
+    </tbody>
     </table>
-    <div class="account"><br>
-    <label style="margin-left:50px">5-07-20</label>
-    <label style="margin-left:10px">SD0072</label>
-    <label style="margin-left:45px">sale</label>
-    <label style="margin-left:120px">$250.00</label>
-    <label style="margin-left:205px">$360.00</label>
     </div>
-    <div class="account"><br>
-    <label style="margin-left:45px">15-07-20</label>
-    <label style="margin-left:10px">SD0093</label>
-    <label style="margin-left:40px">sale</label>
-    <label style="margin-left:120px">$400.00</label>
-    <label style="margin-left:210px">$860.00</label>
     </div>
-    <div class="account"><br>
-    <label style="margin-left:45px">25-07-20</label>
-    <label style="margin-left:10px">DC18</label>
-    <label style="margin-left:55px">Payment</label>
-    <label style="margin-left:220px">$100.00</label>
-    <label style="margin-left:80px">$750.00</label>
     </div>
-    <div class="account"><br>
-    <label style="margin-left:45px">29-07-20</label>
-    <label style="margin-left:10px">CG0010</label>
-    <label style="margin-left:38px">Credit</label>
-    <label style="margin-left:105px">$50.00</label>
-    <label style="margin-left:222px">$700.00</label>
-    </div><br><br><br>
-    <div class="account">
-    <label style="margin-left:500px">Subtotal</label>
-    <label style="margin-left:80px">$700.00</label>
     </div>
-    <div class="account"><br>
-    <label style="margin-left:60px">Thank you for your business</label>
-    <label style="margin-left:250px">Interest</label>
-    <label style="margin-left:84px">$5.75</label>
-    </div><br>
-    <table style="background-color: white;margin-left: 500px;width:200px;">
-        <tr>
-            <td><label>Total due</label>
-                <label style="margin-left: 70px">$705.75</label>
-            </td>
-        </tr>
-    </table>
-    <br>
-    
-    <label style="margin-left:60px">Payment day by May 25,2012</label><br><br>
-    <label style="margin-left:60px">Please make payment into Bank Account No.</label><br><br>
-    <label style="margin-left:60px">Interest of 10% per annum will be charged on late payments</label>
     </div>
-    
-    
+    </div> 
+    </div>
+    </div>
+    </div>

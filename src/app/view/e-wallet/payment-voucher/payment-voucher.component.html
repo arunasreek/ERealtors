@@ -133,29 +133,29 @@
       <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
    
    <div class="row">
-     <div class="column1">
-       <label>&nbsp;&nbsp;&nbsp;Receipt#:123456789</label>
-     </div>
-     <div class="column2"  style="text-align: right">
+     <div class="column2"  style="margin-left: 3%">
        <label>Amount</label>
      </div>
-     <div class="column3">
-   <input type="text" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
+     <div class="column3"  style="margin-left: -8%; margin-right: 8%; ">
+   <input type="text" [(ngModel)]="amount" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
      </div>
+     <div class="sample"><br>
+      <label>Paid To:<select [(ngModel)]="customerId" (change)="getDue($event) " class="form-control " id="Sponsor " name="Sponsor " >
+        <option *ngFor="let item of paymentVoucherList " [value]="item.Id ">{{item.GUID}}</option>
+        </select>
+      </label>
+    </div>
      <div class="column4">
-       <label style="margin-left: 125px;">Date:DD/MM/YY</label>
+       <label style="margin-left: 125px;">Date:{{currentDate | date:'yyyy/MM/dd'}}</label>
      </div>
    </div>
+   
    <div class="sample"><br>
-     <label >Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
-    
-   </div>
-   <div class="sample"><br>
-     <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
+     <label >In Rupees<input type="text"  disabled [(ngModel)]="amountR" name="amountR" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
      <label >only</label>
    </div>
    <div class="sample"><br>
-     <label >For Payment of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
+     <label >For Payment of<input type="text" name="paymentDetails" [(ngModel)]="paymentDetails"  style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
     
    </div>
    <div class="row">
@@ -179,9 +179,9 @@
        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Due</label>
      </div>
      <div class="column2">
-       <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
-       <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
-       <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
+       <input type="text" style="border-top:0px;border-left:0px;border-right:0px"  [value]="Amountdue" disabled><br><br>
+       <input type="text" style="border-top:0px;border-left:0px;border-right:0px" [value]="AmountPaid" disabled><br><br>
+       <input type="text" style="border-top:0px;border-left:0px;border-right:0px" [value]="Balancedue" disabled><br>
        
      </div>
      <div class="column3" style="text-align: right;">
@@ -213,7 +213,7 @@
      <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
    </div>
    <div class="views-exposed-widget views-submit-button form-group m-t-24">  
-    <input type="submit" id="edit-reset" name="op" value="Save" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;"/>
+    <input (click)="pushPayment()" name="op" value="Save" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;"/>
     <input type="submit" id="edit-reset" name="op" value="Cancel" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;"/>
   </div>
   </div>
