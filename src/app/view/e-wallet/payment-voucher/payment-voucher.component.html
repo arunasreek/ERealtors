@@ -120,14 +120,15 @@
                 <div class="views-exposed-widget views-submit-button form-group m-t-22">
                     <input type="button"  id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
                     <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
-                    <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                    <input type="submit" (click)="convetToPDF()" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
                 </div>
             </div>
         </div>
     </div>
   
   </div>
-  <div class="receipt">
+  <form>
+  <div class="receipt" id="hmtlData">
      
       <img src="assets/img/logo.png" style="width:100%;height:25%" />
       <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
@@ -217,6 +218,7 @@
     <input type="submit" id="edit-reset" name="op" value="Cancel" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;"/>
   </div>
   </div>
+  </form>
   </div>
   </div>
   </div>

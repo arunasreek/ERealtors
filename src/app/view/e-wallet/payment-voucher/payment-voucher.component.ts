@@ -7,6 +7,10 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { FormGroup,  FormBuilder,  Validators, FormGroupDirective } from '@angular/forms';
 import { moment } from 'ngx-bootstrap/chronos/test/chain';
 import { ToastrService } from 'ngx-toastr';
+import * as jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import * as html2pdf from 'html2pdf.js';
+
 
 
 @Component({
@@ -64,6 +68,25 @@ export class PaymentVoucherComponent implements OnInit {
   openModal(template: TemplateRef<any>){
     this.modalRef = this.modalService.show(template);  
   }
+
+  public convetToPDF()
+  {
+  var data = document.getElementById('htmlData');
+  html2canvas(data).then(canvas => {
+  // Few necessary setting options
+  var imgWidth = 150;
+  var pageHeight = 295;
+  var imgHeight = canvas.height * imgWidth / canvas.width;
+  var heightLeft = imgHeight;
+   
+  const contentDataURL = canvas.toDataURL('image/png')
+  let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+  var position = 10;
+  pdf.addImage(contentDataURL, 'PNG', 50, position, imgWidth, imgHeight)
+  pdf.save('payment.pdf'); // Generated PDF
+  });
+  }
+
   getView(){
     var data={
      SpName :"usp_IU_Payment",

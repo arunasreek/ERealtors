@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, ElementRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import {  ReceiptServices } from 'src/app/services';
@@ -7,6 +7,9 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { FormGroup,  FormBuilder,  Validators, FormGroupDirective } from '@angular/forms';
 import { moment } from 'ngx-bootstrap/chronos/test/chain';
 import { ToastrService } from 'ngx-toastr';
+import * as jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import * as html2pdf from 'html2pdf.js';
 
 @Component({
   selector: 'app-receipt-voucher',
@@ -15,6 +18,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ReceiptVoucherComponent implements OnInit {
   @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
+  // @ViewChild('htmlData') htmlData:ElementRef;
   Guid : string;
   modalRef: BsModalRef;
   ReceiptVoucherList:any;
@@ -29,7 +33,7 @@ export class ReceiptVoucherComponent implements OnInit {
   amount:any;
   customerId:any;
   amountR:any;
-
+ 
  
   constructor(private modalService: BsModalService,
     public receiptService: ReceiptServices,
@@ -72,6 +76,40 @@ export class ReceiptVoucherComponent implements OnInit {
     // const modalRef = this.modalService.open(ModelComponent, { size: 'lg', backdrop: 'static' });
     this.modalRef = this.modalService.show(template);  
   }
+
+  public convetToPDF()
+{
+var data = document.getElementById('htmlData1');
+html2canvas(data).then(canvas => {
+// Few necessary setting options
+var imgWidth = 150;
+var pageHeight = 295;
+var imgHeight = canvas.height * imgWidth / canvas.width;
+var heightLeft = imgHeight;
+ 
+const contentDataURL = canvas.toDataURL('image/png')
+let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+var position = 10;
+pdf.addImage(contentDataURL, 'PNG', 50, position, imgWidth, imgHeight)
+pdf.save('receipt.pdf'); // Generated PDF
+});
+}
+
+  // onExportClick(){
+  // const options ={
+  //   filename:'receipt-voucher.pdf',
+  //   image:{type:'jpeg'},
+  //   html2canvas:{},
+  //   jsPDF:{orientation:'landscape'}
+  // };
+  // const content: Element = document.getElementById('htmlData');
+
+  // html2pdf()
+  // .form(content)
+  // .set(options)
+  // .save();
+  // }
+
   getView(){
     var data={
       SpName : "usp_IU_Receipt",
@@ -153,6 +191,23 @@ export class ReceiptVoucherComponent implements OnInit {
 
     this.amountR = this.convertNumberToWords(this.amount)
   }
+
+  // public downloadPDF():void {
+  //   let DATA = this.htmlData.nativeElement;
+  //   let doc = new jsPDF('p','pt', 'a4');
+
+  //   let handleElement = {
+  //     '#editor':function(element,renderer){
+  //       return true;
+  //     }
+  //   };
+  //   doc.fromHTML(DATA.innerHTML,15,15,{
+  //     'width': 400,
+  //     'elementHandlers': handleElement
+  //   });
+
+  //   doc.save('receipt-voucher.pdf');
+  // }
 
   convertNumberToWords(amount) {
     var words = new Array();
