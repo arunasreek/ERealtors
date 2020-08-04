@@ -71,7 +71,7 @@ export class PaymentVoucherComponent implements OnInit {
 
   public convetToPDF()
   {
-  var data = document.getElementById('htmlData');
+  var data = document.getElementById('paymentData');
   html2canvas(data).then(canvas => {
   // Few necessary setting options
   var imgWidth = 150;
