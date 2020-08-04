@@ -1,126 +1,240 @@
 <div class="app-content-body">
-  <div class="hbox hbox-auto-xs hbox-auto-sm">
-      <div class="col">
-          <div class="row">
-              <div class="col-md-12">
-                <div>
-                  <tabset>
-                    <tab heading="PV List" id="tab1">
-                      <div class="region region-content">
-                        <div id="block-system-main" class="block block-system clearfix">
-                        <div class="view view-e-wallet-transactions view-id-e_wallet_transactions view-display-id-page_2 view-dom-id-6f6063f804c3121f115cbb3413b70812">
-                        <div class="view-filters">
-                        <form action="/afl/expenses-history" method="get" id="views-exposed-form-e-wallet-transactions-page-2" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
-                        <div class="views-exposed-widgets clearfix">
-                        <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
-                        <label for="edit-associated-user-id" style="font-weight:400 !important">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <tabset>
+                            <tab heading="PV List" id="tab1">
+                                <div class="region region-content">
+                                    <div id="block-system-main" class="block block-system clearfix">
+                                        <div class="view view-e-wallet-transactions view-id-e_wallet_transactions view-display-id-page_2 view-dom-id-6f6063f804c3121f115cbb3413b70812">
+                                            <div class="view-filters">
+                                                <form action="/afl/expenses-history" method="get" id="views-exposed-form-e-wallet-transactions-page-2" accept-charset="UTF-8">
+                                                    <div class="from-panel">
+                                                        <div class="views-exposed-form form-inline">
+                                                            <div class="views-exposed-widgets clearfix">
+                                                                <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                                                    <label for="edit-associated-user-id" style="font-weight:400 !important">
                         Transaction id </label>
-                        <div class="views-widget">
-                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
-                        <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                        </div>
-                        </div>
-                        </div>
-                        <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
-                          <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                                                    <div class="views-widget">
+                                                                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                                                            <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                                                    <label for="edit-associated-user-id" style="font-weight:400 !important">
                           Paid To </label>
-                          <div class="views-widget">
-                          <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
-                          <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                          </div>
-                          </div>
-                          </div>
-                          <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
-                            <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                                                    <div class="views-widget">
+                                                                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                                                            <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                                                    <label for="edit-associated-user-id" style="font-weight:400 !important">
                             Payment Date </label>
-                            <div class="views-widget">
-                            <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
-                              <input type="text" placeholder="" class="form-control" bsDatepicker >
-                            </div>
-                            </div>
-                            </div>
-                        <div class="views-exposed-widget views-submit-button form-group m-t-22">
-                        <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
-                        <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
-                      </div>
-                        </div>
-                        </div>
-                        </div></form> </div>
-                        <div class="view-content">
-                        <div class="panel panel-default">
-                        <div class="table-responsive">
-                        <table class="views-table cols-5 table">
-                        <thead>
-                        <tr>
-                         <th class="views-field views-field-counter">
-                        # </th>
-                        <th class="views-field views-field-category">
-                        Paid To</th>
-                        <th class="views-field views-field-name">
-                        Details of Transaction </th>
-                        <th class="views-field views-field-php">
-                        Amount </th>
-                        <th class="views-field views-field-created">
-                        Transaction Date </th>
-                        <th class="views-field views-field-created">
-                          Actions </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor="let item of paymentVoucherList">
-                            <td>{{item.GUID}}</td>
-                            <td>{{item.PaidTo}}</td>
-                            <td>{{item.TransactionDetails}}</td>
-                            <td>{{item.Amount}}</td>
-                            <td>{{item.TransactionDate}}</td>
-                        <td>
-                                                      
-                          <a (click)="openModal(template)" data-lity="">
-                              <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
-                          </a>
-                          <a >
-                              <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
-                          </a>
-                          <a >
-                              <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
-                          </a>
-                          <a >
-                            <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
-                        </a>
-                      </td>
-                        </tr>
-                        
-                        </tbody>
-                        </table>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        </div> 
-                        </div>
-                    </tab>
-                    <tab heading="Payment Voucher">
-                      <div class="region region-content">
-                        <div id="block-system-main" class="block block-system clearfix">
-                            <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
-              <div class="view-filters">
-  
-    <div class="from-panel">
-        <div class="views-exposed-form form-inline">
-            <div class="views-exposed-widgets clearfix">
-                <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
-                    <label for="edit-pin">
+                                                                    <div class="views-widget">
+                                                                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                                                            <input type="text" placeholder="" class="form-control" bsDatepicker>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                                                    <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear"
+                                                                        class="form-submit btn btn-default btn-primary" />
+                                                                    <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="view-content">
+                                                <div class="panel panel-default">
+                                                    <div class="table-responsive">
+                                                        <table class="views-table cols-5 table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="views-field views-field-counter">
+                                                                        # </th>
+                                                                    <th class="views-field views-field-category">
+                                                                        Paid To</th>
+                                                                    <th class="views-field views-field-name">
+                                                                        Details of Transaction </th>
+                                                                    <th class="views-field views-field-php">
+                                                                        Amount </th>
+                                                                    <th class="views-field views-field-created">
+                                                                        Transaction Date </th>
+                                                                    <th class="views-field views-field-created">
+                                                                        Actions </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr *ngFor="let item of paymentVoucherList">
+                                                                    <td>{{item.GUID}}</td>
+                                                                    <td>{{item.ReceivedFrom}}</td>
+                                                                    <td>{{item.TransactionDetails}}</td>
+                                                                    <td>{{item.Amount}}</td>
+                                                                    <td>{{item.TransactionDate}}</td>
+                                                                    <td>
+
+                                                                        <a (click)="openModal(template)" data-lity="">
+                                                                            <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                                                                        </a>
+                                                                        <a>
+                                                                            <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                                                                        </a>
+                                                                        <a>
+                                                                            <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;"></i>
+                                                                        </a>
+                                                                        <a>
+                                                                            <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;"></i>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </tab>
+                            <tab heading="Payment Voucher">
+                                <div class="region region-content">
+                                    <div id="block-system-main" class="block block-system clearfix">
+                                        <div class="view view-track-epin-admin view-id-track_epin_admin view-display-id-page view-dom-id-b8b6cdbd4568b730bdbc5ea8d072c971">
+                                            <div class="view-filters">
+
+                                                <div class="from-panel">
+                                                    <div class="views-exposed-form form-inline">
+                                                        <div class="views-exposed-widgets clearfix">
+                                                            <div id="edit-pin-wrapper" class="views-exposed-widget views-widget-filter-pin form-group">
+                                                                <label for="edit-pin">
                                Search by Payment Voucher No. </label>
-                    <div class="views-widget">
-                        <div class="form-item clearfix form-type-textfield form-item-pin form-group">
-                            <input type="text" #userId id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
-                        </div>
+                                                                <div class="views-widget">
+                                                                    <div class="form-item clearfix form-type-textfield form-item-pin form-group">
+                                                                        <input type="text" #userId id="edit-pin" name="pin" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                                                <input type="button" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
+                                                                <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                                                                <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="receipt">
+
+                                                <img src="assets/img/logo.png" style="width:100%;height:25%" />
+                                                <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
+
+                                                <div class="row">
+                                                    <div class="column2" style="margin-left: 3%">
+                                                        <label>Amount</label>
+                                                    </div>
+                                                    <div class="column3" style="margin-left: -8%; margin-right: 8%; ">
+                                                        <input type="text" [(ngModel)]="amount" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
+                                                    </div>
+                                                    <div class="sample"><br>
+                                                        <label>Paid To:<select [(ngModel)]="customerId" (change)="getDue($event) " class="form-control " id="Sponsor " name="Sponsor " >
+        <option *ngFor="let item of paymentVoucherList " [value]="item.Id ">{{item.GUID}}</option>
+        </select>
+      </label>
+                                                    </div>
+                                                    <div class="column4">
+                                                        <label style="margin-left: 125px;">Date:{{currentDate | date:'yyyy/MM/dd'}}</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sample"><br>
+                                                    <label>In Rupees<input type="text"  disabled [(ngModel)]="amountR" name="amountR" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
+                                                    <label>only</label>
+                                                </div>
+                                                <div class="sample"><br>
+                                                    <label>For Payment of<input type="text" name="paymentDetails" [(ngModel)]="paymentDetails"  style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column1">
+                                                    </div>
+                                                    <div class="column2">
+
+                                                    </div>
+                                                    <div class="column3">
+                                                    </div>
+                                                    <div class="column4">
+
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="column1">
+                                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
+                                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amount Paid</label><br><br>
+                                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Due</label>
+                                                    </div>
+                                                    <div class="column2">
+                                                        <input type="text" style="border-top:0px;border-left:0px;border-right:0px" [value]="Amountdue" disabled><br><br>
+                                                        <input type="text" style="border-top:0px;border-left:0px;border-right:0px" [value]="AmountPaid" disabled><br><br>
+                                                        <input type="text" style="border-top:0px;border-left:0px;border-right:0px" [value]="Balancedue" disabled><br>
+
+                                                    </div>
+                                                    <div class="column3" style="text-align: right;">
+
+                                                    </div>
+                                                    <div class="column4">
+
+
+                                                    </div>
+                                                </div>
+                                                <br><br>
+                                                <hr class="fast" />
+                                                <h3 style="text-align: center;">For Office use only</h3>
+                                                <br>
+
+                                                <div class="sample">
+                                                    <label>Prepared by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                </div>
+                                                <div class="sample"><br>
+                                                    <label>Approved by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                </div>
+                                                <div class="sample"><br>
+                                                    <label>Recorded by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                    <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                                </div>
+                                                <div class="views-exposed-widget views-submit-button form-group m-t-24">
+                                                    <input (click)="pushPayment()" name="op" value="Save" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;" />
+                                                    <input type="submit" id="edit-reset" name="op" value="Cancel" class="form-submit btn btn-default btn-primary" style="width:150px;height:50px;font-size: 25px;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </tab>
+                        </tabset>
                     </div>
+
                 </div>
                 <div class="views-exposed-widget views-submit-button form-group m-t-22">
                     <input type="button"  id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
                     <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
                     <input type="submit" (click)="convetToPDF()" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+
                 </div>
             </div>
         </div>
@@ -234,19 +348,19 @@
 </div>
 
 <ng-template #template>
-  <div class="modal-header">
-      <h4 class="modal-title pull-left">Payment View</h4>
-      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Payment View</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-  <div class="modal-body">
-      <div class="from-panel">
-          <div id="checkboxes-div">
-              <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
-                  <legend><span class="fieldset-legend">Payment Details</span></legend>
-                  <div class="fieldset-wrapper">
-                      <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
+    </div>
+    <div class="modal-body">
+        <div class="from-panel">
+            <div id="checkboxes-div">
+                <fieldset class="form-wrapper" id="edit-transaction-authorization-form">
+                    <legend><span class="fieldset-legend">Payment Details</span></legend>
+                    <div class="fieldset-wrapper">
+                        <!-- <div class="field-type-list-text field-name-field-country field-widget-options-select form-wrapper" id="edit-field-country">
                           <div class="form-item clearfix form-type-select form-item-field-country-und form-group2">
                               <label for="edit-field-country-und">Country <span class="form-required" title="This field is required.">*</span></label>
                               <select formControlName="Country" id="edit-field-country-und" name="field_country[und]" class="form-select form-control required">
@@ -255,98 +369,98 @@
                               </select>
                           </div>
                       </div> -->
-                      <div class="receipt" style="margin-left: 0px;border:none;height:850px">
-                        <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
-                     
-                     <div class="row">
-                       <div class="column1">
-                         <label>&nbsp;&nbsp;&nbsp;Receipt#:123456789</label>
-                       </div>
-                       <div class="column2"  style="text-align: right">
-                         <label>Amount</label>
-                       </div>
-                       <div class="column3">
-                     <input type="text" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
-                       </div>
-                       <div class="column4">
-                         <label style="margin-left: 125px;">Date:DD/MM/YY</label>
-                       </div>
-                     </div>
-                     <div class="sample"><br>
-                       <label >Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
-                      
-                     </div>
-                     <div class="sample"><br>
-                       <label >In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
-                       <label >only</label>
-                     </div>
-                     <div class="sample"><br>
-                       <label >For Payment of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
-                      
-                     </div>
-                     <div class="row">
-                       <div class="column1">
-                       </div>
-                       <div class="column2">
-                         
-                       </div>
-                       <div class="column3">
-                       </div>
-                       <div class="column4">
-                       
-                       </div>
-                     </div>
-                     <br>
-                     <br>
-                     <div class="row">
-                       <div class="column1" >
-                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
-                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amount Paid</label><br><br>
-                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Due</label>
-                       </div>
-                       <div class="column2">
-                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
-                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
-                         <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
-                         
-                       </div>
-                       <div class="column3" style="text-align: right;">
-                        
-                       </div>
-                       <div class="column4">
-                         
-                  
-                       </div>
-                     </div>
-                     <br><br>
-                     <hr class="fast"/>
-                     <h3 style="text-align: center;">For Office use only</h3>
-                     <br>
-                     
-                     <div class="sample">
-                       <label >Prepared by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                     </div>
-                     <div class="sample"><br>
-                       <label >Approved by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                     </div>
-                     <div class="sample"><br>
-                       <label >Recorded by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                       <label >Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
-                     </div>
-                    
-                    </div>
-                    
-                                         
+                        <div class="receipt" style="margin-left: 0px;border:none;height:850px">
+                            <h1 style="text-align:center; color:darkblue">Payment Voucher</h1><br>
 
-                  </div>
-              </fieldset>
-          </div>
-          <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
-      </div>
-  </div>
-</ng-template>   
+                            <div class="row">
+                                <div class="column1">
+                                    <label>&nbsp;&nbsp;&nbsp;Receipt#:123456789</label>
+                                </div>
+                                <div class="column2" style="text-align: right">
+                                    <label>Amount</label>
+                                </div>
+                                <div class="column3">
+                                    <input type="text" id="fname" name="fname" value="&#x20B9;" style="width:200px;"><br>
+                                </div>
+                                <div class="column4">
+                                    <label style="margin-left: 125px;">Date:DD/MM/YY</label>
+                                </div>
+                            </div>
+                            <div class="sample"><br>
+                                <label>Paid to:<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:300px"></label>
+
+                            </div>
+                            <div class="sample"><br>
+                                <label>In Rupees<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:500px;margin-left: 10px;"></label>
+                                <label>only</label>
+                            </div>
+                            <div class="sample"><br>
+                                <label>For Payment of<input type="text" style="border-top:0px;border-left:0px;border-right:0px;width:380px"></label>
+
+                            </div>
+                            <div class="row">
+                                <div class="column1">
+                                </div>
+                                <div class="column2">
+
+                                </div>
+                                <div class="column3">
+                                </div>
+                                <div class="column4">
+
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="column1">
+                                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount Due</label><br><br>
+                                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amount Paid</label><br><br>
+                                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Due</label>
+                                </div>
+                                <div class="column2">
+                                    <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
+                                    <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
+                                    <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
+
+                                </div>
+                                <div class="column3" style="text-align: right;">
+
+                                </div>
+                                <div class="column4">
+
+
+                                </div>
+                            </div>
+                            <br><br>
+                            <hr class="fast" />
+                            <h3 style="text-align: center;">For Office use only</h3>
+                            <br>
+
+                            <div class="sample">
+                                <label>Prepared by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                            </div>
+                            <div class="sample"><br>
+                                <label>Approved by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                            </div>
+                            <div class="sample"><br>
+                                <label>Recorded by:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Signature:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                                <label>Date:<input type="text" style="border-top:0px;border-left:0px;border-right:0px"></label>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </fieldset>
+            </div>
+            <!-- <button type='submit' class="btn btn-primary" style="margin-top: 10px;">Submit</button> -->
+        </div>
+    </div>
+</ng-template>
