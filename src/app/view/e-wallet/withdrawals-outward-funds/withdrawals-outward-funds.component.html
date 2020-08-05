@@ -378,7 +378,7 @@
               <div class="table-responsive">
               <table class="views-table cols-5 table">
               <thead>
-              <tr>
+              <tr  >
                <th class="views-field views-field-counter">
               # </th>
               <th class="views-field views-field-category">
@@ -471,6 +471,9 @@
               </tr>
               </tbody>
               </table>
+              <div style="float:right;margin-top:20px;color:#102f66;font-weight:800">
+                <pagination-controls (pageChange)="p=$event"></pagination-controls>
+               </div> 
               </div>
               </div>
               </div>

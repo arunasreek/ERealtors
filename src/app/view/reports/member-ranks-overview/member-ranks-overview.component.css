@@ -560,153 +560,63 @@ p {
     margin-bottom: 0;
     border: 0;
 }
-
 .table-responsive {
     min-height: .01%;
     overflow-x: auto;
 }
-
-.panel>.table-responsive:last-child>.table:last-child,
-.panel>.table:last-child {
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-
-.panel>.table-responsive:first-child>.table:first-child,
-.panel>.table:first-child {
+.panel>.table-responsive:first-child>.table:first-child, .panel>.table:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-
-.panel>.panel-collapse>.table,
-.panel>.table,
-.panel>.table-responsive>.table {
+.panel>.panel-collapse>.table, .panel>.table, .panel>.table-responsive>.table {
     margin-bottom: 0;
 }
-
 .table-responsive table {
-    border: 0px solid #ddd;
+    border: 1px solid #ddd;
 }
-
 .table {
-    border-top: 0%;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+   
+}
+table {
+    background-color: transparent;
+}
+table {
     border-spacing: 0;
     border-collapse: collapse;
 }
-
-.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:first-child,
-.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:first-child,
-.panel>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-.panel>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-.panel>.table:first-child>thead:first-child>tr:first-child td:first-child,
-.panel>.table:first-child>thead:first-child>tr:first-child th:first-child {
-    border-radius: 0;
+.table-responsive table thead {
+    background: #e5e5e5;
 }
-
-.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child,
-.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child,
-.panel>.table:first-child>tbody:first-child>tr:first-child,
-.panel>.table:first-child>thead:first-child>tr:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
-.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:first-child,
-.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:first-child,
-.panel>.table:first-child>tbody:first-child>tr:first-child td:first-child,
-.panel>.table:first-child>tbody:first-child>tr:first-child th:first-child,
-.panel>.table:first-child>thead:first-child>tr:first-child td:first-child,
-.panel>.table:first-child>thead:first-child>tr:first-child th:first-child {
-    border-radius: 0;
-}
-
-.table>caption+thead>tr:first-child>td,
-.table>caption+thead>tr:first-child>th,
-.table>colgroup+thead>tr:first-child>td,
-.table>colgroup+thead>tr:first-child>th,
-.table>thead:first-child>tr:first-child>td,
-.table>thead:first-child>tr:first-child>th {
-    border-top: 0;
-}
-
-.table-responsive table thead th {
-    font-weight: 700;
-}
-
-.table>thead>tr>th {
-    padding: 8px 8px;
-    border-bottom: 0px solid #eaeff0;
-}
-
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
-    line-height: 1.42857143;
-}
-
-.table-responsive table th {
-    text-align: center;
-    border-right: solid 0px #cecece;
-    color: #cc0000;
-    font-weight: bold;
-    padding-left: 2%;
-    text-align: center;
-}
-
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-}
-
-.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child td:first-child,
-.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child th:first-child,
-.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child td:first-child,
-.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child th:first-child,
-.panel>.table:last-child>tbody:last-child>tr:last-child td:first-child,
-.panel>.table:last-child>tbody:last-child>tr:last-child th:first-child,
-.panel>.table:last-child>tfoot:last-child>tr:last-child td:first-child,
-.panel>.table:last-child>tfoot:last-child>tr:last-child th:first-child {
-    border-bottom-left-radius: 3px;
-}
-
-.afl_enrolment_details .table>tbody>tr>th,
-.afl_enrolment_details .table>tfoot>tr>th,
-.table>tbody>tr>td,
-.afl_enrolment_details .table>tfoot>tr>td {
+afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
     border: none;
 }
-
-.table>tbody>tr>th,
-.table>tfoot>tr>th,
-.table>tbody>tr>td,
-.table>tfoot>tr>td {
-    padding: 8px 15px;
+.afl_enrolment_details .table>tbody>tr>th, .afl_enrolment_details .table>tfoot>tr>th, .table>tbody>tr>td, .afl_enrolment_details .table>tfoot>tr>td {
+    border: none;
 }
-
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
+.table>tbody>tr>th, .table>tfoot>tr>th, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px 15px;
+    border-top: 1px solid #eaeff0;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
+    border-top: 1px solid #ddd;
 }
-
-.table-responsive tbody th,
-.table-responsive tbody td {
+.table-responsive tbody th, .table-responsive tbody td {
+    padding: 15px 0;
     text-align: center;
-    border-right: solid 0px #ccc!important;
+    border-right: solid 1px #ccc!important;
+    font-size: 14px;
     color: #3f4454;
-    border-bottom: solid 0px #ccc!important;
+    border-bottom: solid 1px #ccc!important;
 }
+table, th, td {
+    border: 1px solid #d8dbe0;
+  }

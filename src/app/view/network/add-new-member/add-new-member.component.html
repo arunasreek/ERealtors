@@ -107,7 +107,7 @@
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                        <tr *ngFor="let item of filterValue">
+                                                                        <tr *ngFor="let item of filterValue | paginate:{ itemsPerPage: 10 , currentPage: p }">
                                                                             <td>{{item.Guid}}</td>
                                                                             <td>{{item.Member}}</td>
                                                                             <td>{{item.Star}}</td>
@@ -129,6 +129,9 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
+                                                                <div style="float:right;margin-top:20px;color:#102f66;font-weight:800">
+                                                                    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                                                                   </div>  
                                                             </div>
                                                         </div>
                                                     </div>
