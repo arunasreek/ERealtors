@@ -29,6 +29,7 @@ export class AddNewMemberComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   currentId:number;
+  p: number=1;
   constructor(private modalService: BsModalService,public memberService: MemberServices,private formBuilder: FormBuilder,
               public toastr: ToastrService,private changeDetection: ChangeDetectorRef) { }
  

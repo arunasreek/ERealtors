@@ -8,6 +8,7 @@ import { MemberServices } from 'src/app/services';
 })
 export class MemberRanksOverviewComponent implements OnInit {
   memberRankList:any;
+  p: number=1;
   constructor(public memberService: MemberServices) { }
 
   ngOnInit(): void {

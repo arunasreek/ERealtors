@@ -9,6 +9,7 @@ import { moment } from 'ngx-bootstrap/chronos/test/chain';
 import { ToastrService } from 'ngx-toastr';
 import * as jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import {NgxPaginationModule} from 'ngx-pagination';
 import * as html2pdf from 'html2pdf.js';
 
 @Component({
@@ -33,12 +34,17 @@ export class ReceiptVoucherComponent implements OnInit {
   amount:any;
   customerId:any;
   amountR:any;
- 
+  // collections= [];
+  p: number=1;
  
   constructor(private modalService: BsModalService,
     public receiptService: ReceiptServices,
     private formBuilder: FormBuilder,
-    public toastr: ToastrService) { }
+    public toastr: ToastrService) { 
+      //  for(let i=1; i<=200 ; i++){
+
+      //  }
+    }
 
   ngOnInit(): void {
     this.Guid = null;

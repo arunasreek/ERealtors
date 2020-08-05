@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -130,6 +131,7 @@ import { ProfileComponent } from './view/profile/profile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxPaginationModule,
     HttpClientModule,
     TabsModule.forRoot(),
     BsDatepickerModule.forRoot(),

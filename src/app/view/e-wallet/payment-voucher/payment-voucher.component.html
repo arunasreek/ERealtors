@@ -72,7 +72,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr *ngFor="let item of paymentVoucherList">
+                                                                <tr *ngFor="let item of paymentVoucherList | paginate:{ itemsPerPage: 10 , currentPage: p };">
                                                                     <td>{{item.GUID}}</td>
                                                                     <td>{{item.ReceivedFrom}}</td>
                                                                     <td>{{item.TransactionDetails}}</td>
@@ -97,6 +97,9 @@
 
                                                             </tbody>
                                                         </table>
+                                                        <div style="float:right;margin-top:20px;color:#102f66;font-weight:800">
+                                                            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                                                           </div>  
                                                     </div>
                                                 </div>
                                             </div>
