@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild, ElementRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
-import {  ReceiptServices } from 'src/app/services';
+import {  ReceiptServices, CommonServices } from 'src/app/services';
 import { combineLatest, Subscription } from 'rxjs';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { FormGroup,  FormBuilder,  Validators, FormGroupDirective } from '@angular/forms';
@@ -36,11 +36,13 @@ export class ReceiptVoucherComponent implements OnInit {
   amountR:any;
   // collections= [];
   p: number=1;
+  customerList:any;
  
   constructor(private modalService: BsModalService,
     public receiptService: ReceiptServices,
     private formBuilder: FormBuilder,
-    public toastr: ToastrService) { 
+    public toastr: ToastrService,
+    public commonservice: CommonServices) { 
       //  for(let i=1; i<=200 ; i++){
 
       //  }
@@ -55,6 +57,7 @@ export class ReceiptVoucherComponent implements OnInit {
     this.Amountdue=0;
     this.AmountReceived=0;
     this.Balancedue=0;
+    this.getSponserList();
   }
   // const data = {
   //   ActionTaken : this.Guid?'Update':'Insert',
@@ -196,6 +199,13 @@ pdf.save('receipt.pdf'); // Generated PDF
     });
 
     this.amountR = this.convertNumberToWords(this.amount)
+  }
+
+  getSponserList(){
+    this.commonservice.getSponserList()
+     .subscribe((res) => {
+      this.customerList = res.Result;
+    });
   }
 
   // public downloadPDF():void {

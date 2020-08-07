@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
-import {  ReceiptServices } from 'src/app/services';
+import {  ReceiptServices, CommonServices } from 'src/app/services';
 import { combineLatest, Subscription } from 'rxjs';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { FormGroup,  FormBuilder,  Validators, FormGroupDirective } from '@angular/forms';
@@ -36,11 +36,13 @@ export class PaymentVoucherComponent implements OnInit {
   customerId:any;
   amountR:any;
   p: number=1; 
+  customerList:any;
 
   constructor(private modalService: BsModalService,
     public receiptService: ReceiptServices,
     private formBuilder: FormBuilder,
-    public toastr: ToastrService) { }
+    public toastr: ToastrService,
+    public commonservice: CommonServices) { }
 
   ngOnInit(): void {
     this.Guid = null;
@@ -49,6 +51,7 @@ export class PaymentVoucherComponent implements OnInit {
     this.Amountdue=0;
     this.AmountPaid=0;
     this.Balancedue=0;
+    this.getSponserList();
   }
 
   setPaymentForm(){
@@ -155,7 +158,12 @@ export class PaymentVoucherComponent implements OnInit {
     this.amountR = this.convertNumberToWords(this.amount)
   }
 
-
+  getSponserList(){
+    this.commonservice.getSponserList()
+     .subscribe((res) => {
+      this.customerList = res.Result;
+    });
+  }
 
   convertNumberToWords(amount) {
     var words = new Array();

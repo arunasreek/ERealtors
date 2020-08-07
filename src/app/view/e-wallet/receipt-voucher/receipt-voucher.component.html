@@ -44,14 +44,14 @@
                                                                 <div class="views-exposed-widget views-submit-button form-group m-t-22">
                                                                     <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear"
                                                                         class="form-submit btn btn-default btn-primary" />
-                                                                    <input type="submit" id="edit-reset" name="op"  (click)="convetToPDF()" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                                    <input type="submit" id="edit-reset" name="op" (click)="convetToPDF()" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="view-content" id="htmlData" >
+                                            <div class="view-content" id="htmlData">
                                                 <div class="panel panel-default">
                                                     <div class="table-responsive">
                                                         <table class="views-table cols-5 table">
@@ -96,11 +96,11 @@
                                                                     </td>
 
                                                             </tbody>
-                                        
+
                                                         </table>
                                                         <div style="float:right;margin-top:20px;color:#102f66;font-weight:800">
-                                                        <pagination-controls (pageChange)="p=$event"></pagination-controls>
-                                                       </div>  
+                                                            <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -129,7 +129,7 @@
                                                             <div class="views-exposed-widget views-submit-button form-group m-t-22">
                                                                 <input type="button" id="edit-submit-track-epin-admin" name="" value="Search" class="form-submit btn btn-default btn-primary" />
                                                                 <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
-                                                                <input type="submit"  (click)="convetToPDF()" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                                <input type="submit" (click)="convetToPDF()" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -151,7 +151,7 @@
                                                         </div>
                                                         <div class="sample ">
                                                             <label>Received From:<select [(ngModel)]="customerId" (change)="getDue($event) " class="form-control " id="Sponsor " name="Sponsor " >
-                                                      <option *ngFor="let item of ReceiptVoucherList " [value]="item.Id ">{{item.GUID}}</option>
+                                                      <option *ngFor="let item of customerList " [value]="item.SponserId ">{{item.SponserValue}}</option>
                                                       </select>
                                                     </label>
                                                         </div>
