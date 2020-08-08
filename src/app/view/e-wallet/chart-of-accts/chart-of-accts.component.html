@@ -1,0 +1,343 @@
+
+
+<!-- <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <h1 class="m-n h3">Purchase Invoices</h1>
+    <small class="text-muted"></small>
+    </div>
+    
+    </div>
+    </div> -->
+    
+    
+    <div class="wrapper-md ">
+    
+  
+    
+    
+        <div class="row">
+        <div class="col-md-12">
+  
+          <div>
+            <tabset>
+              <tab heading="Accounts  List" id="tab1">
+                 <div class="region region-content">
+                          <div id="block-system-main" class="block block-system clearfix">
+                          <div class="view view-e-wallet-transactions view-id-e_wallet_transactions view-display-id-page_2 view-dom-id-6f6063f804c3121f115cbb3413b70812">
+                          <div class="view-filters">
+                          <form action="/afl/expenses-history" method="get" id="views-exposed-form-e-wallet-transactions-page-2" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
+                          <div class="views-exposed-widgets clearfix">
+                          <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                          <label for="edit-associated-user-id" style="font-weight:400 !important">
+                          Transaction id </label>
+                          <div class="views-widget">
+                          <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                          <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                          </div>
+                          </div>
+                          </div>
+                          <!-- <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                            <label for="edit-associated-user-id" style="font-weight:400 !important">
+                            Paid To </label>
+                            <div class="views-widget">
+                            <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                            <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                            </div>
+                            </div>
+                            </div> -->
+                            <!-- <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                              <label for="edit-associated-user-id" style="font-weight:400 !important">
+                              Payment Date </label>
+                              <div class="views-widget">
+                              <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                <input type="text" placeholder="" class="form-control" bsDatepicker >
+                              </div>
+                              </div>
+                              </div> -->
+                          <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                          <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Search" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit btn btn-default btn-primary" />
+                          <input type="submit" id="edit-reset" name="op" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                        </div>
+                          </div>
+                          </div>
+                          </div></form> </div>
+                          <div class="view-content">
+                          <div class="panel panel-default">
+                          <div class="table-responsive">
+                          <table class="views-table cols-5 table">
+                          <thead>
+                          <tr>
+                           <th class="views-field views-field-counter">
+                          Chart of Account ID</th>
+                          <th class="views-field views-field-category">
+                          Account Number</th>
+                          <th class="views-field views-field-name">
+                          Account Name </th>
+                          <th class="views-field views-field-php">
+                          Accounnt Type </th>
+                          
+                            <th class="views-field views-field-created">
+                             Actions </th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <!-- <tr *ngFor="let item of paymentVoucherList">
+                              <td>{{item.GUID}}</td>
+                              <td>{{item.PaidTo}}</td>
+                              <td>{{item.TransactionDetails}}</td>
+                              <td>{{item.Amount}}</td>
+                              <td>{{item.TransactionDate}}</td>
+                          <td>
+                                                        
+                            <a (click)="openModal(template)" data-lity="">
+                                <i class="fa fa-eye fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                            </a>
+                            <a >
+                                <i class="fa fa-edit fa-1x" style="font-size: 14px; padding: 05px;color: #102f66;"></i>
+                            </a>
+                            <a >
+                                <i class="fa fa-trash fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                            </a>
+                            <a >
+                              <i class="fa fa-print fa-1x" style="font-size: 14px;padding: 05px;color: #102f66;" ></i>
+                          </a>
+                        </td>
+                          </tr> -->
+                          
+                          </tbody>
+                          </table>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div> 
+                          </div>
+              </tab>
+              <tab heading="Account Details"> <div class="region region-content">
+                <div id="block-system-main" class="block block-system clearfix">
+                <div class="view view-manage-members view-id-manage_members view-display-id-page view-dom-id-9c7a613581257f299f8e8ef3797ec6b6">
+                <div class="view-filters">
+                <form action="/afl-admin/manage-members" method="get" id="views-exposed-form-manage-members-page" accept-charset="UTF-8"><div class="from-panel"><div class="views-exposed-form form-inline">
+                <div class="views-exposed-widgets clearfix">
+                    <legend><span class="fieldset-legend">Add New Ledger Account Codes</span></legend>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                          Enterprise ID </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Employee ID </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Branch ID </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Organization ID </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Project ID </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                        <label for="edit-associated-user-id" style="font-weight:400 !important">
+                        Account Number </label>
+                        <div class="views-widget">
+                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                        <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                        </div>
+                        </div>
+                        </div>
+                        <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                            <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                Account Name </label>
+                            <div class="views-widget">
+                            <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                            <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                            </div>
+                            </div>
+                            </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Account Type </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected">Select Account Type</option>
+                                    <option value="user_profile_email_change">Account Head</option>
+                                    <option value="user_profile_password_change">Account Group</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                        <label for="edit-category">
+                            Parent Group </label>
+                        <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                                <select  class="form-control">
+                                    <option value="All" selected="selected"></option><option value="user_profile_email_change">Profile Email Change Request</option><option value="user_profile_password_change">Profile Password Change</option><option value="wallet_change">Withdrawal Wallet Address Change</option><option value="change_transaction_password">Transaction Password Change</option><option value="bitcoin_wallet_change">Bitcoin Wallet Address Change</option><option value="token_wallet_change">Token Wallet Address Change</option><option value="bitcoin_withdrawal">Bitcoin Withdrawal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                        <label for="edit-associated-user-id" style="font-weight:400 !important">
+                        Budget Amount </label>
+                        <div class="views-widget">
+                        <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                        <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                        </div>
+                        </div>
+                        </div>
+                        <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                            <label for="edit-associated-user-id" style="font-weight:400 !important">
+                            Opening Balance Imported </label>
+                            <div class="views-widget">
+                            <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                            <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                            </div>
+                            </div>
+                            </div>
+                            <div id="edit-associated-user-id-wrapper" class="views-exposed-widget views-widget-filter-associated_user_id form-group">
+                                <label for="edit-associated-user-id" style="font-weight:400 !important">
+                                Current Ledger Balance </label>
+                                <div class="views-widget">
+                                <div class="form-item clearfix form-type-textfield form-item-associated-user-id form-group">
+                                <input type="text" id="edit-associated-user-id" name="associated_user_id" value="" size="30" maxlength="128" class="form-text form-control input-lg-3" />
+                                </div>
+                                </div>
+                                </div>
+                          <!-- <div id="edit-category-wrapper" class="views-exposed-widget views-widget-filter-category form-group">
+                            <label for="edit-category">
+                            Discount </label>
+                            <div class="views-widget">
+                            <div class="form-item clearfix form-type-select form-item-category form-group">
+                             
+                              <select id="edit-category" name="category" class="form-select form-control"><option value="Amount" selected="selected">Amount</option><option value="percent">Percent</option></select>
+                            </div>
+                            </div>
+                            </div> -->
+                            <div class="views-exposed-widget views-submit-button form-group m-t-22">
+                                <input type="submit" id="edit-submit-e-wallet-transactions" name="" value="Submit" class="form-submit btn btn-default btn-primary" /> 
+                                <input type="submit" id="edit-reset" name="op" value="Cancel" class="form-submit btn btn-default btn-primary" />
+                        
+                              </div>
+                </div>
+                </div>
+                </div></form> </div>
+                <!-- <div class="view-content">
+                <div class="vbo-views-form"><form action="/afl-admin/manage-members" method="post" id="views-form-manage-members-page" accept-charset="UTF-8"><div class="from-panel"><input type="hidden" name="form_build_id" value="form--QtrpyATFC55n1sp5JS-wdFk1aNRltQwFAuZt5-wX2M" />
+                <input type="hidden" name="form_token" value="UAYTayyB66VLRdKqNUAOy9VqyXrKwaLmDw-3sTpiXqc" />
+                <input type="hidden" name="form_id" value="views_form_manage_members_page" />
+                <input class="select-all-rows" type="hidden" name="select_all" value="" />
+                
+                <div class="vbo-table-select-all-markup"><span class="vbo-table-this-page">Selected <strong>25 rows</strong> in this page. &nbsp;<input class="vbo-table-select-all-pages form-submit btn btn-default btn-primary" type="submit" name="op" value="Select all 151 rows in this view." /></span><span class="vbo-table-all-pages" style="display: none">Selected <strong>151 rows</strong> in this view. &nbsp;<input class="vbo-table-select-this-page form-submit btn btn-default btn-primary" type="submit" name="op" value="Select only 25 rows in this page." /></span></div><div class="panel panel-default">
+                <div class="table-responsive">
+                  <table class="views-table cols-6 table">
+                    <thead>
+                    <tr>
+                    <th class="views-field views-field-order-id">
+                    </th>
+                    <th class="views-field views-field-uid">
+                    Item </th>
+                    <th class="views-field views-field-commerce-customer-billing">
+                    Description </th>
+                    <th class="views-field views-field-mail">
+                    Unit Cost </th>
+                    <th class="views-field views-field-php">
+                    Quantity </th>
+                    <th class="views-field views-field-php">
+                      Amount </th>
+                      <th class="views-field views-field-php">
+                        Discount </th>
+                    <th class="views-field views-field-view-order">
+                     Total Amount </th>
+                    </tr>
+                    </thead>
+                    <tbody id="txtbody">
+                      <tr >
+                          <td><input type="text" class="form-control" id="slno" value="" placeholder="S.No" readonly /></td>
+                          <td id="td"><input type="text" class="form-control" id="itemid" placeholder="&#61442;" style="font-family:FontAwesome;" /></td>
+                          <td><input type="text" name="description_$index"  id="description" class="form-control" ></td>
+                         
+                          <td width="150"><input ng-model="item.unitmeasure" id="unitmeasure" type="text" class="form-control" ></td>
+                          <td width="150"><input ng-model="item.unitmeasure" id="unitmeasure" type="text" class="form-control" ></td>
+                                                                                           
+                          <td><input  id="discountamt" type="text" class="form-control" ></td>
+                          <td><input  id="discountamt" type="text" class="form-control" ></td>
+                          <td><input  id="totamt" type="text" class="form-control"></td>
+                          
+                          <td ></td>
+                        
+                      </tr>                                                                    
+                  </tbody>
+                    </table>
+                    </div>
+                  </div>
+                  </form>
+                  </div>
+                </div> -->
+                </div>
+                </div>
+                </div>
+                
+              </tab>
+             
+            </tabset>
+      
+      </div>
+  
+        
+       
+  
+            <!-- </div>
+            </div> -->
+            <!-- <div class="sample" style="text-align:right">
+              <div class="column1" >
+                <label>Subtotal</label><br>
+                <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paid to Date</label><br>
+                <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balence Date</label><br>
+                <input type="text" style="border-top:0px;border-left:0px;border-right:0px"><br><br>
+              </div> -->
+              
+                            

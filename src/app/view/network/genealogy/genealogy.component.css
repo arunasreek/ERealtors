@@ -44,3 +44,6 @@
 g circle {
     display: none;
 }
+.node{
+    fill:cadetblue !important;
+}

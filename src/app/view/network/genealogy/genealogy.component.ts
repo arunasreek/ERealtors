@@ -17,7 +17,7 @@ export class GenealogyComponent implements OnInit {
     this.commonService.getGenealogy(null)
     .subscribe((res) => {
       if(res){
-        // mouseScrool: OrgChart.action.scroll,
+        //  var mouseScroll: OrgChart.action.scroll,
         var chart = new OrgChart(document.getElementById('tree'), {
           
           enableSearch: true,

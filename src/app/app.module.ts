@@ -53,6 +53,7 @@ import { WithdrawFromEwalletComponent }  from './view/e-wallet/withdraw-from-ewa
 import { EWalletSummaryComponent }  from './view/e-wallet/e-wallet-summary/e-wallet-summary.component';
 import { AllTransactionsComponent }  from './view/e-wallet/all-transactions/all-transactions.component';
 import { EarningsFundsComponent }  from './view/e-wallet/earnings-funds/earnings-funds.component';
+import { ChartOfAcctsComponent }  from './view/e-wallet/chart-of-accts/chart-of-accts.component';
 import { WithdrawalRequestsComponent }  from './view/payout-reports/withdrawal-requests/withdrawal-requests.component';
 import { ActivePayoutsComponent }  from './view/payout-reports/active-payouts/active-payouts.component';
 import { PaymentVoucherComponent }  from './view/e-wallet/payment-voucher/payment-voucher.component';
@@ -127,6 +128,7 @@ import { ProfileComponent } from './view/profile/profile.component';
     BalanceSheetComponent,
     StoreComponent,
     ProfileComponent,
+    ChartOfAcctsComponent,
   ],
   imports: [
     BrowserModule,

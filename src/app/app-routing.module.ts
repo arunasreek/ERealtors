@@ -54,7 +54,7 @@ import { ProfitLossAccountComponent } from './view/e-wallet/profit-loss-account/
 import { BalanceSheetComponent } from './view/e-wallet/balance-sheet/balance-sheet.component';
 import { StoreComponent }  from './view/e-commerce/store/store.component';
 import { ProfileComponent } from './view/profile/profile.component';
-
+import { ChartOfAcctsComponent }  from './view/e-wallet/chart-of-accts/chart-of-accts.component';
 import { AuthGuard } from './guards'
 
 const routes: Routes = [ 
@@ -110,6 +110,7 @@ const routes: Routes = [
 { path: 'balance-sheet', component:BalanceSheetComponent , canActivate: [AuthGuard] },
 { path: 'store', component:StoreComponent , canActivate: [AuthGuard] },
 { path: 'profile', component:ProfileComponent , canActivate: [AuthGuard] },
+{ path: 'chart-of-accts', component:ChartOfAcctsComponent , canActivate: [AuthGuard] },
 ];
 
 @NgModule({

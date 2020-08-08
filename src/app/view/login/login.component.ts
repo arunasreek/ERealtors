@@ -35,11 +35,11 @@ export class LoginComponent implements OnInit {
             this.toaster.success('success');
             this.myapp.isNavbarShow = true;
           }else{
-            this.toaster.error('Username or password is incorrect','Success');
+            this.toaster.error('Username or password is incorrect','Unsuccess');
           }
         },
         error => {
-            this.toaster.error('Username or password is incorrect','Success');
+            this.toaster.error('Username or password is incorrect','Unsuccess');
         });
   }
 

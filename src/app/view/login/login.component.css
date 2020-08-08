@@ -108,7 +108,7 @@ button, input {
     width: 50%;
     height: 50px;
     border-radius: 25px;
-    background: #3336bd;
+    background: cadetblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +169,7 @@ button {
     color: #666666;
 }
 button:hover{
-    background:#2e3094;
+    background:#FFB739;
 }
 .alignform
 {
