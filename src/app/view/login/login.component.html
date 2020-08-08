@@ -1,66 +1,66 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="containerfluid">
-    
+
     <div class="row">
-        <div class="col-sm-7" >
-        	<div class="container alignform " >
-                <form class="login100-form validate-form formalign " >
-                <span class="login100-form-title">
+        <div class="col-sm-7">
+            <div class="container alignform ">
+                <form class="login100-form validate-form formalign ">
+                    <span class="login100-form-title">
                 Login
                 </span>
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                <input class="input100" type="text" name="username" placeholder="Username">
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input [(ngModel)]="userName" class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 </span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Password is required">
-                <input class="input100" type="password" name="pass" placeholder="Password">
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input [(ngModel)]="passWord" class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 </span>
-                </div>
-                <div class="container-login100-form-btn">
-                <button class="login100-form-btn clr">
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <button (click)="login()" class="login100-form-btn clr">
                 Login
                 </button>
-                </div>
-                <div class="text-center p-t-12">
-                <span class="txt1">
+                    </div>
+                    <div class="text-center p-t-12">
+                        <span class="txt1">
                 Forgot
                 </span>
-                <a class="txt2" [routerLink]="['/password-reset']">
+                        <a class="txt2" [routerLink]="['/password-reset']">
                 Username / Password?
                 </a>
-                </div>
-                
+                    </div>
+
                 </form>
-                                            
-            </div>	
+
+            </div>
         </div>
-        <div class="col-sm-5 img_align " >
+        <div class="col-sm-5 img_align ">
             <carousel [noPause]="false">
                 <slide>
                     <img src="assets/img/1.png" alt="First slide" style="display: block; width: 70%;opacity:0.8;">
                     <div class="carousel-caption d-none d-md-block">
-                    <h3></h3>
-                    <p></p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </slide>
                 <slide>
                     <img src="assets/img/gif/3a.gif" alt="Second slide" style="display: block; width: 80%;padding-top:5%;opacity:0.7;">
                     <div class="carousel-caption d-none d-md-block">
-                    <h3></h3>
-                    <p></p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </slide>
                 <slide>
                     <img src="assets/img/gif/4.gif" alt="Third slide" style="display: block; width: 70%;padding-top:5%;opacity:0.7;height:100%">
                     <div class="carousel-caption d-none d-md-block">
-                    <h3></h3>
-                    <p></p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </slide>
             </carousel>
@@ -70,9 +70,4 @@
 
 
 
-</div>
-
-
-
-
-
+    </div>
