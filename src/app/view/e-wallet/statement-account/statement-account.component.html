@@ -121,13 +121,16 @@
                                                     </div>
                                                     <div class="views-exposed-widget views-submit-button form-group m-t-22">
                                                         <input type="submit" id="edit-submit-business-transactions" name="" value="Filter" class="form-submit btn btn-default btn-primary" /> <input type="submit" id="edit-reset" name="op" value="Clear"
-                                                            class="form-submit btn btn-default btn-primary" /> </div>
-                                                </div>
+                                                            class="form-submit btn btn-default btn-primary" /> 
+                                                            <input type="submit" id="edit-reset" name="op" (click)="convetToPDF()" value="Export to PDF" class="form-submit btn btn-default btn-primary" />
+                                                        </div>
+                                                           
+                                                        </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="view-content">
+                                <div class="view-content" id="StatementData">
                                     <div class="panel panel-default">
                                         <div class="table-responsive">
                                             <table class="views-table cols-6 table">
@@ -139,6 +142,8 @@
                                                             Transaction Id No </th>
                                                         <th class="views-field views-field-name-1">
                                                             Description </th>
+                                                            <th class="views-field views-field-name-1">
+                                                                Account Name </th>
                                                         <th class="views-field views-field-php">
                                                             Receipt Amount </th>
                                                         <th class="views-field views-field-created">
@@ -152,12 +157,16 @@
                                                         <td>{{item.Date.split('T')[0]}}</td>
                                                         <td>{{item.TranNo}}</td>
                                                         <td>{{item.Description}}</td>
+                                                        <td>---------------</td>
                                                         <td>{{item.ReceiptAmount}}</td>
                                                         <td>{{item.PaymentAmount}}</td>
                                                         <td>{{item.Balance}}</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div style="float:right;margin-top:20px;color:#102f66;font-weight:800">
+                                                <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberServices, CommonServices } from 'src/app/services';
+import * as jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-statement-account',
@@ -9,6 +11,7 @@ import { MemberServices, CommonServices } from 'src/app/services';
 export class StatementAccountComponent implements OnInit {
   customerList :any;
   statementList:any;
+  p: number=1;
   constructor(public commonservice: CommonServices) { }
 
   ngOnInit(): void {
@@ -23,7 +26,23 @@ export class StatementAccountComponent implements OnInit {
      console.log(res);
    });
   }
-
+  public convetToPDF()
+  {
+  var data = document.getElementById('StatementData');
+  html2canvas(data).then(canvas => {
+  // Few necessary setting options
+  var imgWidth = 150;
+  var pageHeight = 295;
+  var imgHeight = canvas.height * imgWidth / canvas.width;
+  var heightLeft = imgHeight;
+   
+  const contentDataURL = canvas.toDataURL('image/png')
+  let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+  var position = 10;
+  pdf.addImage(contentDataURL, 'PNG', 50, position, imgWidth, imgHeight)
+  pdf.save('Statement of Account.pdf'); // Generated PDF
+  });
+  }
   getSponserList(){
     this.commonservice.getSponserList()
      .subscribe((res) => {
